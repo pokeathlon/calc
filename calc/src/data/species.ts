@@ -13406,7 +13406,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 178,
     abilities: { 0: 'Sand Stream' }
 },
-'Okthane': {
+'Ockthane': {
     types: ['Ice', 'Electric'],
     bs: { hp: 87, at: 93, df: 62, sa: 144, sd: 116, sp: 78 },
     weightkg: 17,
