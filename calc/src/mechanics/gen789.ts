@@ -258,7 +258,7 @@ export function calculateSMSSSV(
     if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize) {
       desc.attackerAbility = attacker.ability;
       hasAteAbilityTypeChange = true;
-    } else if (isLiquidVoice) {
+    } else if (isLiquidVoice || attacker.hasAbility('Kablooey')) {
       desc.attackerAbility = attacker.ability;
     }
   }

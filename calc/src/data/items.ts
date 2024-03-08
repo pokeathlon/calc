@@ -342,6 +342,9 @@ export const MEGA_STONES: {[species: string]: string} = {
   Swampertite: 'Swampert',
   Tyranitarite: 'Tyranitar',
   Venusaurite: 'Venusaur',
+  Florgesite: 'Florges',
+  Electrodite: 'Electrode',
+  'Frosty Snorlaxite': 'Snorlax Frost',
 };
 
 const XY = BW.concat(
