@@ -67,8 +67,8 @@ export function calculateBWXY(
 
   computeFinalStats(gen, attacker, defender, field, 'atk', 'spa');
 
-  checkInfiltrator(attacker, field.defenderSide);
-  checkInfiltrator(defender, field.attackerSide);
+  checkInfiltrator(attacker, field.defenderSide, move);
+  checkInfiltrator(defender, field.attackerSide, move);
 
   const desc: RawDesc = {
     attackerName: attacker.name,

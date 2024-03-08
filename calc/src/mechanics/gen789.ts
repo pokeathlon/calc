@@ -94,8 +94,8 @@ export function calculateSMSSSV(
 
   computeFinalStats(gen, attacker, defender, field, 'atk', 'spa');
 
-  checkInfiltrator(attacker, field.defenderSide);
-  checkInfiltrator(defender, field.attackerSide);
+  checkInfiltrator(attacker, field.defenderSide, move);
+  checkInfiltrator(defender, field.attackerSide, move);
 
   const desc: RawDesc = {
     attackerName: attacker.name,
@@ -791,6 +791,7 @@ export function calculateBasePowerSMSSSV(
   case 'Dragon Energy':
   case 'Eruption':
   case 'Water Spout':
+  case 'Blooms Day':
     basePower = Math.max(1, Math.floor((150 * attacker.curHP()) / attacker.maxHP()));
     desc.moveBP = basePower;
     break;
@@ -947,7 +948,8 @@ export function calculateBPModsSMSSSV(
   if ((move.named('Facade') && attacker.hasStatus('brn', 'par', 'psn', 'tox')) ||
     (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
     (move.named('Venoshock') && defender.hasStatus('psn', 'tox')) ||
-    (move.named('Lash Out') && (countBoosts(gen, attacker.boosts) < 0))
+    (move.named('Lash Out') && (countBoosts(gen, attacker.boosts) < 0)) ||
+    (move.named('Pixie Trick') && !resistedKnockOffDamage)
   ) {
     bpMods.push(8192);
     desc.moveBP = basePower * 2;
@@ -1167,7 +1169,8 @@ export function calculateBPModsSMSSSV(
      attacker.item && move.hasType(getItemBoostType(attacker.item)) ||
     (attacker.name.includes('Ogerpon-Cornerstone') && attacker.hasItem('Cornerstone Mask')) ||
     (attacker.name.includes('Ogerpon-Hearthflame') && attacker.hasItem('Hearthflame Mask')) ||
-    (attacker.name.includes('Ogerpon-Wellspring') && attacker.hasItem('Wellspring Mask'))
+    (attacker.name.includes('Ogerpon-Wellspring') && attacker.hasItem('Wellspring Mask')) ||
+    (attacker.hasItem('Smooth Rock') && move.name === 'Desert Tempest')
   ) {
     bpMods.push(4915);
     desc.attackerItem = attacker.item;

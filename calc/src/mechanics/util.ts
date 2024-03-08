@@ -271,8 +271,8 @@ export function checkEmbody(source: Pokemon, gen: Generation) {
   }
 }
 
-export function checkInfiltrator(pokemon: Pokemon, affectedSide: Side) {
-  if (pokemon.hasAbility('Infiltrator')) {
+export function checkInfiltrator(pokemon: Pokemon, affectedSide: Side, move: Move) {
+  if (pokemon.hasAbility('Infiltrator') || move.name === 'Foul Strike') {
     affectedSide.isReflect = false;
     affectedSide.isLightScreen = false;
     affectedSide.isAuroraVeil = false;

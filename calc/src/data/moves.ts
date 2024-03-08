@@ -4910,6 +4910,102 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
     isWind: true,
     target: 'allAdjacentFoes',
   },
+  // PoA Moves
+  'Blooms Day': {
+    bp: 150,
+    type: 'Grass',
+    category: 'Special',
+    zp: 100,
+    maxPower: 90,
+    target: 'allAdjacentFoes'
+},
+  'Box In': {
+    bp: 70,
+    type: 'Ghost',
+    category: 'Physical',
+    makesContact: true,
+    zp: 100,
+    maxPower: 90
+},
+Bulwark: {
+  bp: 0,
+  type: 'Psychic',
+  category: 'Status',
+  priority: -1
+},
+'Desert Tempest': {
+  bp: 65,
+  type: 'Rock',
+  category: 'Special',
+  zp: 100,
+  maxPower: 90
+},
+'Full Heal': {
+  bp: 0,
+  type: 'Normal',
+  category: 'Status',
+  priority: -7,
+  zp: 100,
+  maxPower: 90
+},
+Heal: {
+  bp: 0,
+  type: 'Normal',
+  category: 'Status'
+},
+'Hyper Heal': {
+  bp: 0,
+  type: 'Normal',
+  category: 'Status',
+  priority: -5,
+  zp: 100,
+  maxPower: 90
+},
+//Pokeathlon moves
+'Runtime Exception': {
+  bp: 0,
+  type: 'Steel',
+  category: 'Status',
+  zp: 100,
+  maxPower: 90
+},
+'Fibre Graft': {
+  bp: 0,
+  type: 'Fighting',
+  category: 'Status',
+  zp: 100,
+  maxPower: 90
+},
+'Pixie Trick': {
+  bp: 70,
+  type: 'Fairy',
+  category: 'Physical',
+  zp: 100,
+  maxPower: 100,
+  makesContact: true,
+},
+Mudslide: {
+  bp: 95,
+  type: 'Ground',
+  category: 'Physical',
+  zp: 100,
+  maxPower: 100,
+  secondaries: true,
+},
+'Pack In': {
+  bp: 0,
+  type: 'Ice',
+  category: 'Status',
+  zp: 100,
+  maxPower: 90
+},
+'Foul Strike': {
+  bp: 100,
+  type: 'Steel',
+  category: 'Physical',
+  zp: 100,
+  maxPower: 100,
+},
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
