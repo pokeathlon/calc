@@ -243,7 +243,8 @@ export function calculateSMSSSV(
     const normal = move.hasType('Normal');
     if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
       type = 'Flying';
-    } else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal)) {
+      //Kablooey is written as a separate statement as to not trigger "isGalvanize", and avoid gaining the damage boost
+    } else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal) || (attacker.hasAbility('Kablooey') && normal)) {
       type = 'Electric';
     } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
       type = 'Water';
