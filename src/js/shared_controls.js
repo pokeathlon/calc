@@ -278,7 +278,17 @@ $(".ability").bind("keyup change", function () {
 	} else {
 		$(this).closest(".poke-info").find(".alliesFainted").val('0');
 		$(this).closest(".poke-info").find(".alliesFainted").hide();
-
+	}
+	if (ability === "Slow Light") {
+		$("#gravity").prop("checked", true);
+	} else {
+		$("#gravity").prop("checked", false);
+	} 
+	if (ability === "Multishot") {
+		$(this).closest(".poke-info").find(".move-hits").val('3');
+	} else {
+		$(this).closest(".poke-info").find(".move-hits").val('0');
+		$(this).closest(".poke-info").find(".move-hits").hide();
 	}
 });
 

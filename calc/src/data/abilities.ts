@@ -337,6 +337,22 @@ const SV = SS.concat([
   'Wind Power',
   'Wind Rider',
   'Zero to Hero',
+  'Sacred Treasures',
+  'Consumer Exchange',
+  'Windy Wall',
+  'Fairy Law',
+  'Muscle Memory',
+  'Bushido',
+  'Slow Light',
+  'Sandy Defense',
+  'Inertia',
+  'Multishot',
+  'Ivy Wall',
+  'Kablooey',
+  'Sanctuary',
+  'Counterclockwise',
+  'Undeterred',
+  'Necromancy'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

@@ -437,7 +437,7 @@ function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
   if (defender.hasItem('Heavy-Duty Boots')) {
     return {damage, texts};
   }
-  if (defenderSide.isSR && !defender.hasAbility('Magic Guard', 'Mountaineer')) {
+  if (defenderSide.isSR && !defender.hasAbility('Magic Guard', 'Mountaineer', 'Undeterred')) {
     const rockType = gen.types.get('rock' as ID)!;
     const effectiveness =
       rockType.effectiveness[defender.types[0]]! *
@@ -445,7 +445,7 @@ function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
     damage += Math.floor((effectiveness * defender.maxHP()) / 8);
     texts.push('Stealth Rock');
   }
-  if (defenderSide.steelsurge && !defender.hasAbility('Magic Guard', 'Mountaineer')) {
+  if (defenderSide.steelsurge && !defender.hasAbility('Magic Guard', 'Mountaineer', 'Undeterred')) {
     const steelType = gen.types.get('steel' as ID)!;
     const effectiveness =
       steelType.effectiveness[defender.types[0]]! *
@@ -455,7 +455,7 @@ function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
   }
 
   if (!defender.hasType('Flying') &&
-      !defender.hasAbility('Magic Guard', 'Levitate') &&
+      !defender.hasAbility('Magic Guard', 'Levitate', 'Undeterred') &&
       !defender.hasItem('Air Balloon')
   ) {
     if (defenderSide.spikes === 1) {

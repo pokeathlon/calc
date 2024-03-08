@@ -381,7 +381,8 @@ export function calculateSMSSSV(
       (move.flags.sound && !move.named('Clangorous Soul') && defender.hasAbility('Soundproof')) ||
       (move.priority > 0 && defender.hasAbility('Queenly Majesty', 'Dazzling', 'Armor Tail')) ||
       (move.hasType('Ground') && defender.hasAbility('Earth Eater')) ||
-      (move.flags.wind && defender.hasAbility('Wind Rider'))
+      (move.flags.wind && defender.hasAbility('Wind Rider')) || 
+      (move.hasType('Flying') && defender.hasAbility('Windy Wall'))
   ) {
     desc.defenderAbility = defender.ability;
     return result;
@@ -1074,10 +1075,17 @@ export function calculateBPModsSMSSSV(
     (attacker.hasAbility('Analytic') &&
       (turnOrder !== 'first' || field.defenderSide.isSwitching === 'out')) ||
     (attacker.hasAbility('Tough Claws') && move.flags.contact) ||
-    (attacker.hasAbility('Punk Rock') && move.flags.sound)
+    (attacker.hasAbility('Punk Rock') && move.flags.sound) ||
+    (attacker.hasAbility('Bushido') &&
+      (turnOrder === 'first' || field.defenderSide.isSwitching === 'out'))
   ) {
     bpMods.push(5325);
     desc.attackerAbility = attacker.ability;
+  }
+
+  if (attacker.hasAbility('Multishot') && move.hits < 2) {
+    bpMods.push(attacker.hasItem('Loaded Dice')? 4915 : 3686);
+    desc.attackerAbility = attacker.hasItem('Loaded Dice')? 'Multishot (4 hits)' : 'Multishot (3 hits)';
   }
 
   if (field.attackerSide.isBattery && move.category === 'Special') {
@@ -1614,9 +1622,15 @@ export function calculateFinalModsSMSSSV(
     desc.defenderAbility = defender.ability;
   } else if (
     (defender.hasAbility('Punk Rock') && move.flags.sound) ||
-    (defender.hasAbility('Ice Scales') && move.category === 'Special')
+    (defender.hasAbility('Ice Scales') && move.category === 'Special') || 
+    (defender.hasAbility('Ivy Wall') && move.hasType('Ground', 'Water', 'Grass', 'Electric'))
   ) {
     finalMods.push(2048);
+    desc.defenderAbility = defender.ability;
+  }
+
+  if (defender.hasAbility('Sandy Defense') &&  field.hasWeather('Sand')) {
+    finalMods.push(2731)
     desc.defenderAbility = defender.ability;
   }
 
