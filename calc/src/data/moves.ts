@@ -5006,6 +5006,14 @@ Mudslide: {
   zp: 100,
   maxPower: 100,
 },
+'Siren Song': {
+  bp: 120,
+  type: 'Normal',
+  category: 'Special',
+  isSound: true,
+  zp: 100,
+  maxPower: 100
+}
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);

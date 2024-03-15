@@ -352,7 +352,8 @@ const SV = SS.concat([
   'Sanctuary',
   'Counterclockwise',
   'Undeterred',
-  'Necromancy'
+  'Necromancy',
+  'Clean Sweep'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

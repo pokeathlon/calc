@@ -151,6 +151,11 @@ export function getMoveEffectiveness(
       gen.types.get('fighting' as ID)!.effectiveness[type]! *
       gen.types.get('flying' as ID)!.effectiveness[type]!
     );
+  } else if (move.named('Siren Song')) {
+    return (
+      gen.types.get('normal' as ID)!.effectiveness[type]! *
+      gen.types.get('fairy' as ID)!.effectiveness[type]!
+    );
   } else {
     return gen.types.get(toID(move.type))!.effectiveness[type]!;
   }

@@ -13466,6 +13466,18 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 2.4,
     abilities: { 0: 'Necromancy' }
 },
+'Sweepdol': {
+    types: ['Grass', 'Fairy'],
+    bs: { hp: 80, at: 55, df: 80, sa: 90, sd: 105, sp: 78 },
+    weightkg: 24.5,
+    abilities: { 0: 'Clean Sweep' }
+},
+'Paldemaria': {
+    types: ['Water', 'Fairy'],
+    bs: { hp: 90, at: 59, df: 70, sa: 110, sd: 100, sp: 106 },
+    weightkg: 60,
+    abilities: { 0: 'Liquid Voice' }
+}
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
