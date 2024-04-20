@@ -1172,6 +1172,13 @@ export function calculateBPModsSMSSSV(
     desc.alliesFainted = attacker.alliesFainted;
   }
 
+  if (attacker.hasAbility('Lernean') && attacker.heads) {
+    const powMod = [4710, 5017, 5325, 5632, 5939];
+    bpMods.push(powMod[attacker.heads-5]);
+    desc.attackerAbility = attacker.ability;
+    desc.heads = attacker.heads;
+  }
+
   if (attacker.hasAbility('Amplifier') && move.flags.sound) {
     bpMods.push(5120);
     desc.attackerAbility = attacker.ability;

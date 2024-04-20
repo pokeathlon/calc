@@ -49,6 +49,7 @@ export interface RawDesc {
   terrain?: Terrain;
   weather?: Weather;
   isDefenderDynamaxed?: boolean;
+  heads?: number;
 }
 
 export function display(
@@ -862,6 +863,9 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   if (description.alliesFainted) {
     output += Math.min(5, description.alliesFainted) +
       ` ${description.alliesFainted === 1 ? 'ally' : 'allies'} fainted `;
+  }
+  if (description.heads) {
+    output += Math.min(5, description.heads) + ` heads `;
   }
   if (description.attackerTera) {
     output += `Tera ${description.attackerTera} `;

@@ -26,6 +26,7 @@ export class Pokemon implements State.Pokemon {
   boostedStat?: I.StatIDExceptHP | 'auto';
   item?: I.ItemName;
   teraType?: I.TypeName;
+  heads?: number;
 
   nature: I.NatureName;
   ivs: I.StatsTable;
@@ -67,6 +68,7 @@ export class Pokemon implements State.Pokemon {
       ? (options.dynamaxLevel === undefined ? 10 : options.dynamaxLevel) : undefined;
     this.isSaltCure = !!options.isSaltCure;
     this.alliesFainted = options.alliesFainted;
+    this.heads = options.heads;
     this.boostedStat = options.boostedStat;
     this.teraType = options.teraType;
     this.item = options.item;
@@ -165,6 +167,7 @@ export class Pokemon implements State.Pokemon {
       dynamaxLevel: this.dynamaxLevel,
       isSaltCure: this.isSaltCure,
       alliesFainted: this.alliesFainted,
+      heads: this.heads,
       boostedStat: this.boostedStat,
       item: this.item,
       gender: this.gender,
