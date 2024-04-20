@@ -492,7 +492,7 @@ function getEndOfTurn(
   const texts = [];
 
   if (field.hasWeather('Sun', 'Harsh Sunshine')) {
-    if (defender.hasAbility('Dry Skin', 'Solar Power')) {
+    if (defender.hasAbility('Dry Skin', 'Solar Power', 'Heliophobia')) {
       damage -= Math.floor(defender.maxHP() / 8);
       texts.push(defender.ability + ' damage');
     }
@@ -525,6 +525,14 @@ function getEndOfTurn(
     ) {
       damage -= Math.floor(defender.maxHP() / 16);
       texts.push('hail damage');
+    }
+  } else if (field.hasWeather('Darkness')) {
+    if (defender.hasAbility('Absolution')) {
+      damage -= Math.floor(defender.maxHP() / 8);
+      texts.push(defender.ability + ' damage');
+    } else if (defender.hasAbility('Heliophobia')) {
+      damage += Math.floor(defender.maxHP() / 8);
+      texts.push('Heliophobia recovery');
     }
   }
 

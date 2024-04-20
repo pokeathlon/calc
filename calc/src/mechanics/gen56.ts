@@ -133,6 +133,8 @@ export function calculateBWXY(
   let isPixilate = false;
   let isRefrigerate = false;
   let isNormalize = false;
+  let isFoundry = false;
+  let isIntoxicate = false;
   const noTypeChange =
     move.named('Judgment', 'Nature Power', 'Techo Blast', 'Natural Gift', 'Weather Ball',
       'Struggle');
@@ -145,13 +147,17 @@ export function calculateBWXY(
       move.type = 'Fairy';
     } else if ((isRefrigerate = attacker.hasAbility('Refrigerate') && normal)) {
       move.type = 'Ice';
+    } else if ((isFoundry = attacker.hasAbility('Foundry') && move.hasType('Rock'))) {
+      move.type = 'Fire';
+    } else if ((isIntoxicate = attacker.hasAbility('Intoxicate') && normal)) {
+      move.type = 'Poison';
     } else if ((isNormalize = attacker.hasAbility('Normalize'))) {
       move.type = 'Normal';
     }
-    if (isPixilate || isRefrigerate || isAerilate || isNormalize) {
+    if (isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate) {
       desc.attackerAbility = attacker.ability;
     }
-    if (isPixilate || isRefrigerate || isAerilate) {
+    if (isPixilate || isRefrigerate || isAerilate || isFoundry || isIntoxicate) {
       hasAteAbilityTypeChange = true;
     }
   }
@@ -365,7 +371,7 @@ export function calculateBWXY(
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-      attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate');
+      attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Foundry', 'Intoxicate');
 
       if ((move.dropsStats && move.timesUsed! > 1)) {
         // Adaptability does not change between hits of a multihit, only between turns

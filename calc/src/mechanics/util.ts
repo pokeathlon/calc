@@ -103,7 +103,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
       (pokemon.hasAbility('Chlorophyll') && weather.includes('Sun')) ||
       (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
       (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
-      (pokemon.hasAbility('Slush Rush') && ['Hail', 'Snow'].includes(weather)) ||
+      (pokemon.hasAbility('Slush Rush', 'Ice Cleats') && ['Hail', 'Snow'].includes(weather)) ||
       (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric')
   ) {
     speedMods.push(8192);
@@ -156,6 +156,8 @@ export function getMoveEffectiveness(
       gen.types.get('normal' as ID)!.effectiveness[type]! *
       gen.types.get('fairy' as ID)!.effectiveness[type]!
     );
+  } else if (move.named('Corrode') && type === 'Steel') {
+    return 2;
   } else {
     return gen.types.get(toID(move.type))!.effectiveness[type]!;
   }
@@ -567,6 +569,9 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   if (pokemon.hasOriginalType(move.type)) {
     stabMod += 2048;
   } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
+    stabMod += 2048;
+    desc.attackerAbility = pokemon.ability;
+  } else if (pokemon.hasAbility('Ancient Presence')) {
     stabMod += 2048;
     desc.attackerAbility = pokemon.ability;
   }

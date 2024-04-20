@@ -227,6 +227,8 @@ export function calculateSMSSSV(
   let isGalvanize = false;
   let isLiquidVoice = false;
   let isNormalize = false;
+  let isFoundry = false;
+  let isIntoxicate = false;
   const noTypeChange = move.named(
     'Revelation Dance',
     'Judgment',
@@ -254,8 +256,12 @@ export function calculateSMSSSV(
       type = 'Ice';
     } else if ((isNormalize = attacker.hasAbility('Normalize'))) { // Boosts any type
       type = 'Normal';
+    } else if ((isFoundry = attacker.hasAbility('Foundry') && move.hasType('Rock'))) {
+      type = 'Fire';
+    } else if ((isIntoxicate = attacker.hasAbility('Intoxicate') && normal)) {
+      type = 'Poison';
     }
-    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize) {
+    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate) {
       desc.attackerAbility = attacker.ability;
       hasAteAbilityTypeChange = true;
     } else if (isLiquidVoice || attacker.hasAbility('Kablooey')) {
@@ -282,7 +288,8 @@ export function calculateSMSSSV(
     attacker.hasAbility('Scrappy') || attacker.hasAbility('Mind\'s Eye') ||
       field.defenderSide.isForesight;
   const isRingTarget =
-    defender.hasItem('Ring Target') && !defender.hasAbility('Klutz');
+    (defender.hasItem('Ring Target') && !defender.hasAbility('Klutz')) ||
+    attacker.hasAbility('Irrelephant');
   const type1Effectiveness = getMoveEffectiveness(
     gen,
     move,
@@ -301,7 +308,28 @@ export function calculateSMSSSV(
       isRingTarget
     )
     : 1;
-  let typeEffectiveness = type1Effectiveness * type2Effectiveness;
+
+    let abilitytypemod: number;
+    switch (defender.ability) {
+      case 'Ethereal Shroud':
+        if (getMoveEffectiveness(gen, move, 'Ghost', isGhostRevealed, field.isGravity,isRingTarget) > 1) {
+          abilitytypemod = 1
+        }
+        else abilitytypemod = getMoveEffectiveness(gen, move, 'Ghost', isGhostRevealed, field.isGravity,isRingTarget)
+        desc.defenderAbility = defender.ability;
+        break;
+      case 'Ivy Wall':
+        if (getMoveEffectiveness(gen, move, 'Grass', isGhostRevealed, field.isGravity,isRingTarget) > 1) {
+          abilitytypemod = 1
+        }
+        else abilitytypemod = getMoveEffectiveness(gen, move, 'Grass', isGhostRevealed, field.isGravity,isRingTarget)
+        desc.defenderAbility = defender.ability;
+        break;
+      default:
+        abilitytypemod = 1;
+    }
+
+  let typeEffectiveness = type1Effectiveness * type2Effectiveness * abilitytypemod;
 
   if (defender.teraType && defender.teraType !== 'Stellar') {
     typeEffectiveness = getMoveEffectiveness(
@@ -321,6 +349,10 @@ export function calculateSMSSSV(
 
   if (typeEffectiveness === 0 && move.named('Thousand Arrows')) {
     typeEffectiveness = 1;
+  }
+
+  if (typeEffectiveness <1 && typeEffectiveness !=0 && move.named('Achilles Heel')) {
+    typeEffectiveness = 2;
   }
 
   if (typeEffectiveness === 0) {
@@ -372,7 +404,7 @@ export function calculateSMSSSV(
   if ((defender.hasAbility('Wonder Guard') && typeEffectiveness <= 1) ||
       (move.hasType('Grass') && defender.hasAbility('Sap Sipper')) ||
       (move.hasType('Fire') && defender.hasAbility('Flash Fire', 'Well-Baked Body')) ||
-      (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb')) ||
+      (move.hasType('Water') && defender.hasAbility('Dry Skin', 'Storm Drain', 'Water Absorb', 'Castle Moat')) ||
       (move.hasType('Electric') &&
         defender.hasAbility('Lightning Rod', 'Motor Drive', 'Volt Absorb')) ||
       (move.hasType('Ground') &&
@@ -599,7 +631,7 @@ export function calculateSMSSSV(
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-        attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize');
+        attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Foundry', 'Intoxicate');
 
       if ((move.dropsStats && move.timesUsed! > 1)) {
         // Adaptability does not change between hits of a multihit, only between turns
@@ -1125,11 +1157,6 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = attacker.ability;
   }
 
-  if (attacker.hasItem('Punching Glove') && move.flags.punch) {
-    bpMods.push(4506);
-    desc.attackerItem = attacker.item;
-  }
-
   if (gen.num <= 8 && defender.hasAbility('Heatproof') && move.hasType('Fire')) {
     bpMods.push(2048);
     desc.defenderAbility = defender.ability;
@@ -1143,6 +1170,11 @@ export function calculateBPModsSMSSSV(
     bpMods.push(powMod[Math.min(5, attacker.alliesFainted)]);
     desc.attackerAbility = attacker.ability;
     desc.alliesFainted = attacker.alliesFainted;
+  }
+
+  if (attacker.hasAbility('Amplifier') && move.flags.sound) {
+    bpMods.push(5120);
+    desc.attackerAbility = attacker.ability;
   }
 
   // Items
@@ -1180,6 +1212,10 @@ export function calculateBPModsSMSSSV(
     (attacker.hasItem('Wise Glasses') && move.category === 'Special')
   ) {
     bpMods.push(4505);
+    desc.attackerItem = attacker.item;
+  }
+  if (attacker.hasItem('Punching Glove') && move.flags.punch) {
+    bpMods.push(4506);
     desc.attackerItem = attacker.item;
   }
   return bpMods;
@@ -1259,7 +1295,8 @@ export function calculateAtModsSMSSSV(
     (attacker.named('Cherrim') &&
      attacker.hasAbility('Flower Gift') &&
      field.hasWeather('Sun', 'Harsh Sunshine') &&
-     move.category === 'Physical')) {
+     move.category === 'Physical') || (attacker.hasAbility('Absolution') 
+     && field.hasWeather('Darkness'))) {
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;
     desc.weather = field.weather;
@@ -1293,8 +1330,8 @@ export function calculateAtModsSMSSSV(
   } else if (
     (attacker.hasAbility('Steelworker') && move.hasType('Steel')) ||
     (attacker.hasAbility('Dragon\'s Maw') && move.hasType('Dragon')) ||
-    (attacker.hasAbility('Rocky Payload') && move.hasType('Rock'))
-  ) {
+    (attacker.hasAbility('Rocky Payload') && move.hasType('Rock')))
+  {
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;
   } else if (attacker.hasAbility('Transistor') && move.hasType('Electric')) {
@@ -1305,7 +1342,8 @@ export function calculateAtModsSMSSSV(
     desc.attackerAbility = attacker.ability;
   } else if (
     (attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
-    (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical')
+    (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical') ||
+    (attacker.hasAbility('Athenian') && move.category === 'Special')
   ) {
     atMods.push(8192);
     desc.attackerAbility = attacker.ability;
