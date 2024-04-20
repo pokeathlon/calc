@@ -164,6 +164,7 @@ export function calculateSMSSSV(
       : field.hasWeather('Rain', 'Heavy Rain') && !holdingUmbrella ? 'Water'
       : field.hasWeather('Sand') ? 'Rock'
       : field.hasWeather('Hail', 'Snow') ? 'Ice'
+      : field.hasWeather('Darkness') ? 'Dark'
       : 'Normal';
     desc.weather = field.weather;
     desc.moveType = type;

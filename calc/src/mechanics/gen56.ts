@@ -102,6 +102,7 @@ export function calculateBWXY(
       : field.hasWeather('Rain', 'Heavy Rain') ? 'Water'
       : field.hasWeather('Sand') ? 'Rock'
       : field.hasWeather('Hail') ? 'Ice'
+      : field.hasWeather('Darkness') ? 'Dark'
       : 'Normal';
     desc.weather = field.weather;
     desc.moveType = move.type;
