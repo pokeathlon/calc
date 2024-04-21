@@ -1468,7 +1468,7 @@ export function calculateAtModsSMSSSV(
        attacker.named('Cubone', 'Marowak', 'Marowak-Alola', 'Marowak-Alola-Totem') &&
        move.category === 'Physical') ||
       (attacker.hasItem('Deep Sea Tooth') &&
-       attacker.named('Clamperl') &&
+       attacker.named('Clamperl', 'Clamperl-Delta') &&
        move.category === 'Special') ||
       (attacker.hasItem('Light Ball') && attacker.name.includes('Pikachu') && !move.isZ)
   ) {
@@ -1609,8 +1609,8 @@ export function calculateDfModsSMSSSV(
     dfMods.push(6144);
     desc.defenderItem = defender.item;
   } else if (
-    (defender.hasItem('Metal Powder') && defender.named('Ditto') && hitsPhysical) ||
-    (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl') && !hitsPhysical)
+    (defender.hasItem('Metal Powder') && defender.named('Ditto', 'Ditto-Delta') && hitsPhysical) ||
+    (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl', 'Clamperl-Delta') && !hitsPhysical)
   ) {
     dfMods.push(8192);
     desc.defenderItem = defender.item;

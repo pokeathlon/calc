@@ -120,7 +120,7 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
     speedMods.push(6144);
   } else if (pokemon.hasItem('Iron Ball', ...EV_ITEMS)) {
     speedMods.push(2048);
-  } else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto')) {
+  } else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto', 'Ditto-Delta')) {
     speedMods.push(8192);
   }
 

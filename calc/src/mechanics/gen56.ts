@@ -888,7 +888,7 @@ export function calculateAtModsBWXY(
        attacker.named('Cubone', 'Marowak', 'Marowak-Alola') &&
        move.category === 'Physical') ||
       (attacker.hasItem('Deep Sea Tooth') &&
-       attacker.named('Clamperl') &&
+       attacker.named('Clamperl', 'Clamperl-Delta') &&
        move.category === 'Special') ||
       (attacker.hasItem('Light Ball') && attacker.name.startsWith('Pikachu') && !move.isZ)
   ) {
@@ -991,8 +991,8 @@ export function calculateDfModsBWXY(
     desc.defenderItem = defender.item;
   }
 
-  if ((defender.hasItem('Metal Powder') && defender.named('Ditto') && hitsPhysical) ||
-      (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl') && !hitsPhysical)) {
+  if ((defender.hasItem('Metal Powder') && defender.named('Ditto', 'Ditto-Delta') && hitsPhysical) ||
+      (defender.hasItem('Deep Sea Scale') && defender.named('Clamperl', 'Clamperl-Delta') && !hitsPhysical)) {
     dfMods.push(8192);
     desc.defenderItem = defender.item;
   }
