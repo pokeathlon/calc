@@ -1228,6 +1228,13 @@ export function calculateBPModsSMSSSV(
     desc.heads = attacker.heads;
   }
 
+  if (attacker.hasAbility('Winter Joy') && attacker.season) {
+    const powMod = [4096, 2867, 5734];
+    bpMods.push(powMod[attacker.season]);
+    desc.attackerAbility = attacker.ability;
+    desc.season = attacker.season;
+  }
+
   if (attacker.hasAbility('Amplifier') && move.flags.sound) {
     bpMods.push(5120);
     desc.attackerAbility = attacker.ability;

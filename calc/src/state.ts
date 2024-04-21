@@ -12,6 +12,7 @@ export namespace State {
     alliesFainted?: number;
     heads?: number;
     boostedStat?: I.StatIDExceptHP | 'auto';
+    season?: number;
     item?: I.ItemName;
     gender?: I.GenderName;
     nature?: I.NatureName;

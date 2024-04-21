@@ -273,6 +273,15 @@ $(".ability").bind("keyup change", function () {
 		boostedStat.hide();
 	}
 
+	var season = $(this).closest(".poke-info").find(".season");
+
+	if (ability === "Winter Joy") {
+		season.show();
+		autosetQP($(this).closest(".poke-info"));
+	} else {
+		season.hide();
+	}
+
 	if (ability === "Supreme Overlord") {
 		$(this).closest(".poke-info").find(".alliesFainted").show();
 	} else {
@@ -1040,6 +1049,7 @@ function createPokemon(pokeInfo) {
 			alliesFainted: parseInt(pokeInfo.find(".alliesFainted").val()),
 			heads: parseInt(pokeInfo.find(".heads").val()),
 			boostedStat: pokeInfo.find(".boostedStat").val() || undefined,
+			season: pokeInfo.find(".season").val() || undefined,
 			teraType: teraType,
 			boosts: boosts,
 			curHP: curHP,

@@ -27,6 +27,7 @@ export class Pokemon implements State.Pokemon {
   item?: I.ItemName;
   teraType?: I.TypeName;
   heads?: number;
+  season?: number;
 
   nature: I.NatureName;
   ivs: I.StatsTable;
@@ -70,6 +71,7 @@ export class Pokemon implements State.Pokemon {
     this.alliesFainted = options.alliesFainted;
     this.heads = options.heads;
     this.boostedStat = options.boostedStat;
+    this.season = options.season;
     this.teraType = options.teraType;
     this.item = options.item;
     this.nature = options.nature || ('Serious' as I.NatureName);
@@ -169,6 +171,7 @@ export class Pokemon implements State.Pokemon {
       alliesFainted: this.alliesFainted,
       heads: this.heads,
       boostedStat: this.boostedStat,
+      season: this.season,
       item: this.item,
       gender: this.gender,
       nature: this.nature,

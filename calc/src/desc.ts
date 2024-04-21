@@ -50,6 +50,7 @@ export interface RawDesc {
   weather?: Weather;
   isDefenderDynamaxed?: boolean;
   heads?: number;
+  season?: number;
 }
 
 export function display(
