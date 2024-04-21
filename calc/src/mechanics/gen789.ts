@@ -798,7 +798,7 @@ export function calculateBasePowerSMSSSV(
     break;
   case 'Weather Ball':
     basePower = move.bp * (field.weather && !field.hasWeather('Strong Winds') ? 2 : 1);
-    if (field.hasWeather('Sun', 'Harsh Sunshine', 'Rain', 'Heavy Rain') &&
+    if (field.hasWeather('Sun', 'Harsh Sunshine', 'Rain', 'Heavy Rain', 'Darkness') &&
       attacker.hasItem('Utility Umbrella')) basePower = move.bp;
     desc.moveBP = basePower;
     break;
@@ -1009,6 +1009,14 @@ export function calculateBPModsSMSSSV(
     bpMods.push(2048);
     desc.moveBP = basePower / 2;
     desc.weather = field.weather;
+  } else if (move.named('Solar Beam') && field.hasWeather('Darkness')) {
+    bpMods.push(2867);
+    desc.moveBP = basePower * 0.7;
+    desc.weather = field.weather;
+  } else if (move.named('Surf') && field.hasWeather('Darkness')) {
+    bpMods.push(6144);
+    desc.moveBP = basePower * 1.5;
+    desc.weather = field.weather;
   } else if (move.named('Collision Course', 'Electro Drift')) {
     const isGhostRevealed =
       attacker.hasAbility('Scrappy') || attacker.hasAbility('Mind\'s Eye') ||
@@ -1091,12 +1099,16 @@ export function calculateBPModsSMSSSV(
   const auraActive = isAttackerAura || isDefenderAura || isFieldFairyAura || isFieldDarkAura;
   const auraBreak = isFieldAuraBreak || isUserAuraBreak;
   if (auraActive) {
-    if (auraBreak) {
-      bpMods.push(3072);
+    if (auraBreak) { // Aura Break
+      bpMods.push(field.hasWeather('Darkness')? 2458 : 3072);
       desc.attackerAbility = attacker.ability;
       desc.defenderAbility = defender.ability;
-    } else {
-      bpMods.push(5448);
+    } else if (aura === 'Dark Aura' && field.hasWeather('Darkness')) { // Dark Aura in Darkness
+      bpMods.push(6827);
+      if (isAttackerAura) desc.attackerAbility = attacker.ability;
+      if (isDefenderAura) desc.defenderAbility = defender.ability;
+    } else { // default Aura case
+      bpMods.push((aura === 'Fairy Aura' && field.hasWeather('Darkness'))? 4096 : 5448);
       if (isAttackerAura) desc.attackerAbility = attacker.ability;
       if (isDefenderAura) desc.defenderAbility = defender.ability;
     }
@@ -1600,6 +1612,16 @@ function calculateBaseDamageSMSSSV(
     ) {
       baseDamage = pokeRound(OF32(baseDamage * 2048) / 4096);
       desc.weather = field.weather;
+    } else if (
+      (field.hasWeather('Darkness') && move.hasType('Dark', 'Ghost'))
+    ) {
+      baseDamage = pokeRound(OF32(baseDamage * 5529) / 4096);
+      desc.weather = field.weather;
+    } else if (
+      (field.hasWeather('Darkness') && move.hasType('Fairy'))
+    ) {
+      baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
+      desc.weather = field.weather;
     }
   }
 
@@ -1627,14 +1649,18 @@ export function calculateFinalModsSMSSSV(
   if (field.defenderSide.isReflect && move.category === 'Physical' &&
       !isCritical && !field.defenderSide.isAuroraVeil) {
     // doesn't stack with Aurora Veil
-    finalMods.push(field.gameType !== 'Singles' ? 2732 : 2048);
+    finalMods.push(field.gameType !== 'Singles' ? 
+      (field.hasWeather('Darkness')? 2184 : 2732) :
+      (field.hasWeather('Darkness')? 1638 : 2048));
     desc.isReflect = true;
   } else if (
     field.defenderSide.isLightScreen && move.category === 'Special' &&
     !isCritical && !field.defenderSide.isAuroraVeil
   ) {
     // doesn't stack with Aurora Veil
-    finalMods.push(field.gameType !== 'Singles' ? 2732 : 2048);
+    finalMods.push(field.gameType !== 'Singles' ? 
+      (field.hasWeather('Darkness')? 2184 : 2732) :
+      (field.hasWeather('Darkness')? 1638 : 2048));
     desc.isLightScreen = true;
   }
   if (field.defenderSide.isAuroraVeil && !isCritical) {

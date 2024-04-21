@@ -606,10 +606,10 @@ function getEndOfTurn(
     }
   } else if (
     (defender.hasStatus('slp') || defender.hasAbility('Comatose')) &&
-    attacker.hasAbility('isBadDreams') &&
+    attacker.hasAbility('Bad Dreams') &&
     !defender.hasAbility('Magic Guard')
   ) {
-    damage -= Math.floor(defender.maxHP() / 8);
+    damage -= Math.floor(defender.maxHP() / (field.hasWeather('Darkness')? 4 : 8));
     texts.push('Bad Dreams');
   }
 

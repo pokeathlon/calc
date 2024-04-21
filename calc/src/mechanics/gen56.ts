@@ -704,7 +704,15 @@ export function calculateBPModsBWXY(
     bpMods.push(2048);
     desc.moveBP = basePower / 2;
     desc.weather = field.weather;
-  }
+  } else if (move.named('Solar Beam') && field.hasWeather('Darkness')) {
+    bpMods.push(2867);
+    desc.moveBP = basePower * 0.7;
+    desc.weather = field.weather;
+  } else if (move.named('Surf') && field.hasWeather('Darkness')) {
+    bpMods.push(6144);
+    desc.moveBP = basePower * 1.5;
+    desc.weather = field.weather;
+  } 
 
   if (field.attackerSide.isHelpingHand) {
     bpMods.push(6144);
@@ -735,12 +743,16 @@ export function calculateBPModsBWXY(
   const auraActive = isAttackerAura || isDefenderAura || isFieldFairyAura || isFieldDarkAura;
   const auraBreak = isFieldAuraBreak || isUserAuraBreak;
   if (auraActive) {
-    if (auraBreak) {
-      bpMods.push(3072);
+    if (auraBreak) { // Aura Break
+      bpMods.push(field.hasWeather('Darkness')? 2458 : 3072);
       desc.attackerAbility = attacker.ability;
       desc.defenderAbility = defender.ability;
-    } else {
-      bpMods.push(5448);
+    } else if (aura === 'Dark Aura' && field.hasWeather('Darkness')) { // Dark Aura in Darkness
+      bpMods.push(6827);
+      if (isAttackerAura) desc.attackerAbility = attacker.ability;
+      if (isDefenderAura) desc.defenderAbility = defender.ability;
+    } else { // default Aura case
+      bpMods.push((aura === 'Fairy Aura' && field.hasWeather('Darkness'))? 4096 : 5448);
       if (isAttackerAura) desc.attackerAbility = attacker.ability;
       if (isDefenderAura) desc.defenderAbility = defender.ability;
     }
@@ -1016,6 +1028,16 @@ function calculateBaseDamageBWXY(
     (field.hasWeather('Rain') && move.hasType('Fire'))
   ) {
     baseDamage = pokeRound(OF32(baseDamage * 2048) / 4096);
+    desc.weather = field.weather;
+  } else if (
+    (field.hasWeather('Darkness') && move.hasType('Dark', 'Ghost'))
+  ) {
+    baseDamage = pokeRound(OF32(baseDamage * 5529) / 4096);
+    desc.weather = field.weather;
+  } else if (
+    (field.hasWeather('Darkness') && move.hasType('Fairy'))
+  ) {
+    baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
     desc.weather = field.weather;
   }
 
