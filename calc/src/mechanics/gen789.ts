@@ -47,6 +47,8 @@ import {
   getStabMod,
   getStellarStabMod,
 } from './util';
+import { Types } from '../data/types';
+import { types } from 'util';
 
 export function calculateSMSSSV(
   gen: Generation,
@@ -331,6 +333,30 @@ export function calculateSMSSSV(
     }
 
   let typeEffectiveness = type1Effectiveness * type2Effectiveness * abilitytypemod;
+
+  if (defender.hasAbility('Omnitype')) {
+    var fairyEffectiveness = getMoveEffectiveness(gen, move, 'Fairy', isGhostRevealed, field.isGravity, isRingTarget);
+    var bugEffectiveness = getMoveEffectiveness(gen, move, 'Bug', isGhostRevealed, field.isGravity, isRingTarget);
+    var darkEffectiveness = getMoveEffectiveness(gen, move, 'Dark', isGhostRevealed, field.isGravity, isRingTarget);
+    var dragonEffectiveness = getMoveEffectiveness(gen, move, 'Dragon', isGhostRevealed, field.isGravity, isRingTarget);
+    var electricEffectiveness = getMoveEffectiveness(gen, move, 'Electric', isGhostRevealed, field.isGravity, isRingTarget);
+    var fightingEffectiveness = getMoveEffectiveness(gen, move, 'Fighting', isGhostRevealed, field.isGravity, isRingTarget);
+    var fireEffectiveness = getMoveEffectiveness(gen, move, 'Fire', isGhostRevealed, field.isGravity, isRingTarget);
+    var flyingEffectiveness = getMoveEffectiveness(gen, move, 'Flying', isGhostRevealed, field.isGravity, isRingTarget);
+    var ghostEffectiveness = getMoveEffectiveness(gen, move, 'Ghost', isGhostRevealed, field.isGravity, isRingTarget);
+    var grassEffectiveness = getMoveEffectiveness(gen, move, 'Grass', isGhostRevealed, field.isGravity, isRingTarget);
+    var groundEffectiveness = getMoveEffectiveness(gen, move, 'Ground', isGhostRevealed, field.isGravity, isRingTarget);
+    var iceEffectiveness = getMoveEffectiveness(gen, move, 'Ice', isGhostRevealed, field.isGravity, isRingTarget);
+    var normalEffectiveness = getMoveEffectiveness(gen, move, 'Normal', isGhostRevealed, field.isGravity, isRingTarget);
+    var poisonEffectiveness = getMoveEffectiveness(gen, move, 'Poison', isGhostRevealed, field.isGravity, isRingTarget);
+    var psychicEffectiveness = getMoveEffectiveness(gen, move, 'Psychic', isGhostRevealed, field.isGravity, isRingTarget);
+    var rockEffectiveness = getMoveEffectiveness(gen, move, 'Rock', isGhostRevealed, field.isGravity, isRingTarget);
+    var steelEffectiveness = getMoveEffectiveness(gen, move, 'Steel', isGhostRevealed, field.isGravity, isRingTarget);
+    var waterEffectiveness = getMoveEffectiveness(gen, move, 'Water', isGhostRevealed, field.isGravity, isRingTarget);
+    typeEffectiveness = fairyEffectiveness * bugEffectiveness * darkEffectiveness * dragonEffectiveness * electricEffectiveness * fightingEffectiveness * fireEffectiveness *
+        flyingEffectiveness * ghostEffectiveness * grassEffectiveness * groundEffectiveness * iceEffectiveness * normalEffectiveness * poisonEffectiveness *
+        psychicEffectiveness * rockEffectiveness * steelEffectiveness * waterEffectiveness;
+}
 
   if (defender.teraType && defender.teraType !== 'Stellar') {
     typeEffectiveness = getMoveEffectiveness(
@@ -1739,6 +1765,16 @@ export function calculateFinalModsSMSSSV(
       finalMods.push(8192);
     }
     desc.attackerItem = attacker.item;
+  }
+
+  if (attacker.hasAbility('Pendulum') && move.timesUsedWithMetronome! >= 1) {
+    const timesUsedWithMetronome = Math.floor(move.timesUsedWithMetronome!);
+    if (timesUsedWithMetronome <= 4) {
+      finalMods.push(4096 + timesUsedWithMetronome * 819);
+    } else {
+      finalMods.push(8192);
+    }
+    desc.attackerAbility = attacker.ability;
   }
 
   if (move.hasType(getBerryResistType(defender.item)) &&

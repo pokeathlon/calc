@@ -295,6 +295,12 @@ $(".ability").bind("keyup change", function () {
 	} else {
 		$(this).closest(".poke-info").find(".move-hits").val('0');
 		$(this).closest(".poke-info").find(".move-hits").hide();
+	} 
+	var $metronomeControl = $(this).closest('.poke-info').find('.metronome');
+	if (ability === "Pendulum") {
+		$metronomeControl.show();
+	} else {
+		$metronomeControl.hide()
 	}
 });
 

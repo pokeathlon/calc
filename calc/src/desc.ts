@@ -552,7 +552,10 @@ function getEndOfTurn(
   } else if (defender.hasItem('Sticky Barb')) {
     damage -= Math.floor(defender.maxHP() / 8);
     texts.push('Sticky Barb damage');
-  }
+  } else if (defender.hasAbility('Phototroph') && !field.hasWeather('Darkness', 'Rain', 'Heavy Rain')) {
+    damage += Math.floor(defender.maxHP() / (field.hasWeather('Harsh Sunshine', 'Sun')? 8 : 16));
+    texts.push('Phototroph recovery');
+  } 
 
   if (field.defenderSide.isSeeded) {
     if (!defender.hasAbility('Magic Guard', 'Ivy Wall')) {

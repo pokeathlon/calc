@@ -1063,10 +1063,10 @@ function calculateFinalModsBWXY(
   const finalMods = [];
 
   if (field.defenderSide.isReflect && move.category === 'Physical' && !isCritical) {
-    finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : 2048);
+    finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : (field.hasWeather('Darkness')? 2184 : 2048));
     desc.isReflect = true;
   } else if (field.defenderSide.isLightScreen && move.category === 'Special' && !isCritical) {
-    finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : 2048);
+    finalMods.push(field.gameType !== 'Singles' ? (gen.num > 5 ? 2732 : 2703) : (field.hasWeather('Darkness')? 2184 : 2048));
     desc.isLightScreen = true;
   }
 
@@ -1106,6 +1106,16 @@ function calculateFinalModsBWXY(
       finalMods.push(8192);
     }
     desc.attackerItem = attacker.item;
+  }
+
+  if (attacker.hasAbility('Pendulum') && move.timesUsedWithMetronome! >= 1) {
+    const timesUsedWithMetronome = Math.floor(move.timesUsedWithMetronome!);
+    if (timesUsedWithMetronome <= 4) {
+      finalMods.push(4096 + timesUsedWithMetronome * 819);
+    } else {
+      finalMods.push(8192);
+    }
+    desc.attackerAbility = attacker.ability;
   }
 
   if (attacker.hasItem('Expert Belt') && typeEffectiveness > 1 && !move.isZ) {
