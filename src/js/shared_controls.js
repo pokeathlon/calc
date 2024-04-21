@@ -1132,6 +1132,7 @@ function createField() {
 	var isAuroraVeil = [$("#auroraVeilL").prop("checked"), $("#auroraVeilR").prop("checked")];
 	var isBattery = [$("#batteryL").prop("checked"), $("#batteryR").prop("checked")];
 	var isPowerSpot = [$("#powerSpotL").prop("checked"), $("#powerSpotR").prop("checked")];
+	var isZealousFlock = [$("#zealousFlockL").prop("checked"), $("#zealousFlockR").prop("checked")];
 	// TODO: support switching in as well!
 	var isSwitchingOut = [$("#switchingL").prop("checked"), $("#switchingR").prop("checked")];
 
@@ -1140,7 +1141,7 @@ function createField() {
 			spikes: spikes[i], isSR: isSR[i], steelsurge: steelsurge[i],
 			vinelash: vinelash[i], wildfire: wildfire[i], cannonade: cannonade[i], volcalith: volcalith[i],
 			isReflect: isReflect[i], isLightScreen: isLightScreen[i],
-			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i],
+			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i], isZealousFlock: isZealousFlock[i],
 			isTailwind: isTailwind[i], isHelpingHand: isHelpingHand[i], isFlowerGift: isFlowerGift[i], isFriendGuard: isFriendGuard[i],
 			isAuroraVeil: isAuroraVeil[i], isBattery: isBattery[i], isPowerSpot: isPowerSpot[i], isSwitching: isSwitchingOut[i] ? 'out' : undefined
 		});
@@ -1339,6 +1340,8 @@ function clearField() {
 	$("#batteryR").prop("checked", false);
 	$("#switchingL").prop("checked", false);
 	$("#switchingR").prop("checked", false);
+	$("#zealousFlockL").prop("checked", false);
+	$("#zealousFlockR").prop("checked", false);
 	$("input:checkbox[name='terrain']").prop("checked", false);
 }
 

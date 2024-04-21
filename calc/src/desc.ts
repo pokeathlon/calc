@@ -51,6 +51,7 @@ export interface RawDesc {
   isDefenderDynamaxed?: boolean;
   heads?: number;
   season?: number;
+  isZealousFlock?: boolean;
 }
 
 export function display(
@@ -574,6 +575,13 @@ function getEndOfTurn(
       // 1/16 in gen 1, 1/8 in gen 2 onwards
       damage -= Math.floor(defender.maxHP() / (gen.num >= 2 ? 8 : 16));
       texts.push('Leech Seed damage');
+    }
+  }
+
+  if (field.defenderSide.isZealousFlock) {
+    if (!defender.hasAbility('Magic Guard')) {
+      damage -= Math.floor(defender.maxHP() / 16);
+      texts.push('Zealous Flock damage');
     }
   }
 

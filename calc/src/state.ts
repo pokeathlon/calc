@@ -78,5 +78,6 @@ export namespace State {
     isBattery?: boolean;
     isPowerSpot?: boolean;
     isSwitching?: 'out' | 'in';
+    isZealousFlock?: boolean;
   }
 }

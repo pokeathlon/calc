@@ -5169,7 +5169,44 @@ Mudslide: {
   isSound: true,
   zp: 100,
   maxPower: 100
-}
+},
+'Mindwipe': {
+  bp: 90,
+  type: 'Psychic',
+  category: 'Special',
+  zp: 100,
+  maxPower: 100,
+  secondaries: true,
+},
+'Twin Gust': {
+  bp: 40,
+  type: 'Flying',
+  category: 'Special',
+  zp: 100,
+  maxPower: 100,
+  multihit: 2,
+},
+'Currency Flow': { // Need to add a "Coins Scattered" thing, similar to metronome item
+  bp: 85,
+  type: 'Ground',
+  category: 'Physical',
+  zp: 100,
+  maxPower: 100,
+},
+'Rocket Grab': {
+  bp: 90,
+  type: 'Steel',
+  category: 'Physical',
+  zp: 100,
+  maxPower: 100,
+},
+'Jump Ship': {
+  bp: 0,
+  type: 'Ghost',
+  category: 'Status',
+  zp: 100,
+  maxPower: 90
+},
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);

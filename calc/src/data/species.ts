@@ -13418,6 +13418,26 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 76.1,
     abilities: { 0: 'Iron Fist' }
 },
+'Wrighvern': {
+  types: ['Dragon', 'Flying'],
+  bs: { hp: 90, at: 90, df: 80, sa: 125, sd: 85, sp: 130 },
+  weightkg: 90,
+  abilities: { 0: 'Technician' }
+},
+'Staruhz': {
+  types: ['Water', 'Psychic'],
+  bs: { hp: 70, at: 75, df: 85, sa: 110, sd: 95, sp: 125 },
+  weightkg: 10,
+  abilities: { 0: 'Natural Cure' }
+},
+'Pandiz': {
+  types: ['Normal'],
+  bs: { hp: 90, at: 110, df: 85, sa: 70, sd: 85, sp: 100 },
+  weightkg: 50,
+  abilities: { 0: 'Own Tempo' }
+},
+
+//Pokeathlon
 'Bewitwing': {
     types: ['Ghost', 'Fairy'],
     bs: { hp: 95, at: 100, df: 85, sa: 85, sd: 130, sp: 90 },
@@ -13472,11 +13492,53 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 24.5,
     abilities: { 0: 'Clean Sweep' }
 },
+'Monetoad': {
+    types: ['Ground'],
+    bs: { hp: 148, at: 168, df: 74, sa: 56, sd: 94, sp: 48 },
+    weightkg: 113,
+    abilities: { 0: 'Pickup' }
+},
 'Paldemaria': {
-    types: ['Water', 'Fairy'],
-    bs: { hp: 90, at: 59, df: 70, sa: 110, sd: 100, sp: 106 },
-    weightkg: 60,
-    abilities: { 0: 'Liquid Voice' }
+  types: ['Water', 'Fairy'],
+  bs: { hp: 90, at: 59, df: 70, sa: 110, sd: 100, sp: 106 },
+  weightkg: 60,
+  abilities: { 0: 'Liquid Voice' }
+},
+'Drifloon-Kitakami': {
+  types: ['Ghost', 'Water'],
+  bs: { hp: 90, at: 34, df: 50, sa: 44, sd: 60, sp: 70 },
+  weightkg: 1.1,
+  abilities: { 0: 'Flare Boost' }
+},
+'Drifbozu': {
+  types: ['Ghost', 'Water'],
+  bs: { hp: 150, at: 34, df: 60, sa: 74, sd: 70, sp: 120 },
+  weightkg: 2.5,
+  abilities: { 0: 'Flare Boost' }
+},
+'Nestitan': {
+  types: ['Grass', 'Flying'],
+  bs: { hp: 100, at: 52, df: 160, sa: 75, sd: 65, sp: 93 },
+  weightkg: 364,
+  abilities: { 0: 'Zealous Flock' }
+},
+'Loxicant': {
+  types: ['Steel', 'Poison'],
+  bs: { hp: 85, at: 102, df: 120, sa: 45, sd: 100, sp: 68 },
+  weightkg: 125,
+  abilities: { 0: 'Levitate' }
+},
+'Manacra': {
+  types: ['Rock', 'Ghost'],
+  bs: { hp: 50, at: 60, df: 95, sa: 115, sd: 87, sp: 105 },
+  weightkg: 72,
+  abilities: { 0: 'Levitate' }
+},
+'Manacra-Plated': {
+  types: ['Steel', 'Ghost'],
+  bs: { hp: 50, at: 60, df: 152, sa: 80, sd: 120, sp: 50 },
+  weightkg: 159,
+  abilities: { 0: 'Levitate' }
 }
 };
 
