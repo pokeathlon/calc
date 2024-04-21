@@ -518,6 +518,13 @@ function getEndOfTurn(
     if (defender.hasAbility('Ice Body')) {
       damage += Math.floor(defender.maxHP() / 16);
       texts.push('Ice Body recovery');
+    } else if ( 
+      !defender.hasType('Ice') &&
+      !defender.hasAbility('Magic Guard', 'Overcoat', 'Snow Cloak') &&
+      !defender.hasItem('Safety Goggles') &&
+      attacker.hasAbility('Sleet')) {
+      damage -= Math.floor(defender.maxHP() / 5);
+      texts.push('Sleet damage');
     } else if (
       !defender.hasType('Ice') &&
       !defender.hasAbility('Magic Guard', 'Overcoat', 'Snow Cloak') &&
@@ -535,6 +542,10 @@ function getEndOfTurn(
       damage += Math.floor(defender.maxHP() / 8);
       texts.push('Heliophobia recovery');
     }
+  } else if ((attacker.hasAbility('Vaporization') || defender.hasAbility('Vaporization')) 
+    && defender.hasType('Water')) {
+      damage -= Math.floor(defender.maxHP() / 8);
+      texts.push('Vaporization damage')
   }
 
   const loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');

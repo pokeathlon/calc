@@ -382,6 +382,10 @@ export function calculateSMSSSV(
     typeEffectiveness = 2;
   }
 
+  if (defender.hasAbility('Synthetic Alloy') && move.hasType('Fire') && typeEffectiveness>1) {
+    typeEffectiveness = 1
+  }
+
   if (typeEffectiveness === 0) {
     return result;
   }
@@ -399,7 +403,8 @@ export function calculateSMSSSV(
   }
 
   if (
-    (field.hasWeather('Harsh Sunshine') && move.hasType('Water')) ||
+    ((field.hasWeather('Harsh Sunshine') || attacker.hasAbility('Vaporization') || defender.hasAbility('Vaporization'))
+     && move.hasType('Water')) ||
     (field.hasWeather('Heavy Rain') && move.hasType('Fire'))
   ) {
     desc.weather = field.weather;
@@ -442,7 +447,7 @@ export function calculateSMSSSV(
       (move.priority > 0 && defender.hasAbility('Queenly Majesty', 'Dazzling', 'Armor Tail')) ||
       (move.hasType('Ground') && defender.hasAbility('Earth Eater')) ||
       (move.flags.wind && defender.hasAbility('Wind Rider')) || 
-      (move.hasType('Flying') && defender.hasAbility('Windy Wall'))
+      (move.hasType('Flying') && defender.hasAbility('Windy Wall', 'Wind Force'))
   ) {
     desc.defenderAbility = defender.ability;
     return result;
@@ -1115,6 +1120,11 @@ export function calculateBPModsSMSSSV(
     desc.attackerAbility = attacker.ability;
   }
 
+  if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
+    bpMods.push(5325);
+    desc.attackerAbility = attacker.ability;
+  }
+
   const aura = `${move.type} Aura`;
   const isAttackerAura = attacker.hasAbility(aura);
   const isDefenderAura = defender.hasAbility(aura);
@@ -1282,6 +1292,9 @@ export function calculateAttackSMSSSV(
       (move.named('Tera Blast') && attackSource.teraType)) {
     move.category = attackSource.stats.atk > attackSource.stats.spa ? 'Physical' : 'Special';
   }
+  if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
+    move.category = 'Special';
+  }
   const attackStat =
     move.named('Shell Side Arm') &&
     getShellSideArmCategory(attacker, defender) === 'Physical'
@@ -1335,14 +1348,12 @@ export function calculateAtModsSMSSSV(
     atMods.push(2048);
     desc.attackerAbility = attacker.ability;
   } else if (
-    (attacker.hasAbility('Solar Power') &&
-     field.hasWeather('Sun', 'Harsh Sunshine') &&
-     move.category === 'Special') ||
-    (attacker.named('Cherrim') &&
-     attacker.hasAbility('Flower Gift') &&
-     field.hasWeather('Sun', 'Harsh Sunshine') &&
-     move.category === 'Physical') || (attacker.hasAbility('Absolution') 
-     && field.hasWeather('Darkness'))) {
+    (attacker.hasAbility('Solar Power') && field.hasWeather('Sun', 'Harsh Sunshine') && move.category === 'Special') ||
+    (attacker.named('Cherrim') && attacker.hasAbility('Flower Gift') && 
+     field.hasWeather('Sun', 'Harsh Sunshine') && move.category === 'Physical') || 
+     (attacker.hasAbility('Absolution') && field.hasWeather('Darkness')) ||
+     (attacker.hasAbility('Supercell') && field.hasWeather('Rain', 'Heavy Rain', 'Darkness', 'Thunderstorm'))
+  ) {
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;
     desc.weather = field.weather;
@@ -1361,11 +1372,14 @@ export function calculateAtModsSMSSSV(
     desc.isFlowerGiftAttacker = true;
   } else if (
     (attacker.hasAbility('Guts') && attacker.status && move.category === 'Physical') ||
-    (attacker.curHP() <= attacker.maxHP() / 3 &&
-      ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
-       (attacker.hasAbility('Blaze') && move.hasType('Fire')) ||
-       (attacker.hasAbility('Torrent') && move.hasType('Water')) ||
-       (attacker.hasAbility('Swarm') && move.hasType('Bug')))) ||
+      (attacker.curHP() <= attacker.maxHP() / 3 &&
+        ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
+        (attacker.hasAbility('Blaze') && move.hasType('Fire')) ||
+        (attacker.hasAbility('Torrent') && move.hasType('Water')) ||
+        (attacker.hasAbility('Swarm') && move.hasType('Bug')) ||
+        (attacker.hasAbility('Psycho Call') && move.hasType('Psychic')) ||
+        (attacker.hasAbility('Spirit Call') && move.hasType('Ghost')) ||
+        (attacker.hasAbility('Shadow Call') && move.hasType('Dark')))) ||
     (move.category === 'Special' && attacker.abilityOn && attacker.hasAbility('Plus', 'Minus'))
   ) {
     atMods.push(6144);

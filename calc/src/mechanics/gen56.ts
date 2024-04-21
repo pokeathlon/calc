@@ -204,7 +204,8 @@ export function calculateBWXY(
   }
 
   if (
-    (field.hasWeather('Harsh Sunshine') && move.hasType('Water')) ||
+    ((field.hasWeather('Harsh Sunshine') || attacker.hasAbility('Vaporization') || defender.hasAbility('Vaporization'))
+     && move.hasType('Water')) ||
     (field.hasWeather('Heavy Rain') && move.hasType('Fire'))
   ) {
     desc.weather = field.weather;
@@ -227,7 +228,8 @@ export function calculateBWXY(
         !field.isGravity && !move.named('Thousand Arrows') &&
         !defender.hasItem('Iron Ball') && defender.hasAbility('Levitate')) ||
       (move.flags.bullet && defender.hasAbility('Bulletproof')) ||
-      (move.flags.sound && defender.hasAbility('Soundproof'))
+      (move.flags.sound && defender.hasAbility('Soundproof')) ||
+      (move.hasType('Flying') && defender.hasAbility('Wind Force'))
   ) {
     desc.defenderAbility = defender.ability;
     return result;
@@ -796,7 +798,9 @@ export function calculateAttackBWXY(
     move.named('Foul Play')
       ? getEVDescriptionText(gen, defender, attackStat, defender.nature)
       : getEVDescriptionText(gen, attacker, attackStat, attacker.nature);
-
+  if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
+    move.category = 'Special';
+  }
   if (attackSource.boosts[attackStat] === 0 ||
       (isCritical && attackSource.boosts[attackStat] < 0)) {
     attack = attackSource.rawStats[attackStat];
@@ -837,7 +841,10 @@ export function calculateAtModsBWXY(
         ((attacker.hasAbility('Overgrow') && move.hasType('Grass')) ||
          (attacker.hasAbility('Blaze') && move.hasType('Fire')) ||
          (attacker.hasAbility('Torrent') && move.hasType('Water')) ||
-         (attacker.hasAbility('Swarm') && move.hasType('Bug')))) ||
+         (attacker.hasAbility('Swarm') && move.hasType('Bug')) ||
+         (attacker.hasAbility('Psycho Call') && move.hasType('Psychic')) ||
+         (attacker.hasAbility('Spirit Call') && move.hasType('Ghost')) ||
+         (attacker.hasAbility('Shadow Call') && move.hasType('Dark')))) ||
       (move.category === 'Special' && attacker.abilityOn && attacker.hasAbility('Plus', 'Minus'))
   ) {
     atMods.push(6144);
@@ -852,7 +859,9 @@ export function calculateAtModsBWXY(
     (attacker.named('Cherrim') &&
      attacker.hasAbility('Flower Gift') &&
      field.hasWeather('Sun', 'Harsh Sunshine') &&
-     move.category === 'Physical')
+     move.category === 'Physical') ||
+     (attacker.hasAbility('Supercell') &&
+    field.hasWeather('Rain', 'Heavy Rain', 'Darkness', 'Thunderstorm'))
   ) {
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;

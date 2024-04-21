@@ -104,7 +104,8 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
       (pokemon.hasAbility('Sand Rush') && weather === 'Sand') ||
       (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
       (pokemon.hasAbility('Slush Rush', 'Ice Cleats') && ['Hail', 'Snow'].includes(weather)) ||
-      (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric')
+      (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric') ||
+      (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness'))
   ) {
     speedMods.push(8192);
   } else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
@@ -190,6 +191,12 @@ export function checkForecast(pokemon: Pokemon, weather?: Weather) {
     case 'Hail':
     case 'Snow':
       pokemon.types = ['Ice'];
+      break;
+    case 'Sand':
+      pokemon.types = ['Rock'];
+      break;
+    case 'Darkness':
+      pokemon.types = ['Dark'];
       break;
     default:
       pokemon.types = ['Normal'];
