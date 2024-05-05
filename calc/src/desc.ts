@@ -996,7 +996,7 @@ function getDescriptionLevels(attacker: Pokemon, defender: Pokemon) {
   }
   // There's an argument for showing any level thats not 100, but VGC and LC players
   // probably would rather not see level cruft in their calcs
-  const elide = [100, 50, 5].includes(attacker.level);
+  const elide = [120, 100, 50, 5].includes(attacker.level);
   const level = elide ? '' : `Lvl ${attacker.level}`;
   return [level, level];
 }
