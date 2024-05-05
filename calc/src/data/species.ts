@@ -13539,7 +13539,31 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   bs: { hp: 50, at: 60, df: 152, sa: 80, sd: 120, sp: 50 },
   weightkg: 159,
   abilities: { 0: 'Levitate' }
-}
+},
+'Feidan': {
+  types: ['Steel', 'Ghost'],
+  bs: { hp: 80, at: 80, df: 130, sa: 80, sd: 130, sp: 25 },
+  weightkg: 125,
+  abilities: { 0: 'Iron Barbs' }
+},
+'Porygon2-Rhinian': {
+  types: ['Grass', 'Electric'],
+  bs: { hp: 100, at: 90, df: 95, sa: 100, sd: 90, sp: 40 },
+  weightkg: 32.5,
+  abilities: { 0: 'Electric Surge' }
+},
+'Porygon-Z-Rhinian': {
+  types: ['Grass', 'Electric'],
+  bs: { hp: 100, at: 95, df: 65, sa: 135, sd: 60, sp: 80 },
+  weightkg: 34,
+  abilities: { 0: 'Adaptability' }
+},
+'Niandertroll': {
+  types: ['Grass', 'Steel'],
+  bs: { hp: 108, at: 127, df: 106, sa: 90, sd: 94, sp: 75 },
+  weightkg: 345,
+  abilities: { 0: 'Seed Sower' }
+},
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
