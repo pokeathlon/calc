@@ -122,22 +122,22 @@ $(".level").bind("keyup change", function () {
 $(".nature").bind("keyup change", function () {
 	calcStats($(this).closest(".poke-info"));
 });
-$(".hp .base, .hp .evs, .hp .ivs, .fusion-selector").bind("keyup change", function () {
+$(".hp .base, .hp .evs, .hp .ivs").bind("keyup change", function () {
 	calcHP($(this).closest(".poke-info"));
 });
-$(".at .base, .at .evs, .at .ivs, .fusion-selector").bind("keyup change", function () {
+$(".at .base, .at .evs, .at .ivs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'at');
 });
-$(".df .base, .df .evs, .df .ivs, .fusion-selector").bind("keyup change", function () {
+$(".df .base, .df .evs, .df .ivs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'df');
 });
-$(".sa .base, .sa .evs, .sa .ivs, .fusion-selector").bind("keyup change", function () {
+$(".sa .base, .sa .evs, .sa .ivs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sa');
 });
-$(".sd .base, .sd .evs, .sd .ivs, .fusion-selector").bind("keyup change", function () {
+$(".sd .base, .sd .evs, .sd .ivs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sd');
 });
-$(".sp .base, .sp .evs, .sp .ivs, .fusion-selector").bind("keyup change", function () {
+$(".sp .base, .sp .evs, .sp .ivs").bind("keyup change", function () {
 	calcStat($(this).closest(".poke-info"), 'sp');
 });
 $(".sl .base").keyup(function () {
@@ -959,9 +959,6 @@ function createPokemon(pokeInfo) {
 		var isRandoms = $("#randoms").prop("checked");
 		var set = isRandoms ? randdex[name] : setdex[name][setName];
 
-		var fusionSetName = pokeInfo.find("input.fusion-selector").val();
-		var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
-
 		var ivs = {};
 		var evs = {};
 		for (var i = 0; i < LEGACY_STATS[gen].length; i++) {
@@ -1013,16 +1010,6 @@ function createPokemon(pokeInfo) {
 			var pokemonName = setName.substring(0, setName.indexOf(" ("));
 			var species = pokedex[pokemonName];
 			name = (species.otherFormes || (species.baseSpecies && species.baseSpecies !== pokemonName)) ? pokeInfo.find(".forme").val() : pokemonName;
-		}
-
-		var fusionSetName = pokeInfo.find("input.fusion-selector").val();
-		var fusionName;
-		if (fusionSetName.indexOf("(") === -1) {
-			fusionName = fusionSetName;
-		} else {
-			var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
-			var fusionSpecies = pokedex[fusionName];
-			fusionName = (fusionSpecies.otherFormes || (fusionSpecies.baseSpecies && fusionSpecies.baseSpecies !== fusionName)) ? pokeInfo.find(".forme").val() : fusionName;
 		}
 
 		var baseStats = {};
@@ -1295,8 +1282,6 @@ $(".gen").change(function () {
 
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
-	$(".fusion-selector").val(getFirstValidSetOption().id);
-	$(".fusion-selector").change();
 });
 
 function getFirstValidSetOption() {
@@ -1552,40 +1537,6 @@ function loadDefaultLists() {
 			callback(getFirstValidSetOption());
 		}
 	});
-	$(".fusion-selector").select2({
-		formatResult: function (object) {
-			if ($("#randoms").prop("checked")) {
-				return object.pokemon;
-			} else {
-				return object.set ? ("&nbsp;&nbsp;&nbsp;" + object.set) : ("<b>" + object.text + "</b>");
-			}
-		},
-		query: function (query) {
-			var pageSize = 30;
-			var results = [];
-			var options = getSetOptions();
-			for (var i = 0; i < options.length; i++) {
-				var option = options[i];
-				var pokeName = option.pokemon.toUpperCase();
-				if (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
-					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
-				})) {
-					if ($("#randoms").prop("checked")) {
-						if (option.id) results.push(option);
-					} else {
-						results.push(option);
-					}
-				}
-			}
-			query.callback({
-				results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
-				more: results.length >= query.page * pageSize
-			});
-		},
-		initSelection: function (element, callback) {
-			callback(getFirstValidSetOption());
-		}
-	});
 }
 
 function allPokemon(selector) {
@@ -1651,8 +1602,6 @@ $(document).ready(function () {
 	});
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
-	$(".fusion-selector").val(getFirstValidSetOption().id);
-	$(".fusion-selector").change();
 	$(".terrain-trigger").bind("change keyup", getTerrainEffects);
 });
 
