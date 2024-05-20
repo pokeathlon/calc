@@ -1520,6 +1520,10 @@ export function calculateDefenseSMSSSV(
     defense = pokeRound((defense * 3) / 2);
     desc.weather = field.weather;
   }
+  if (field.hasWeather('Fallout') && defender.hasType('Nuclear')) {
+    defense = pokeRound((defense * 4) / 3);
+    desc.weather = field.weather;
+  }
 
   const dfMods = calculateDfModsSMSSSV(
     gen,
@@ -1668,6 +1672,11 @@ function calculateBaseDamageSMSSSV(
       (field.hasWeather('Darkness') && move.hasType('Fairy'))
     ) {
       baseDamage = pokeRound(OF32(baseDamage * 3072) / 4096);
+      desc.weather = field.weather;
+    } else if (
+      (field.hasWeather('Thunderstorm') && move.hasType('Electric'))
+    ) {
+      baseDamage = pokeRound(OF32(baseDamage * 6144) / 4096);
       desc.weather = field.weather;
     }
   }

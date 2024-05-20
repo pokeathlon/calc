@@ -548,6 +548,20 @@ function getEndOfTurn(
     && defender.hasType('Water')) {
       damage -= Math.floor(defender.maxHP() / 8);
       texts.push('Vaporization damage')
+  } else if (field.hasWeather('Thunderstorm') && (!defender.hasType("Electric", "Ground") || !defender.hasAbility("Lightning Rod", "Motor Drive", "Volt Absorb", "Magic Guard"))) {
+    const electricType = gen.types.get('electric' as ID)!;
+    const effectiveness =
+      electricType.effectiveness[defender.types[0]]! *
+      (defender.types[1] ? electricType.effectiveness[defender.types[1]]! : 1);
+    damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+    texts.push('Thunderstorm');
+  } else if (field.hasWeather('Fallout') && (!defender.hasType("Nuclear", "Steel") || !defender.hasAbility("Magic Guard"))) {
+    const nuclearType = gen.types.get('nuclear' as ID)!;
+    const effectiveness =
+      nuclearType.effectiveness[defender.types[0]]! *
+      (defender.types[1] ? nuclearType.effectiveness[defender.types[1]]! : 1);
+    damage -= Math.floor((effectiveness * defender.maxHP()) / 8);
+    texts.push('Fallout');
   }
 
   const loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');
