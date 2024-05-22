@@ -23,6 +23,7 @@ import {
   checkForecast,
   checkInfiltrator,
   checkIntimidate,
+  checkPetrify,
   checkIntrepidSword,
   checkItem,
   checkMultihitBoost,
@@ -80,6 +81,8 @@ export function calculateSMSSSV(
 
   checkIntimidate(gen, attacker, defender);
   checkIntimidate(gen, defender, attacker);
+  checkPetrify(gen, attacker, defender);
+  checkPetrify(gen, defender, attacker);
   checkDownload(attacker, defender, field.isWonderRoom);
   checkDownload(defender, attacker, field.isWonderRoom);
   checkIntrepidSword(attacker, gen);
@@ -232,6 +235,7 @@ export function calculateSMSSSV(
   let isNormalize = false;
   let isFoundry = false;
   let isIntoxicate = false;
+  let isAtomizate = false;
   const noTypeChange = move.named(
     'Revelation Dance',
     'Judgment',
@@ -249,7 +253,7 @@ export function calculateSMSSSV(
     if ((isAerilate = attacker.hasAbility('Aerilate') && normal)) {
       type = 'Flying';
       //Kablooey is written as a separate statement as to not trigger "isGalvanize", and avoid gaining the damage boost
-    } else if ((isGalvanize = attacker.hasAbility('Galvanize') && normal) || (attacker.hasAbility('Kablooey') && normal)) {
+    } else if ((isGalvanize = attacker.hasAbility('Galvanize', 'Energizate') && normal) || (attacker.hasAbility('Kablooey') && normal)) {
       type = 'Electric';
     } else if ((isLiquidVoice = attacker.hasAbility('Liquid Voice') && !!move.flags.sound)) {
       type = 'Water';
@@ -263,8 +267,10 @@ export function calculateSMSSSV(
       type = 'Fire';
     } else if ((isIntoxicate = attacker.hasAbility('Intoxicate') && normal)) {
       type = 'Poison';
+    } else if ((isAtomizate = attacker.hasAbility('Atomizate') && normal)) {
+      type = 'Nuclear';
     }
-    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate) {
+    if (isGalvanize || isPixilate || isRefrigerate || isAerilate || isNormalize || isFoundry || isIntoxicate ||isAtomizate) {
       desc.attackerAbility = attacker.ability;
       hasAteAbilityTypeChange = true;
     } else if (isLiquidVoice || attacker.hasAbility('Kablooey')) {
@@ -447,7 +453,9 @@ export function calculateSMSSSV(
       (move.priority > 0 && defender.hasAbility('Queenly Majesty', 'Dazzling', 'Armor Tail')) ||
       (move.hasType('Ground') && defender.hasAbility('Earth Eater')) ||
       (move.flags.wind && defender.hasAbility('Wind Rider')) || 
-      (move.hasType('Flying') && defender.hasAbility('Windy Wall', 'Wind Force'))
+      (move.hasType('Flying') && defender.hasAbility('Windy Wall', 'Wind Force')) ||
+      (move.hasType('Fairy') && defender.hasAbility('Disenchant')) ||
+      (move.hasType('Nuclear') && defender.hasAbility('Lead Skin'))
   ) {
     desc.defenderAbility = defender.ability;
     return result;
@@ -663,7 +671,7 @@ export function calculateSMSSSV(
       // Check if lost -ate ability. Typing stays the same, only boost is lost
       // Cannot be regained during multihit move and no Normal moves with stat drawbacks
       hasAteAbilityTypeChange = hasAteAbilityTypeChange &&
-        attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Foundry', 'Intoxicate');
+        attacker.hasAbility('Aerilate', 'Galvanize', 'Pixilate', 'Refrigerate', 'Normalize', 'Foundry', 'Intoxicate', 'Atomizate');
 
       if ((move.dropsStats && move.timesUsed! > 1)) {
         // Adaptability does not change between hits of a multihit, only between turns
@@ -1114,13 +1122,15 @@ export function calculateBPModsSMSSSV(
     (attacker.hasAbility('Mega Launcher') && move.flags.pulse) ||
     (attacker.hasAbility('Strong Jaw') && move.flags.bite) ||
     (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
-    (attacker.hasAbility('Sharpness') && move.flags.slicing)
+    (attacker.hasAbility('Sharpness') && move.flags.slicing) ||
+    (attacker.hasAbility('Acceleration') && move.priority>0)
   ) {
     bpMods.push(6144);
     desc.attackerAbility = attacker.ability;
   }
 
-  if (attacker.hasAbility('Spectral Jaws') && move.flags.bite) {
+  if (attacker.hasAbility('Spectral Jaws') && move.flags.bite ||
+     attacker.hasAbility('Sound Boost') && move.flags.sound) {
     bpMods.push(5325);
     desc.attackerAbility = attacker.ability;
   }
@@ -1397,7 +1407,8 @@ export function calculateAtModsSMSSSV(
   } else if (
     (attacker.hasAbility('Steelworker') && move.hasType('Steel')) ||
     (attacker.hasAbility('Dragon\'s Maw') && move.hasType('Dragon')) ||
-    (attacker.hasAbility('Rocky Payload') && move.hasType('Rock')))
+    (attacker.hasAbility('Rocky Payload') && move.hasType('Rock')) ||
+  (attacker.hasAbility('Elementalist') && move.hasType('Electric', 'Water', 'Fire')))
   {
     atMods.push(6144);
     desc.attackerAbility = attacker.ability;
@@ -1410,7 +1421,9 @@ export function calculateAtModsSMSSSV(
   } else if (
     (attacker.hasAbility('Water Bubble') && move.hasType('Water')) ||
     (attacker.hasAbility('Huge Power', 'Pure Power') && move.category === 'Physical') ||
-    (attacker.hasAbility('Athenian') && move.category === 'Special')
+    (attacker.hasAbility('Athenian') && move.category === 'Special') ||
+    (attacker.hasAbility('Sharp Coral') ||
+    (defender.hasAbility('Sharp Coral')))
   ) {
     atMods.push(8192);
     desc.attackerAbility = attacker.ability;

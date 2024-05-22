@@ -251,6 +251,26 @@ const XY = BW.concat([
   'Venomous',
   'Wind Force',
   'Winter Joy',
+  // Uranium
+  'Acceleration',
+  'Atomizate',
+  'Blood Lust',
+  'Chernobyl',
+  'Deep Freeze',
+  'Disenchant',
+  'Elementalist',
+  'Energizate',
+  'Geiger Sense',
+  'Infuriate',
+  'Lazy',
+  'Lead Skin',
+  'Night Terror',
+  'Petrify',
+  'Quick Charge',
+  'Rebuild',
+  'Sharp Coral',
+  'Sound Boost',
+  'Stormbringer'
 ]);
 
 const SM = XY.concat([
