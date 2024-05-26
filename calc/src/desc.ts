@@ -456,6 +456,14 @@ function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
     damage += Math.floor((effectiveness * defender.maxHP()) / 8);
     texts.push('Steelsurge');
   }
+  if (defenderSide.isStealthCoals && !defender.hasAbility('Magic Guard', 'Mountaineer', 'Undeterred')) {
+    const fireType = gen.types.get('fire' as ID)!;
+    const effectiveness =
+      fireType.effectiveness[defender.types[0]]! *
+      (defender.types[1] ? fireType.effectiveness[defender.types[1]]! : 1);
+    damage += Math.floor((effectiveness * defender.maxHP()) / 8);
+    texts.push('Stealth Coals');
+  }
 
   if (!defender.hasType('Flying') &&
       !defender.hasAbility('Magic Guard', 'Levitate', 'Undeterred') &&

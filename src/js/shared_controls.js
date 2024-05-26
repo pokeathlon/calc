@@ -1119,6 +1119,7 @@ function createField() {
 	var isWonderRoom = $("#wonderroom").prop("checked");
 	var isGravity = $("#gravity").prop("checked");
 	var isSR = [$("#srL").prop("checked"), $("#srR").prop("checked")];
+	var isStealthCoals = [$("#stealthcoalsL").prop("checked"), $("#stealthcoalsR").prop("checked")];
 	var weather;
 	var spikes;
 	if (gen === 2) {
@@ -1152,7 +1153,7 @@ function createField() {
 
 	var createSide = function (i) {
 		return new calc.Side({
-			spikes: spikes[i], isSR: isSR[i], steelsurge: steelsurge[i],
+			spikes: spikes[i], isSR: isSR[i], isStealthCoals: isStealthCoals[i], steelsurge: steelsurge[i],
 			vinelash: vinelash[i], wildfire: wildfire[i], cannonade: cannonade[i], volcalith: volcalith[i],
 			isReflect: isReflect[i], isLightScreen: isLightScreen[i],
 			isProtected: isProtected[i], isSeeded: isSeeded[i], isForesight: isForesight[i], isZealousFlock: isZealousFlock[i],
@@ -1318,6 +1319,8 @@ function clearField() {
 	$("#gravity").prop("checked", false);
 	$("#srL").prop("checked", false);
 	$("#srR").prop("checked", false);
+	$("#stealthcoalsL").prop("checked", false);
+	$("#stealthcoalsR").prop("checked", false);
 	$("#spikesL0").prop("checked", true);
 	$("#spikesR0").prop("checked", true);
 	$("#gscSpikesL").prop("checked", false);
