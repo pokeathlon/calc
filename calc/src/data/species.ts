@@ -12951,7 +12951,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 490,
     abilities: { 0: 'Cloud Nine' }
 },
-'UFI': {
+'Ufi': {
     types: ['Psychic', 'Electric'],
     bs: { hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100 },
     weightkg: 9,
