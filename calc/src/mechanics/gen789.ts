@@ -768,6 +768,7 @@ export function calculateBasePowerSMSSSV(
     desc.moveBP = basePower;
     break;
   case 'Pursuit':
+  case 'Mindtrap':
     const switching = field.defenderSide.isSwitching === 'out';
     basePower = move.bp * (switching ? 2 : 1);
     if (switching) desc.isSwitching = 'out';
@@ -1291,6 +1292,11 @@ export function calculateBPModsSMSSSV(
     bpMods.push(4506);
     desc.attackerItem = attacker.item;
   }
+
+  if (attacker.item?.endsWith('Berry') && move.named('Spud Mortar')) {
+    bpMods.push(6144);
+    desc.attackerItem = attacker.item;
+  }
   return bpMods;
 }
 
@@ -1313,12 +1319,12 @@ export function calculateAttackSMSSSV(
     move.category = 'Special';
   }
   const attackStat =
-    move.named('Shell Side Arm') &&
-    getShellSideArmCategory(attacker, defender) === 'Physical'
+    (move.named('Shell Side Arm') &&
+    getShellSideArmCategory(attacker, defender) === 'Physical') || (attacker.hasAbility('Multitasker') && (attacker.stats.atk > attacker.stats.spa))
       ? 'atk'
       : move.named('Body Press')
         ? 'def'
-        : move.category === 'Special'
+        : move.category === 'Special' || (attacker.hasAbility('Multitasker') && (attacker.stats.spa > attacker.stats.atk))
           ? 'spa'
           : 'atk';
   desc.attackEVs =

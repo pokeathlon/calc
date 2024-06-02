@@ -13436,6 +13436,64 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   weightkg: 50,
   abilities: { 0: 'Own Tempo' }
 },
+'Sceptile-Delta-Mega': {
+  types: ['Dragon', 'Fighting'],
+  bs: { hp: 70, at: 110, df: 75, sa: 145, sd: 85, sp: 145 },
+  weightkg: 70,
+  abilities: { 0: 'Ring Rust' }
+},
+'Blaziken-Delta-Mega': {
+  types: ['Psychic', 'Flying'],
+  bs: { hp: 80, at: 160, df: 80, sa: 130, sd: 80, sp: 100 },
+  weightkg: 52,
+  abilities: { 0: 'Magic Guard' }
+},
+'Larvitar-Delta': {
+  types: ['Dragon', 'Psychic'],
+  bs: { hp: 50, at: 64, df: 50, sa: 45, sd: 50, sp: 41 },
+  weightkg: 72,
+  abilities: { 0: 'Synchronize' },
+  nfe: true
+},
+'Pupitar-Delta': {
+  types: ['Dragon', 'Psychic'],
+  bs: { hp: 70, at: 84, df: 70, sa: 65, sd: 70, sp: 51 },
+  weightkg: 152,
+  abilities: { 0: 'Synchronize' },
+  nfe: true
+},
+'Tyranitar-Delta': {
+  types: ['Dragon', 'Psychic'],
+  bs: { hp: 100, at: 134, df: 110, sa: 95, sd: 100, sp: 61 },
+  weightkg: 202,
+  abilities: { 0: 'Analytic' }
+},
+'Felapstan': {
+  types: ['Ghost', 'Electric'],
+  bs: { hp: 90, at: 70, df: 100, sa: 105, sd: 110, sp: 100 },
+  weightkg: 0.3,
+  abilities: { 0: 'Multitasker' }
+},
+"Tinkastab":{
+  types:  ["Steel", "Dark"],
+  bs:  {hp: 35, at: 64, df: 58, sa: 45, sd: 45, sp: 50},
+  weightkg: 0.3,
+  abilities:  {0: "Mold Breaker"},
+  nfe: true
+  },
+  "Tinkaslice":{
+    types:  ["Steel", "Dark"],
+    bs:  {hp: 45, at: 82, df: 78, sa: 55, sd: 55, sp: 65},
+    weightkg: 1.5,
+    abilities:  {0: "Mold Breaker"},
+    nfe: true
+    },
+  "Tinkashank":{
+    types:  ["Steel", "Dark"],
+    bs:  {hp: 70, at: 105, df: 85, sa: 70, sd: 77, sp: 95},
+    weightkg: 8.4,
+    abilities:  {0: "Mold Breaker"}
+    },
 
 //Pokeathlon
 'Bewitwing': {
@@ -13564,6 +13622,48 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   weightkg: 345,
   abilities: { 0: 'Seed Sower' }
 },
+"Scorching Kiln":{
+  types:  ["Ground", "Fire"],
+  bs:  {hp: 81, at: 63, df: 105, sa: 99, sd: 135, sp: 87},
+  weightkg: 120,
+  abilities:  {0: "Protosynthesis"}
+},
+"Berserker Gene":{
+  types:  ["Psychic", "Dragon"],
+  bs:  {hp: 99, at: 139, df: 101, sa: 51, sd: 93, sp: 107},
+  weightkg: 5,
+  abilities:  {0: "Protosynthesis"}
+},
+"Scaly Terror":{
+  types:  ["Bug", "Dragon"],
+  bs:  {hp: 75, at: 127, df: 73, sa: 97, sd: 83, sp: 115},
+  weightkg: 120,
+  abilities:  {0: "Protosynthesis"}
+ },
+"Pestri":{
+  types:  ["Poison", "Flying"],
+  bs:  {hp: 95, at: 60, df: 90, sa: 100, sd: 105, sp: 80},
+  weightkg: 70,
+  abilities:  {0: "Poison Point"}
+},
+"Sinister Sickle":{
+  types:  ["Poison", "Flying"],
+  bs:  {hp: 79, at: 121, df: 73, sa: 121, sd: 73, sp: 103},
+  weightkg: 150,
+  abilities:  {0: "Protosynthesis"}
+},
+"Grand Mirage":{
+  types:  ["Dark", "Fighting"],
+  bs:  {hp: 91, at: 115, df: 97, sa: 101, sd: 65, sp: 101},
+  weightkg: 120,
+  abilities:  {0: "Protosynthesis"}
+},
+"Magnegauss":{
+  types:  ["Electric", "Grass"],
+  bs:  {hp: 90, at: 60, df: 115, sa: 130, sd: 90, sp: 50},
+  weightkg: 140,
+  abilities:  {0: "Magnet Pull"}
+  },
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
