@@ -13396,7 +13396,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 },
 'Lunachi': {
     types: ['Fairy', 'Dark'],
-    bs: { hp: 99, at: 93, df: 82, sa: 93, sd: 92, sp: 121 },
+    bs: { hp: 108, at: 87, df: 72, sa: 87, sd: 72, sp: 114 },
     weightkg: 11,
     abilities: { 0: 'Sacred Treasures' }
 },
