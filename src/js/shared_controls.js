@@ -596,8 +596,21 @@ $(".set-selector").change(function () {
 	var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 	var setName = fullSetName.substring(fullSetName.indexOf("(") + 1, fullSetName.lastIndexOf(")"));
 	var pokemon = pokedex[pokemonName];
+
+	var pokeObj = $(this).closest(".poke-info");
+
+	var abilityObj = pokeObj.find(".ability");
+	var itemObj = pokeObj.find(".item");
+	var moveObj;
+	var formeObj = $(this).siblings().find(".forme").parent();
+	var baseForme;
+
+	// Fusion info
+	var fusionSetName = pokeObj.find("input.fusion-selector").val();
+	var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
+	var fusion = pokedex[fusionName];
+
 	if (pokemon) {
-		var pokeObj = $(this).closest(".poke-info");
 		var isAutoTera =
 		(startsWith(pokemonName, "Ogerpon") && endsWith(pokemonName, "Tera")) ||
 		pokemonName === 'Terapagos-Stellar';
@@ -608,20 +621,56 @@ $(".set-selector").change(function () {
 		stellarButtonsVisibility(pokeObj, 0);
 		pokeObj.find(".boostedStat").val("");
 		pokeObj.find(".analysis").attr("href", smogonAnalysis(pokemonName));
+
+		if (pokemon && fusion && pokeObj.find("#fusionToggle").prop("checked")) { 
+		
+		// FUSION STUFF
+		//Fusion Type control
 		pokeObj.find(".type1").val(pokemon.types[0]);
-		pokeObj.find(".type2").val(pokemon.types[1]);
-		pokeObj.find(".hp .base").val(pokemon.bs.hp);
+		if ((pokemon.types[0] == fusion.types[1]) || (!fusion.types[1] && (fusion.types[0] != pokemon.types[0]))) { // type 2 matching type 1 or non-existent
+			pokeObj.find(".type2").val(fusion.types[0]);
+		} else {
+			pokeObj.find(".type2").val(fusion.types[1]);
+		}
+		//Fusion Stat control
 		var i;
-		for (i = 0; i < LEGACY_STATS[gen].length; i++) {
-			pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(pokemon.bs[LEGACY_STATS[gen][i]]);
+		for (i = 0; i < LEGACY_STATS[gen].length; i++) { // Not sure why the old code didn't work, but this stupid thing does so...
+			switch (LEGACY_STATS[gen][i]) {
+				case "hp":
+					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+				break;
+				case "sa":
+					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+				break;
+				case "sd":
+					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+				break;
+				case "at":
+					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+				break;
+				case "df":
+					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+				break;
+				case "sp":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+				break;
+			}
+		}
+		} 
+		if (!pokeObj.find("#fusionToggle").prop("checked")) {
+			pokeObj.find(".type1").val(pokemon.types[0]);
+			pokeObj.find(".type2").val(pokemon.types[1]);
+	
+			pokeObj.find(".hp .base").val(pokemon.bs.hp);
+			var i;
+			for (i = 0; i < LEGACY_STATS[gen].length; i++) {
+				pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(pokemon.bs[LEGACY_STATS[gen][i]]);
+			}
 		}
 		pokeObj.find(".boost").val(0);
 		pokeObj.find(".percent-hp").val(100);
 		pokeObj.find(".status").val("Healthy");
 		$(".status").change();
-		var moveObj;
-		var abilityObj = pokeObj.find(".ability");
-		var itemObj = pokeObj.find(".item");
 		var randset = $("#randoms").prop("checked") ? randdex[pokemonName] : undefined;
 		var regSets = pokemonName in setdex && setName in setdex[pokemonName];
 
@@ -751,15 +800,13 @@ $(".set-selector").change(function () {
 			if (is50lvl) pokeObj.find(".level").val(50);
 			//if (isDoubles) field.gameType = 'Doubles'; *TODO*
 		}
-		var formeObj = $(this).siblings().find(".forme").parent();
 		itemObj.prop("disabled", false);
-		var baseForme;
 		if (pokemon.baseSpecies && pokemon.baseSpecies !== pokemon.name) {
 			baseForme = pokedex[pokemon.baseSpecies];
 		}
-		if (pokemon.otherFormes) {
+		if (pokemon.otherFormes && !pokeObj.find("#fusionToggle").prop("checked")) { // It was causing forms to overwrite the pokeObj with fusions for some reason, so forms begone with fusion
 			showFormes(formeObj, pokemonName, pokemon, pokemonName);
-		} else if (baseForme && baseForme.otherFormes) {
+		} else if (baseForme && baseForme.otherFormes && !pokeObj.find("#fusionToggle").prop("checked")) {
 			showFormes(formeObj, pokemonName, baseForme, pokemon.baseSpecies);
 		} else {
 			formeObj.hide();
@@ -773,6 +820,26 @@ $(".set-selector").change(function () {
 			pokeObj.find(".gender").val("");
 		} else pokeObj.find(".gender").parent().show();
 	}
+});
+
+$(".fusionToggle").change(function () {
+	var pokeObj = $(this).closest(".poke-info");
+	var oldSet = pokeObj.find("input.set-selector").val()
+	var setVal = $(".set-selector").val(oldSet); 
+	setVal.change();
+	
+	console.log($("input.set-selector").val())
+	console.log($(".set-selector").val())
+});
+
+$(".fusion-selector").change(function () {
+	var pokeObj = $(this).closest(".poke-info");
+	var oldSet = pokeObj.find("input.set-selector").val()
+	var setVal = $(".set-selector").val(oldSet);  
+	setVal.change();
+	
+	console.log($("input.set-selector").val())
+	console.log($(".set-selector").val())
 });
 
 function formatMovePool(moves) {
@@ -1297,6 +1364,9 @@ $(".gen").change(function () {
 
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
+
+	$(".fusion-selector").val(getFirstValidFusionOption().id);
+	$(".fusion-selector").change();
 });
 
 function getFirstValidSetOption() {
@@ -1304,6 +1374,15 @@ function getFirstValidSetOption() {
 	// NB: The first set is never valid, so we start searching after it.
 	for (var i = 1; i < sets.length; i++) {
 		if (sets[i].id && sets[i].id.indexOf('(Blank Set)') === -1) return sets[i];
+	}
+	return undefined;
+}
+
+function getFirstValidFusionOption() {
+	var sets = getFusionOptions();
+	// NB: The first set is never valid, so we start searching after it.
+	for (var i = 1; i < sets.length; i++) {
+		if (sets[i].id) return sets[i];
 	}
 	return undefined;
 }
@@ -1407,6 +1486,26 @@ function getSetOptions(sets) {
 				id: pokeName + " (Blank Set)"
 			});
 		}
+	}
+	return setOptions;
+}
+
+function getFusionOptions(sets) {
+	var setsHolder = sets;
+	if (setsHolder === undefined) {
+		setsHolder = pokedex;
+	}
+	var pokeNames = Object.keys(setsHolder);
+	pokeNames.sort();
+	var setOptions = [];
+	for (var i = 0; i < pokeNames.length; i++) {
+		var pokeName = pokeNames[i];
+			setOptions.push({ // This provides only blank sets for the pokémon.
+				pokemon: pokeName,
+				set: pokeName,
+				text: pokeName,
+				id: pokeName + " (Blank Set)"
+			});
 	}
 	return setOptions;
 }
@@ -1551,7 +1650,51 @@ function loadDefaultLists() {
 			});
 		},
 		initSelection: function (element, callback) {
-			callback(getFirstValidSetOption());
+			var fullSetName = $(".fusion-selector").val();
+			var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
+			if((pokemonName != "Abomasnow") || (!pokemonName)) {
+				callback(getFirstValidFusionOption());
+			}
+		}
+	});
+
+	$(".fusion-selector").select2({
+		formatResult: function (object) {
+			if ($("#randoms").prop("checked")) {
+				return object.pokemon;
+			} else {
+				return object.set ? ("&nbsp;&nbsp;&nbsp;" + object.set) : ("<b>" + object.text + "</b>");
+			}
+		},
+		query: function (query) {
+			var pageSize = 30;
+			var results = [];
+			var options = getFusionOptions();
+			for (var i = 0; i < options.length; i++) {
+				var option = options[i];
+				var pokeName = option.pokemon.toUpperCase();
+				if (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
+					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
+				})) {
+					if ($("#randoms").prop("checked")) {
+						if (option.id) results.push(option);
+					} else {
+						results.push(option);
+					}
+				}
+			}
+			query.callback({
+				results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
+				more: results.length >= query.page * pageSize
+			});
+		},
+
+		initSelection: function (element, callback) {
+			var fullSetName = $(".fusion-selector").val();
+			var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
+			if((pokemonName != "Abomasnow") || (!pokemonName)) {
+				callback(getFirstValidFusionOption());
+			}
 		}
 	});
 }
@@ -1596,6 +1739,35 @@ function loadCustomList(id) {
 			callback(data);
 		}
 	});
+
+	$("#" + id + " .fusion-selector").select2({
+		formatResult: function (set) {
+			return (set.nickname ? set.pokemon : set.id);
+		},
+		query: function (query) {
+			var pageSize = 30;
+			var results = [];
+			var options = getFusionOptions();
+			for (var i = 0; i < options.length; i++) {
+				var option = options[i];
+				var pokeName = option.pokemon.toUpperCase();
+				var setName = option.set ? option.set.toUpperCase() : option.set;
+				if (option.isCustom && option.set && (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
+					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0 || setName.indexOf(term) === 0 || setName.indexOf("-" + term) >= 0 || setName.indexOf(" " + term) >= 0;
+				}))) {
+					results.push(option);
+				}
+			}
+			query.callback({
+				results: results.slice((query.page - 1) * pageSize, query.page * pageSize),
+				more: results.length >= query.page * pageSize
+			});
+		},
+		initSelection: function (element, callback) {
+			var data = "";
+			callback(data);
+		}
+	});
 }
 
 $(document).ready(function () {
@@ -1620,6 +1792,9 @@ $(document).ready(function () {
 	$(".set-selector").val(getFirstValidSetOption().id);
 	$(".set-selector").change();
 	$(".terrain-trigger").bind("change keyup", getTerrainEffects);
+	
+	$(".fusion-selector").val(getFirstValidFusionOption().id);
+	$(".fusion-selector").change();
 });
 
 /* Click-to-copy function */

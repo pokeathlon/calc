@@ -921,7 +921,9 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   if (description.isSwordOfRuin) {
     output += 'Sword of Ruin ';
   }
-  output += description.attackerName + ' ';
+  output += description.attackerName;
+  //output += ' / ' FUSION + 'Babasur ';
+  output += ' ';
   if (description.isHelpingHand) {
     output += 'Helping Hand ';
   }
@@ -979,6 +981,7 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
     output += `Tera ${description.defenderTera} `;
   }
   output += description.defenderName;
+  //fusion stuff here
   if (description.weather && description.terrain) {
     // do nothing
   } else if (description.weather) {

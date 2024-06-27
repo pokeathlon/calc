@@ -144,6 +144,14 @@
         <fieldset class="poke-info" id="p1">
             <legend align="center">Pok&eacute;mon 1</legend>
             <input type="text" class="set-selector calc-trigger" />
+            <!---->
+                <fieldset class="fusion-info">
+                    <legend align="center">Fuse</legend>
+                    <input type="text" class="fusion-selector calc-trigger" />
+                    <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger">
+                    <button id="swap" class="swap-button">Swap</button>
+                </fieldset>
+           <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">
                 <input type="checkbox" id="importedSets" /> Only show imported sets <br />
                 <button id="clearSets">Clear Imported Sets</button>
@@ -176,13 +184,6 @@
                     -->
                     <input class="level calc-trigger" id="levelL1" value="100" inputmode="decimal" />
                 </div>
-                   <!--
-                    THE CODE BELOW THIS IS FOR FUSION COMPONENT
-                    
-                <input type="text" class="set-selector calc-trigger" />
-                    
-                    THE CODE ABOVE THIS IS FOR FUSION COMPONENT
-                    -->
                 <div class="hide">
                     <label for="weightL1">Weight (kg)</label>
                     <input class="weight calc-trigger" id="weightL1" value="10.0" />
@@ -1100,6 +1101,12 @@
         <fieldset class="poke-info" id="p2">
             <legend align="center">Pok&eacute;mon 2</legend>
             <input type="text" class="set-selector calc-trigger" />
+             <!---->
+            
+             <input type="text" class="fusion-selector calc-trigger" />
+             <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger"> Fusion (body) <br />
+             
+            <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">
                 <input type="checkbox" id="importedSets" /> Only show imported sets <br />
                 <button id="clearSets">Clear Imported Sets</button>

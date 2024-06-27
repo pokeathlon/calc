@@ -221,6 +221,16 @@ th {
     text-align: center;
     width: 27.5em;
 }
+.fusion-info {
+    text-align: left;
+    width: 31em;
+    padding: 3px 3px;
+    margin: 1px;
+}
+.swap-button {
+    float: right;
+    margin-top: 4px;
+}
 .holder-0 {
     position: absolute;
     top: 151px;
@@ -371,6 +381,9 @@ th {
 }
 .set-selector {
     width: 100%;
+}.fusion-selector {
+    width: 70%;
+    padding: 3px 3px;
 }
 .info-selectors select {
     width: 12em;
