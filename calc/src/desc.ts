@@ -922,7 +922,7 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
     output += 'Sword of Ruin ';
   }
   output += description.attackerName;
-  //output += ' / ' FUSION + 'Babasur ';
+  //output += ' - ' + FUSION;
   output += ' ';
   if (description.isHelpingHand) {
     output += 'Helping Hand ';

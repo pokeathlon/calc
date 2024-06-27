@@ -626,12 +626,31 @@ $(".set-selector").change(function () {
 		
 		// FUSION STUFF
 		//Fusion Type control
+		if (pokemonName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for head
+			pokemon.types.reverse();
+		}
+
+		if (((pokemon.types[0] == "Normal") || (pokemon.types[0] == "Flying")) && ((pokemon.types[1] == "Normal") || (pokemon.types[1] == "Flying"))) { //Flying-Normal exceptions for head
+			pokemon.types[0] = "Flying";
+			pokemon.types.splice(1, 1);
+		}
+
+		if (fusionName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for body
+			fusion.types.reverse();
+		}
+
+		if (((fusion.types[0] == "Normal") || (fusion.types[0] == "Flying")) && ((fusion.types[1] == "Normal") || (fusion.types[1] == "Flying"))) { //Flying-Normal exceptions for body
+			fusion.types[0] = "Flying";
+			fusion.types.splice(1, 1);
+		}
+
 		pokeObj.find(".type1").val(pokemon.types[0]);
 		if ((pokemon.types[0] == fusion.types[1]) || (!fusion.types[1] && (fusion.types[0] != pokemon.types[0]))) { // type 2 matching type 1 or non-existent
 			pokeObj.find(".type2").val(fusion.types[0]);
 		} else {
 			pokeObj.find(".type2").val(fusion.types[1]);
 		}
+
 		//Fusion Stat control
 		var i;
 		for (i = 0; i < LEGACY_STATS[gen].length; i++) { // Not sure why the old code didn't work, but this stupid thing does so...
@@ -825,21 +844,22 @@ $(".set-selector").change(function () {
 $(".fusionToggle").change(function () {
 	var pokeObj = $(this).closest(".poke-info");
 	var oldSet = pokeObj.find("input.set-selector").val()
-	var setVal = $(".set-selector").val(oldSet); 
+	var setVal = pokeObj.find(".set-selector").val(oldSet); 
 	setVal.change();
-	
-	console.log($("input.set-selector").val())
-	console.log($(".set-selector").val())
 });
 
 $(".fusion-selector").change(function () {
 	var pokeObj = $(this).closest(".poke-info");
 	var oldSet = pokeObj.find("input.set-selector").val()
-	var setVal = $(".set-selector").val(oldSet);  
+	var setVal = pokeObj.find(".set-selector").val(oldSet);  
 	setVal.change();
-	
-	console.log($("input.set-selector").val())
-	console.log($(".set-selector").val())
+});
+
+$("#swap1").click(function () {
+	console.log("hi");
+});
+$("#swap2").click(function () {
+	console.log("hi");
 });
 
 function formatMovePool(moves) {
