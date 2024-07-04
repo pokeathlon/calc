@@ -856,7 +856,11 @@ $(".fusion-selector").change(function () {
 });
 
 $("#swap1").click(function () {
-	console.log("hi");
+	console.log("I'm not done yet :(")
+	var pokeObj = $(this).closest(".poke-info");
+	var oldSet = pokeObj.find("input.set-selector").val()
+	var setVal = pokeObj.find(".set-selector").val(oldSet);  
+	setVal.change();
 });
 $("#swap2").click(function () {
 	console.log("hi");
@@ -1826,3 +1830,12 @@ $("#mainResult").click(function () {
 		}, 1500);
 	});
 });
+
+function collapse(element) {
+    var content = element.nextElementSibling;
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
+}

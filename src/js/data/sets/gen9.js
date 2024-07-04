@@ -7652,7 +7652,400 @@ var SETDEX_SV = {
         },
         'moves': ['Shore Up', 'Stealth Rock', 'Earthquake', 'Toxic']
     }
+},
+'Poliwrath-Mega': {
+  'Sleeper Offense': {
+      "level": 120,
+      'ability': 'No Guard',
+      'item': 'Poliwrathite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Hypnosis', 'Focus Punch', 'Dynamic Punch', 'Liquidation']
+  }
+},
+'Donphan-Mega': {
+  'Offensive Spinner': {
+      "level": 120,
+      'ability': 'Irrelephant',
+      'item': 'Donphanite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Earthquake', 'Knock Off', 'Ice Shard', 'Rapid Spin']
+  }
+},
+
+'Meganium-Mega': {
+  'Specially Defensive': {
+      "level": 120,
+      'ability': 'Magic Bounce',
+      'item': 'Meganiumite',
+      'nature': 'Calm',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 4,
+          'sd': 252
+      },
+      'moves': ['Moonblast', 'Giga Drain', 'Leech Seed', 'Synthesis']
+  }
+},
+
+'Meganium-Mega': {
+  'Calm Mind': {
+      "level": 120,
+      'ability': 'Magic Bounce',
+      'item': 'Meganiumite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Moonblast', 'Giga Drain', 'Calm Mind', 'Synthesis']
+  }
+},
+
+'Crawdaunt-Mega': {
+  'Dragon Dance': {
+      "level": 120,
+      'ability': 'Adaptability',
+      'item': 'Crawdauntite',
+      'nature': 'Adamant',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Dragon Dance', 'Crabhammer', 'Knock Off', 'Aqua Jet']
+  }
+},
+
+'Chatot-Mega': {
+  'Boombird': {
+      "level": 120,
+      'ability': 'Amplifier',
+      'item': 'Chatotite',
+      'nature': 'Timid',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Boomburst', 'Heat Wave', 'U-turn', 'Nasty Plot',]
+  }
+},
+
+'Spiritombite-Mega': {
+  'Remember Noctem in Base Form': {
+      "level": 120,
+      'ability': 'Tough Claws',
+      'item': 'Spiritombite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Knock Off', 'Brick Break', 'Sucker Punch', 'Shadow Sneak']
+  }
+},
+
+'Stunfisk-Mega': {
+  'Bulky Offense': {
+      "level": 120,
+      'ability': 'Athenian',
+      'item': 'Stunfiskite',
+      'nature': 'Modest',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'sa': 252,
+          'sp': 4
+      },
+      'moves': ['Earth Power', 'Thunderbolt', 'Volt Switch', 'Sludge Wave']
+  }
+},
+
+'Flygon-Mega': {
+  'Special Attacker': {
+      "level": 120,
+      'ability': 'Amplifier',
+      'item': 'Flygonite',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Drakon Voice', 'Boomburst', 'Fire Blast', 'U-turn']
+  }
+},
+
+'Marowak-Mega': {
+  'Physical Attacker': {
+      "level": 120,
+      'ability': 'Parental Bond',
+      'item': 'Marowakite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Earthquake', 'Shadow Claw', 'Shadow Sneak', 'Power-Up Punch']
+  }
+},
+
+'Milotic-Mega': {
+  'Physically Defensive': {
+      "level": 120,
+      'ability': 'Prism Guard',
+      'item': 'Milotite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Recover', 'Refresh', 'Moonblast', 'Scald']
+  }
+},
+
+'Zebstrika-Mega': {
+  'Special Attacker': {
+      "level": 120,
+      'ability': 'Competitive',
+      'item': 'Zebstrikite',
+      'nature': 'Timid',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
+  }
+},
+'Poliwrath-Mega': {
+  'Sleeper Offense': {
+      "level": 120,
+      'ability': 'No Guard',
+      'item': 'Poliwrathite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Hypnosis', 'Focus Punch', 'Dynamic Punch', 'Liquidation']
+  }
+},
+'Donphan-Mega': {
+  'Offensive Spinner': {
+      "level": 120,
+      'ability': 'Irrelephant',
+      'item': 'Donphanite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Earthquake', 'Knock Off', 'Ice Shard', 'Rapid Spin']
+  }
+},
+
+'Meganium-Mega': {
+  'Specially Defensive': {
+      "level": 120,
+      'ability': 'Magic Bounce',
+      'item': 'Meganiumite',
+      'nature': 'Calm',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 4,
+          'sd': 252
+      },
+      'moves': ['Moonblast', 'Giga Drain', 'Leech Seed', 'Synthesis']
+  }
+},
+
+'Meganium-Mega': {
+  'Calm Mind': {
+      "level": 120,
+      'ability': 'Magic Bounce',
+      'item': 'Meganiumite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Moonblast', 'Giga Drain', 'Calm Mind', 'Synthesis']
+  }
+},
+
+'Crawdaunt-Mega': {
+  'Dragon Dance': {
+      "level": 120,
+      'ability': 'Adaptability',
+      'item': 'Crawdauntite',
+      'nature': 'Adamant',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Dragon Dance', 'Crabhammer', 'Knock Off', 'Aqua Jet']
+  }
+},
+
+'Chatot-Mega': {
+  'Boombird': {
+      "level": 120,
+      'ability': 'Amplifier',
+      'item': 'Chatotite',
+      'nature': 'Timid',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Boomburst', 'Heat Wave', 'U-turn', 'Nasty Plot',]
+  }
+},
+
+'Spiritombite-Mega': {
+  'Remember Noctem in Base Form': {
+      "level": 120,
+      'ability': 'Tough Claws',
+      'item': 'Spiritombite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Knock Off', 'Brick Break', 'Sucker Punch', 'Shadow Sneak']
+  }
+},
+
+'Stunfisk-Mega': {
+  'Bulky Offense': {
+      "level": 120,
+      'ability': 'Athenian',
+      'item': 'Stunfiskite',
+      'nature': 'Modest',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'sa': 252,
+          'sp': 4
+      },
+      'moves': ['Earth Power', 'Thunderbolt', 'Volt Switch', 'Sludge Wave']
+  }
+},
+
+'Flygon-Mega': {
+  'Special Attacker': {
+      "level": 120,
+      'ability': 'Amplifier',
+      'item': 'Flygonite',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Drakon Voice', 'Boomburst', 'Fire Blast', 'U-turn']
+  }
+},
+
+'Marowak-Mega': {
+  'Physical Attacker': {
+      "level": 120,
+      'ability': 'Parental Bond',
+      'item': 'Marowakite',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Earthquake', 'Shadow Claw', 'Shadow Sneak', 'Power-Up Punch']
+  }
+},
+
+'Milotic-Mega': {
+  'Physically Defensive': {
+      "level": 120,
+      'ability': 'Prism Guard',
+      'item': 'Milotite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Recover', 'Refresh', 'Moonblast', 'Scald']
+  }
+},
+
+'Zebstrika-Mega': {
+  'Special Attacker': {
+      "level": 120,
+      'ability': 'Competitive',
+      'item': 'Zebstrikite',
+      'nature': 'Timid',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
+  }
 }
+
 
 
 };

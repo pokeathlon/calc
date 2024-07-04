@@ -145,12 +145,17 @@
             <legend align="center">Pok&eacute;mon 1</legend>
             <input type="text" class="set-selector calc-trigger" />
             <!---->
-                <fieldset class="fusion-info">
-                    <legend align="center">Fuse</legend>
+            <fieldset class="fusion-info">
+                <legend align="center" class="collapsible" onclick="collapse(this)">Fuse</legend>
+                <div class="content">
                     <input type="text" class="fusion-selector calc-trigger" />
                     <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger">
+                    <!--
                     <button id="swap1" class="swap-button">Swap</button>
-                </fieldset>
+                    -->
+                </div>
+            </fieldset>
+            
            <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">
                 <input type="checkbox" id="importedSets" /> Only show imported sets <br />
@@ -1103,10 +1108,14 @@
             <input type="text" class="set-selector calc-trigger" />
              <!---->
              <fieldset class="fusion-info">
-                <legend align="center">Fuse</legend>
+                <legend align="center" class="collapsible" onclick="collapse(this)">Fuse</legend>
+                <div class="content">
                 <input type="text" class="fusion-selector calc-trigger" />
                 <input type="checkbox" id="fusionToggle" class="fusionToggle terrain-trigger calc-trigger">
+                <!--
                 <button id="swap2" class="swap-button">Swap</button>
+                -->
+                </div>
             </fieldset>
             <!---->
             <span id="importedSetsOptions" style="width:auto; display:none">

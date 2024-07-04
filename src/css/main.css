@@ -537,3 +537,26 @@ table.field {
 .extraSetMoves {
     width: 100%;
 }
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+    text-align: center;
+    border: solid 1px #aaaaaa;
+    padding: 2px 2px;
+    position: relative;
+    cursor: pointer;
+    margin: -1px -3px 0;
+    display: inline-block;
+    width: 4em;
+    border-radius: 8px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
