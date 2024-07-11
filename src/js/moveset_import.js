@@ -23,6 +23,16 @@ function ExportPokemon(pokeInfo) {
 		}
 	}
 	finalText += pokemon.ability ? "Ability: " + pokemon.ability + "\n" : "";
+
+	// FUSION EXPORT
+	var fusionSetName = pokeInfo.find("input.fusion-selector").val();
+	var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
+
+	if (pokeInfo.find("#fusionToggle").prop("checked")) {
+		finalText += fusionName ? "Fusion: " + fusionName + "\n" : "";
+	}
+	//END OF FUSION EXPORT
+
 	if (gen > 2) {
 		var EVs_Array = [];
 		for (var stat in pokemon.evs) {

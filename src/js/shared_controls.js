@@ -856,12 +856,66 @@ $(".fusion-selector").change(function () {
 });
 
 $("#swap1").click(function () {
-	console.log("I'm not done yet :(")
+	
+	// Variable definitions
 	var pokeObj = $(this).closest(".poke-info");
-	var oldSet = pokeObj.find("input.set-selector").val()
-	var setVal = pokeObj.find(".set-selector").val(oldSet);  
-	setVal.change();
+	var poke = pokeObj.find("input.set-selector").val();
+	var fusion = pokeObj.find("input.fusion-selector").val();
+	var abilityObj = pokeObj.find(".ability").val();
+	var itemObj = pokeObj.find(".item").val();
+	var natureObj = pokeObj.find(".nature").val();
+
+	//evs
+	var evs = [];
+	for (i = 0; i < LEGACY_STATS[gen].length; i++) {
+		evs.push(pokeObj.find("." + LEGACY_STATS[gen][i] + " .evs").val());
+	}
+
+	//ivs
+	var ivs = [];
+	for (i = 0; i < LEGACY_STATS[gen].length; i++) {
+		ivs.push(pokeObj.find("." + LEGACY_STATS[gen][i] + " .ivs").val());
+	}
+
+	//moves
+	var moveObj = [];
+	for (i = 0; i < 4; i++) {
+		moveObj.push(pokeObj.find(".move" + (i + 1) + " select.move-selector").val());
+	}
+
+	//Variable cycle
+	var temp = poke;
+	poke = fusion;
+	fusion = temp;
+	
+
+	// Actual set swapping
+	pokeObj.find(".set-selector").val(poke);
+	pokeObj.find(".fusion-selector").val(fusion);
+
+	// Update set selector
+	pokeObj.find(".set-selector").change();
+
+	// Rewriting items, ability, moves, nature, evs
+	pokeObj.find(".ability").val(abilityObj);
+	pokeObj.find(".item").val(itemObj);
+	pokeObj.find(".nature").val(natureObj);
+
+	for (i = 0; i < LEGACY_STATS[gen].length; i++) {
+		pokeObj.find("." + LEGACY_STATS[gen][i] + " .evs").val(evs[i]);
+	}
+	for (i = 0; i < LEGACY_STATS[gen].length; i++) {
+		pokeObj.find("." + LEGACY_STATS[gen][i] + " .ivs").val(ivs[i]);
+	}
+	for (i = 0; i < 4; i++) {
+		pokeObj.find(".move" + (i + 1) + " select.move-selector").val(moveObj[i]);
+	}
+
+	// Recalculating stats after all of the above
+	calcHP(pokeObj);
+	calcStats(pokeObj);
 });
+
 $("#swap2").click(function () {
 	console.log("hi");
 });
@@ -1674,10 +1728,10 @@ function loadDefaultLists() {
 			});
 		},
 		initSelection: function (element, callback) {
-			var fullSetName = $(".fusion-selector").val();
+			var fullSetName = $(".set-selector").val();
 			var pokemonName = fullSetName.substring(0, fullSetName.indexOf(" ("));
 			if((pokemonName != "Abomasnow") || (!pokemonName)) {
-				callback(getFirstValidFusionOption());
+				callback(getFirstValidSetOption());
 			}
 		}
 	});

@@ -939,6 +939,10 @@ export function calculateBasePowerSMSSSV(
     basePower = attacker.teraType === 'Stellar' ? 100 : 80;
     desc.moveBP = basePower;
     break;
+    case 'Quaking Thrust':
+    basePower = move.bp * (turnOrder !== 'last' ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
   default:
     basePower = move.bp;
   }
@@ -1444,6 +1448,10 @@ export function calculateAtModsSMSSSV(
 
   if (gen.num >= 9 && defender.hasAbility('Heatproof') && move.hasType('Fire')) {
     atMods.push(2048);
+    desc.defenderAbility = defender.ability;
+  }
+  if (defender.hasAbility('Glutinous Rice') && move.hasType('Fighting')) {
+    atMods.push(1024);
     desc.defenderAbility = defender.ability;
   }
   // Pokemon with "-of Ruin" Ability are immune to the opposing "-of Ruin" ability

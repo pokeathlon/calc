@@ -420,6 +420,7 @@ const SV = SS.concat([
   'Starfall',
   'Zealous Flock',
   'Multitasker',
+  'Glutinous Rice'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

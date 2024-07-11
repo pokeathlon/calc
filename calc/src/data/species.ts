@@ -11585,7 +11585,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 },
 'Dugtrio-Delta': {
     types: ['Ice', 'Normal'],
-    bs: { hp: 35, at: 100, df: 50, sa: 50, sd: 70, sp: 120 },
+    bs: { hp: 35, at: 80, df: 50, sa: 50, sd: 70, sp: 120 },
     weightkg: 33.3,
     abilities: { 0: 'Snow Cloak' }
 },
@@ -13663,7 +13663,37 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   bs:  {hp: 90, at: 60, df: 115, sa: 130, sd: 90, sp: 50},
   weightkg: 140,
   abilities:  {0: "Magnet Pull"}
-  },
+},
+"Dangonna":{
+  types:  ["Normal"],
+  bs:  {hp: 30, at: 46, df: 50, sa: 46, sd: 60, sp: 22},
+  weightkg: 0.6,
+  abilities:  {0: "Gooey"}
+},
+"Mochimechi":{
+  types:  ["Normal"],
+  bs:  {hp: 99, at: 89, df: 110, sa: 79, sd: 120, sp: 66},
+  weightkg: 84,
+  abilities:  {0: "Gooey"}
+},
+"Carcharus":{
+  types:  ["Rock", "Ground"],
+  bs:  {hp: 74, at: 107, df: 98, sa: 50, sd: 59, sp: 107},
+  weightkg: 210,
+  abilities:  {0: "Strong Jaw"}
+},
+"Rotom-Hisui":{
+  types:  ["Poison", "Fairy"],
+  bs:  {hp: 60, at: 81, df: 67, sa: 50, sd: 67, sp: 115},
+  weightkg: 72,
+  abilities:  {0: "Dry Skin"}
+},
+"Rotom-Hisui-Armored":{
+  types:  ["Poison", "Ground"],
+  bs:  {hp: 60, at: 105, df: 97, sa: 45, sd: 97, sp: 106},
+  weightkg: 159,
+  abilities:  {0: "Dry Skin"}
+},
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);
