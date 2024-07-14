@@ -12218,59 +12218,59 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 22.6,
     abilities: { 0: 'Pressure' }
 },
-'Beldum-Delta-S': {
+'Beldum-Delta-Spider': {
     types: ['Ground', 'Bug'],
     bs: { hp: 40, at: 55, df: 80, sa: 35, sd: 60, sp: 30 },
     weightkg: 47.5,
     abilities: { 0: 'Poison Touch' },
     nfe: true
 },
-'Beldum-Delta-R': {
+'Beldum-Delta-Ruin': {
     types: ['Grass', 'Rock'],
     bs: { hp: 40, at: 55, df: 80, sa: 35, sd: 60, sp: 30 },
     weightkg: 95.2,
     abilities: { 0: 'Sturdy' },
     nfe: true
 },
-'Metang-Delta-S': {
+'Metang-Delta-Spider': {
     types: ['Ground', 'Bug'],
     bs: { hp: 60, at: 75, df: 100, sa: 55, sd: 80, sp: 50 },
     weightkg: 101.3,
     abilities: { 0: 'Poison Touch' },
     nfe: true
 },
-'Metang-Delta-R': {
+'Metang-Delta-Ruin': {
     types: ['Grass', 'Rock'],
     bs: { hp: 60, at: 75, df: 100, sa: 55, sd: 80, sp: 50 },
     weightkg: 202.5,
     abilities: { 0: 'Sturdy' },
     nfe: true
 },
-'Metagross-Delta-S': {
+'Metagross-Delta-Spider': {
     types: ['Ground', 'Bug'],
     bs: { hp: 80, at: 135, df: 130, sa: 95, sd: 90, sp: 70 },
     weightkg: 224,
     abilities: { 0: 'Poison Touch' }
 },
-'Metagross-Delta-R': {
+'Metagross-Delta-Ruin': {
     types: ['Grass', 'Rock'],
     bs: { hp: 80, at: 135, df: 130, sa: 95, sd: 90, sp: 70 },
     weightkg: 550,
     abilities: { 0: 'Sturdy' }
 },
-'Metagross-Delta-S-Mega': {
+'Metagross-Delta-Spider-Mega': {
     types: ['Ground', 'Bug'],
     bs: { hp: 80, at: 145, df: 150, sa: 105, sd: 110, sp: 110 },
     weightkg: 942.9,
     abilities: { 0: 'Mold Breaker' }
 },
-'Metagross-Delta-R-Mega': {
+'Metagross-Delta-Ruin-Mega': {
     types: ['Grass', 'Rock'],
     bs: { hp: 80, at: 145, df: 150, sa: 105, sd: 110, sp: 110 },
     weightkg: 942.9,
     abilities: { 0: 'Rock Head' }
 },
-'Metagross-Delta-R-Crystal': {
+'Metagross-Delta-Ruin-Crystal': {
     types: ['Grass', 'Crystal'],
     bs: { hp: 80, at: 180, df: 100, sa: 120, sd: 100, sp: 100 },
     weightkg: 942.9,
