@@ -12562,27 +12562,27 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 200.5,
     abilities: { 0: 'Weak Armor' }
 },
-'Petilil-Delta-F': {
+'Petilil-Delta-Fairy': {
     types: ['Fairy', 'Flying'],
     bs: { hp: 45, at: 35, df: 50, sa: 70, sd: 50, sp: 30 },
     weightkg: 6.6,
     abilities: { 0: 'Serene Grace' },
     nfe: true
 },
-'Petilil-Delta-W': {
+'Petilil-Delta-Water': {
     types: ['Water', 'Fire'],
     bs: { hp: 45, at: 35, df: 50, sa: 70, sd: 50, sp: 30 },
     weightkg: 6.6,
     abilities: { 0: 'Storm Drain' },
     nfe: true
 },
-'Lilligant-Delta-F': {
+'Lilligant-Delta-Fairy': {
     types: ['Fairy', 'Flying'],
     bs: { hp: 70, at: 60, df: 75, sa: 110, sd: 75, sp: 90 },
     weightkg: 16.3,
     abilities: { 0: 'Serene Grace' }
 },
-'Lilligant-Delta-W': {
+'Lilligant-Delta-Water': {
     types: ['Water', 'Fire'],
     bs: { hp: 70, at: 60, df: 75, sa: 110, sd: 75, sp: 90 },
     weightkg: 16.3,
@@ -12607,27 +12607,27 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     weightkg: 28,
     abilities: { 0: 'Motor Drive' }
 },
-'Dwebble-Delta-B': {
+'Dwebble-Delta-Berry': {
     types: ['Grass', 'Poison'],
     bs: { hp: 50, at: 65, df: 85, sa: 35, sd: 35, sp: 55 },
     weightkg: 14.5,
     abilities: { 0: 'Harvest' },
     nfe: true
 },
-'Dwebble-Delta-C': {
+'Dwebble-Delta-Cake': {
     types: ['Fairy', 'Normal'],
     bs: { hp: 50, at: 65, df: 85, sa: 35, sd: 35, sp: 55 },
     weightkg: 14.5,
     abilities: { 0: 'Own Tempo' },
     nfe: true
 },
-'Crustle-Delta-B': {
+'Crustle-Delta-Berry': {
     types: ['Grass', 'Poison'],
     bs: { hp: 70, at: 105, df: 125, sa: 65, sd: 75, sp: 45 },
     weightkg: 150,
     abilities: { 0: 'Harvest' }
 },
-'Crustle-Delta-C': {
+'Crustle-Delta-Cake': {
     types: ['Fairy', 'Normal'],
     bs: { hp: 70, at: 105, df: 125, sa: 65, sd: 75, sp: 45 },
     weightkg: 100,
