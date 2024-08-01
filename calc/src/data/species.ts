@@ -13694,6 +13694,24 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   weightkg: 159,
   abilities:  {0: "Dry Skin"}
 },
+"Harportia":{
+types:  ["Electric", "Flying"],
+bs:  {hp: 91, at: 105, df: 73, sa: 62, sd: 90, sp: 124},
+weightkg: 238,
+abilities:  {0: "Tough Claws"}
+},
+"Suenami":{
+types:  ["Water"],
+bs:  {hp: 85, at: 63, df: 70, sa: 120, sd: 95, sp: 37},
+weightkg: 62.3,
+abilities:  {0: "Magic Bounce"}
+},
+"Cetitan-Hisui":{
+types:  ["Water", "Fire"],
+bs:  {hp: 170, at: 113, df: 75, sa: 40, sd: 60, sp: 63},
+weightkg: 750,
+abilities:  {0: "Swift Swim"}
+},
 };
 
 const SV: {[name: string]: SpeciesData} = extend(true, {}, SS, SV_PATCH, PLA_PATCH);

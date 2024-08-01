@@ -5279,6 +5279,22 @@ Mudslide: {
   isSlicing: true,
   category: 'Physical',
 },
+'Rift Jump': {
+  bp: 0,
+  type: 'Electric',
+  category: 'Status',
+  zp: 100,
+  maxPower: 90
+},
+'Superheated Crash': {
+  bp: 90,
+  type: 'Fire',
+  category: 'Physical',
+  zp: 190,
+  maxPower: 140,
+  makesContact: true,
+  recoil: [33, 100],
+},
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);

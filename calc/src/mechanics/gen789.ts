@@ -1686,7 +1686,7 @@ function calculateBaseDamageSMSSSV(
       desc.weather = field.weather;
     } else if (
       (field.hasWeather('Sun') && move.hasType('Water')) ||
-      (field.hasWeather('Rain') && move.hasType('Fire'))
+      (field.hasWeather('Rain') && move.hasType('Fire') && !move.named('Superheated Crash'))
     ) {
       baseDamage = pokeRound(OF32(baseDamage * 2048) / 4096);
       desc.weather = field.weather;
