@@ -5090,8 +5090,22 @@ Bulwark: {
   priority: -1
 },
 'Desert Tempest': {
-  bp: 65,
+  bp: 80,
   type: 'Rock',
+  category: 'Special',
+  zp: 100,
+  maxPower: 90
+},
+'Subzero Storm': {
+  bp: 80,
+  type: 'Ice',
+  category: 'Special',
+  zp: 100,
+  maxPower: 90
+},
+'Fiery Maelstrom': {
+  bp: 80,
+  type: 'Fire',
   category: 'Special',
   zp: 100,
   maxPower: 90

@@ -1281,7 +1281,9 @@ export function calculateBPModsSMSSSV(
     (attacker.name.includes('Ogerpon-Cornerstone') && attacker.hasItem('Cornerstone Mask')) ||
     (attacker.name.includes('Ogerpon-Hearthflame') && attacker.hasItem('Hearthflame Mask')) ||
     (attacker.name.includes('Ogerpon-Wellspring') && attacker.hasItem('Wellspring Mask')) ||
-    (attacker.hasItem('Smooth Rock') && move.name === 'Desert Tempest')
+    (attacker.hasItem('Smooth Rock') && move.name === 'Desert Tempest') ||
+    (attacker.hasItem('Icy Rock') && move.name === 'Subzero Storm') ||
+    (attacker.hasItem('Heat Rock') && move.name === 'Fiery Maelstrom')
   ) {
     bpMods.push(4915);
     desc.attackerItem = attacker.item;

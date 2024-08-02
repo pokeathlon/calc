@@ -685,6 +685,7 @@ const RBY: {[name: string]: SpeciesData} = {
     types: ['Water', 'Psychic'],
     bs: {hp: 60, at: 75, df: 85, sp: 115, sl: 100},
     weightkg: 80,
+    nfe: true,
   },
   Staryu: {
     types: ['Water'],
@@ -2504,6 +2505,7 @@ const ADV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     bs: {hp: 60, at: 60, df: 60, sa: 60, sd: 60, sp: 60},
     weightkg: 5,
     abilities: {0: 'Own Tempo'},
+    nfe: true,
   },
   Spoink: {
     types: ['Psychic'],
@@ -13420,7 +13422,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 },
 'Wrighvern': {
   types: ['Dragon', 'Flying'],
-  bs: { hp: 90, at: 90, df: 80, sa: 125, sd: 85, sp: 130 },
+  bs: { hp: 90, at: 85, df: 80, sa: 130, sd: 85, sp: 130 },
   weightkg: 90,
   abilities: { 0: 'Technician' }
 },
@@ -13498,7 +13500,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 //Pokeathlon
 'Bewitwing': {
     types: ['Ghost', 'Fairy'],
-    bs: { hp: 95, at: 100, df: 85, sa: 85, sd: 130, sp: 90 },
+    bs: {hp: 85, at: 100, df: 85, sa: 62, sd: 125, sp: 90},
     weightkg: 9,
     abilities: { 0: 'Prankster' }
 },
@@ -13528,7 +13530,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 },
 'Sirentom': {
     types: ['Ghost', 'Water'],
-    bs: { hp: 140, at: 70, df: 62, sa: 96, sd: 105, sp: 25 },
+    bs: { hp: 150, at: 70, df: 62, sa: 99, sd: 105, sp: 19 },
     weightkg: 449,
     abilities: { 0: 'Undeterred' }
 },
@@ -13711,6 +13713,32 @@ types:  ["Water", "Fire"],
 bs:  {hp: 170, at: 113, df: 75, sa: 40, sd: 60, sp: 63},
 weightkg: 750,
 abilities:  {0: "Swift Swim"}
+},
+"Suicune-Supra":{
+types:  ["Fire"],
+bs:  {hp: 100, at: 75, df: 115, sa: 90, sd: 115, sp: 85},
+weightkg: 187,
+abilities:  {0: "Drought"}
+},
+"Entei-Supra":{
+types:  ["Ice"],
+bs:  {hp: 115, at: 115, df: 85, sa: 90, sd: 75, sp: 100},
+weightkg: 198,
+abilities:  {0: "Snow Warning"}
+},
+"Premotee":{
+types:  ["Water"],
+bs:  {hp: 100, at: 30, df: 50, sa: 70, sd: 75, sp: 35},
+weightkg: 31.7,
+abilities:  {0: "Stalwart"},
+nfe: true,
+},
+"Voliable":{
+types:  ["Grass", "Flying"],
+bs:  {hp: 74, at: 40, df: 115, sa: 56, sd: 50, sp: 70},
+weightkg: 131.5,
+abilities:  {0: "Overcoat"},
+nfe: true,
 },
 };
 
