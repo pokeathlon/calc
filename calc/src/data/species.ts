@@ -13363,7 +13363,7 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
     types: ['Rock', 'Grass'],
     bs: { hp: 120, at: 90, df: 120, sa: 50, sd: 100, sp: 30 },
     weightkg: 90,
-    abilities: { 0: 'Phototroph' }
+    abilities: { 0: 'Water Absorb' }
 },
 'Eyespy': {
     types: ['Psychic'],
