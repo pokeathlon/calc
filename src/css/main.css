@@ -5,19 +5,22 @@ a img {
 .header {
     margin: 0 0 30px 0;
 
-    background: #E5ECFB;
-    background: -webkit-gradient(linear, left top, left bottom, from(#E8EEFC), to(#D7DEEA));
-    background: -moz-linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    background: linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8EEFC', endColorstr='#D7DEEA');
-
+    background: #1b1b1b;
+ 
     border-bottom: 1px solid #AAA;
-    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .6), 0px 2px 2px rgba(0, 0, 0, .15);
     min-height: 50px;
 }
 .header-inner {
     max-width: 605px;
     margin: 0 auto;
+}
+.header-color {
+        --text: #e4e4e4;
+        --background: #1b1b1b;
+    
+        --button-hover: black;
+        --button-selected: #232e51;
+        --fieldset-color: #2a2a2a;
 }
 .nav, .nav li, .nav-play, .nav-play li {
     display: block;
@@ -40,6 +43,7 @@ a img {
     padding: 5px 10px;
     margin: 0 -1px 0 0;
     border-radius: 0;
+    
 }
 .nav .button img {
     position: absolute;
@@ -63,6 +67,7 @@ a img {
 .nav .button.nav-first {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    
 }
 .nav .button.nav-last {
     border-top-right-radius: 5px;
@@ -130,15 +135,43 @@ a img {
 /* general page styling */
 html, body {
     font: 10pt Verdana, sans-serif;
-    background-color: white;
+    background-color: #1b1b1b;
     color: black;
     margin: 0;
     padding: 0;
     min-width: 100em;
 }
+
+.trainer-poks-label {
+    margin:  10px 0px;
+}
+
+.trainer-pok-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trainer-pok-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trainer-pok{
+    height:  100%;
+    width:  auto;
+    margin-right:  10px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.trainer-pok:hover,  .opposite-pok:hover{
+    outline: 2px solid;
+    outline-color: #1abc9c;
+}
+
 .wrapper {
     padding: 0 1em;
-    max-width: 1300px;
+    max-width: 1285px;
     margin: 0 auto;
 }
 .credits {
@@ -172,40 +205,39 @@ th {
     position: relative;
     top: -5px;
 }
-.main-title-text {
-    top: -10px;
-}
 .big-text {
     text-align: left;
     font-weight: bold;
     font-size: 1.1em;
     margin: 0.5em 0;
-    position: relative;
 }
 .big-text #mainResult:hover {  /* indicates the presence of click-to-copy function */
     cursor: pointer;
     opacity: 0.7;
 }
 #tooltipText {
-    position: absolute;
-    left: 42%;
-    top: -170%;
     font-size: 0.8em;
     visibility: hidden;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 120px;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 5px;
-    font-weight: normal;
+    margin-left: 10px;
 }
-#tooltipText::after {
-    position: absolute;
-    left: 45%;
-    top: 100%;
-    content: '';
-    border: 6px solid transparent;
-    border-top-color: rgba(0, 0, 0, 0.7);
+#savedTooltip {
+    font-size: 0.6em;
+    visibility: hidden;
+    border-radius: 5px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    position: relative;
+    top: 25px;
+    left: 105px;
 }
 .small-text {
     font-size: 0.8em;
@@ -215,21 +247,11 @@ th {
     display: inline-block; /* required for honkaculate to work */
 }
 .poke-info {
-    width: 32em;
+    width: 31em;
 }
-.field-info, .poke-import {
+.field-info, .poke-import , .note-button{
     text-align: center;
     width: 27.5em;
-}
-.fusion-info {
-    text-align: left;
-    width: 31em;
-    padding: 3px 3px;
-    margin: 1px;
-}
-.swap-button {
-    float: right;
-    margin-top: 4px;
 }
 .holder-0 {
     position: absolute;
@@ -332,7 +354,7 @@ th {
     background: #ffff99;
 }
 
-.genSelection, .notationSelection, .modeSelection {
+.genSelection, .notationSelection {
     display: inline-block;
     position: relative;
     top: -8px;
@@ -381,9 +403,6 @@ th {
 }
 .set-selector {
     width: 100%;
-}.fusion-selector {
-    width: 70%;
-    padding: 3px 3px;
 }
 .info-selectors select {
     width: 12em;
@@ -421,7 +440,6 @@ select.toxic-counter {
     width: 1.5em;
     height: 1em;
     padding: 3px 3px;
-    margin-right: 1px;
 }
 .poke-info .max-btn {
 	font-size: 0.8em;
@@ -429,13 +447,6 @@ select.toxic-counter {
 	height: 1em;
 	padding: 3px 3px;
 }
-.poke-info .stellar-btn {
-   font-size: 0.8em;
-   width: 3.5em;
-   height: 1em;
-   padding: 3px 3px;
-}
-
 
 /* field info */
 .field-info .btn {
@@ -453,13 +464,6 @@ table.field {
 .select2-container .select2-choice > .select2-chosen {
     width: 100%;
 }
-
-.select2-chosen {
-	word-wrap: break-word;
-	text-overflow: inherit;
-	white-space: normal !important;
-}
-
 .small-select.select2-container .select2-choice {
     font-size: 0.9em;
     height: 18px;
@@ -537,6 +541,257 @@ table.field {
 .extraSetMoves {
     width: 100%;
 }
+
+/*
+
+    F = Faster 
+    T = Speed tie
+    S = slower
+*/
+.mon-speed-F{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #7ee1ff;
+    border-radius: 20%;
+    border-width: var(--spe-bor-width)
+}
+.mon-speed-T{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #894197;
+    border-radius: 20%;
+    border-width: var(--spe-bor-width)
+}
+.mon-speed-S{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #1c1414;;
+    border-radius: 20%;
+    border-width: var(--spe-bor-width);
+}
+.mon-speed-none{
+    border: none !important; 
+}
+.mon-dmg-none{
+    background: var(--fieldset-color) !important;
+}
+.mon-dmg-W{
+    /* Is considerable a wall*/
+    background: linear-gradient(to right, #0f0bf3 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-WMO{
+    /* Is considerable a wall that may OHKO*/
+    background: linear-gradient(to right, #1295ec 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-4{
+    /*Gets OHKO*/
+    background: linear-gradient(to right, var(--fieldset-color) 50%, #dd0b0b 0%);
+}
+.mon-dmg-3{
+    /*maybe gets OHKO*/
+    background: linear-gradient(to right, var(--fieldset-color) 50%, #ff7f16 0%);
+}
+.mon-dmg-1{
+    /*inflicts OHKO*/
+    background: linear-gradient(to right, #20d408 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-2{
+    /*may inflicts OHKO*/
+    background: linear-gradient(to right, #daff08 50%, var(--fieldset-color) 0%);
+}
+
+.mon-dmg-14{
+    /*both sides Gets OHKO*/
+    background: linear-gradient(to right, #20d408 50%, #dd0b0b 0%);
+}
+.mon-dmg-23{
+    /*both sides might inflict OHKO*/
+    background: linear-gradient(to right, #daff08 50%, #ff7f16 0%);
+}
+.mon-dmg-13{
+    /*inflict OHKO but may Gets OHKO*/
+    background: linear-gradient(to right, #20d408 50%, #ff7f16 0%);
+}
+.mon-dmg-24{
+    /*may inflict OHKO but Gets OHKO*/
+    background: linear-gradient(to right, #daff08 50%, #dd0b0b 0%);
+}
+
+.box-poke, #trainer-pok-list-opposing2, #trainer-pok-list-opposing{
+    min-height: 30px;
+}
+.dropzone::before{
+    content:attr(data-placeholder);
+    color:gray
+}
+
+.deadzone:hover{
+    background: #722323;
+}
+.over{
+    background: #373232;
+}
+
+.s-arrow{
+    border: solid rgb(175, 155, 155);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+.arrowdown {
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.arrowright {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.arrowtop {
+    transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.arrowleft{
+    transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.l-side-button, .r-side-button{
+    position: absolute;
+}
+.side-pannel{
+    display: grid;
+    position: relative;
+}
+.left-side-pannel{
+    float: left;
+}
+.right-side-pannel{
+    float: none;
+}
+
+#p2mon, #p1mon, #monSingle, #monDouble{
+    min-height: 30px; /* This causes misalignment*/
+}
+
+.info-paragraph > b{
+    color: rgb(15, 14, 14);
+}
+.info-paragraph > b:hover{
+    background: var(--fieldset-color);
+    color: unset;
+}
+
+.box-frame{
+    position: absolute;
+    background: var(--fieldset-color);
+    border: 1px solid #AAA;
+    padding: 3px;
+}
+#item-box-frame, #item-box-frame-right{
+    z-index: 3;
+    width: 630px;
+    height: 300px;
+    top: 500px;
+    left: 500px;
+}
+#note-box-frame{
+    z-index: 2;
+    width: fit-content;
+    height: fit-content;
+    top: 700px;
+    left: 530px;
+    overflow: visible;
+}
+.screen-box-frame{
+    position: absolute !important;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    top: 250px;
+    left: 500px;
+}
+.screen-box-frame-header{
+    position: relative;
+    min-height: 30px;
+}
+.box-frame-header{
+    position: relative;
+    min-height: 30px;
+}
+.box-frame-header>legend{
+    font-size: larger;
+    text-align: unset;
+}
+
+.close-frame{
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border: 1px solid black;
+    margin-left: auto;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+
+#close-item-box:hover{
+    background-color: white;
+    overflow: auto;
+    
+}
+
+.box-item-list>img:hover{
+    background: var(--button-hover);
+}
+
+#sets > a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#screen-calc{
+    float: right;
+    margin-top: 22px;
+    margin-right: 41px;
+}
+
+.field-info, .poke-import {
+    text-align: center;
+    width: 27.5em;
+}
+.fusion-info {
+    text-align: left;
+    width: 30em;
+    padding: 3px 3px;
+    margin: 1px;
+}
+.fusion-selector {
+    width: 80%;
+}
+.swap-button {
+    float: right;
+    margin-top: 4px;
+}
+.iconImage {
+    position: relative;
+    display: inline;
+}
+.imtip {
+    position: absolute;
+    top: 16px;
+    right: 4px;
+    z-index: -1;
+  }
+
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
     text-align: center;

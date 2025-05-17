@@ -560,6 +560,19 @@ const SV = SS.concat([
   'Syrupy Apple',
   'Unremarkable Teacup',
   'Wellspring Mask',
+  // Mariomon
+  'Sturdy Shell',
+  'Goomba Boots',
+  // Pokeathlon
+  'Mana Gel',
+  'Energy Drink',
+  'Double Dip',
+  'Delta Sceptilite',
+  'Delta Blazikenite',
+  'Buddy Lantern',
+  'Boomerang',
+  'Padded Helmet',
+  'Vigor Herb'
 ]);
 
 const BERRIES: {[berry: string]: {t: I.TypeName; p: number}} = {

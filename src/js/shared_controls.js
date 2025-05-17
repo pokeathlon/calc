@@ -611,6 +611,15 @@ $(".set-selector").change(function () {
 	var fusion = pokedex[fusionName];
 
 	if (pokemon) {
+
+		// Setting up icons
+		if ($(this).hasClass("p2")) {
+			topPokemonIcon(fullSetName, $("#p2mon")[0])
+		} else {
+			topPokemonIcon(fullSetName, $("#p1mon")[0])
+		}
+
+
 		var isAutoTera =
 		(startsWith(pokemonName, "Ogerpon") && endsWith(pokemonName, "Tera")) ||
 		pokemonName === 'Terapagos-Stellar';
@@ -623,58 +632,58 @@ $(".set-selector").change(function () {
 		pokeObj.find(".analysis").attr("href", smogonAnalysis(pokemonName));
 
 		if (pokemon && fusion && pokeObj.find("#fusionToggle").prop("checked")) { 
-		
-		// FUSION STUFF
-		//Fusion Type control
-		if (pokemonName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for head
-			pokemon.types.reverse();
-		}
-
-		if (((pokemon.types[0] == "Normal") || (pokemon.types[0] == "Flying")) && ((pokemon.types[1] == "Normal") || (pokemon.types[1] == "Flying"))) { //Flying-Normal exceptions for head
-			pokemon.types[0] = "Flying";
-			pokemon.types.splice(1, 1);
-		}
-
-		if (fusionName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for body
-			fusion.types.reverse();
-		}
-
-		if (((fusion.types[0] == "Normal") || (fusion.types[0] == "Flying")) && ((fusion.types[1] == "Normal") || (fusion.types[1] == "Flying"))) { //Flying-Normal exceptions for body
-			fusion.types[0] = "Flying";
-			fusion.types.splice(1, 1);
-		}
-
-		pokeObj.find(".type1").val(pokemon.types[0]);
-		if ((pokemon.types[0] == fusion.types[1]) || (!fusion.types[1] && (fusion.types[0] != pokemon.types[0]))) { // type 2 matching type 1 or non-existent
-			pokeObj.find(".type2").val(fusion.types[0]);
-		} else {
-			pokeObj.find(".type2").val(fusion.types[1]);
-		}
-
-		//Fusion Stat control
-		var i;
-		for (i = 0; i < LEGACY_STATS[gen].length; i++) { // Not sure why the old code didn't work, but this stupid thing does so...
-			switch (LEGACY_STATS[gen][i]) {
-				case "hp":
-					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
-				break;
-				case "sa":
-					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
-				break;
-				case "sd":
-					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
-				break;
-				case "at":
-					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
-				break;
-				case "df":
-					pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
-				break;
-				case "sp":
-						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
-				break;
+			
+			// FUSION STUFF
+			//Fusion Type control
+			if (pokemonName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for head
+				pokemon.types.reverse();
 			}
-		}
+
+			if (((pokemon.types[0] == "Normal") || (pokemon.types[0] == "Flying")) && ((pokemon.types[1] == "Normal") || (pokemon.types[1] == "Flying"))) { //Flying-Normal exceptions for head
+				pokemon.types[0] = "Flying";
+				pokemon.types.splice(1, 1);
+			}
+
+			if (fusionName == ("Magnezone" || "Magneton" || "Magnemite" || "Spiritomb" || "Trevenant")) { //Type swaps for body
+				fusion.types.reverse();
+			}
+
+			if (((fusion.types[0] == "Normal") || (fusion.types[0] == "Flying")) && ((fusion.types[1] == "Normal") || (fusion.types[1] == "Flying"))) { //Flying-Normal exceptions for body
+				fusion.types[0] = "Flying";
+				fusion.types.splice(1, 1);
+			}
+
+			pokeObj.find(".type1").val(pokemon.types[0]);
+			if ((pokemon.types[0] == fusion.types[1]) || (!fusion.types[1] && (fusion.types[0] != pokemon.types[0]))) { // type 2 matching type 1 or non-existent
+				pokeObj.find(".type2").val(fusion.types[0]);
+			} else {
+				pokeObj.find(".type2").val(fusion.types[1]);
+			}
+
+			//Fusion Stat control
+			var i;
+			for (i = 0; i < LEGACY_STATS[gen].length; i++) { // Not sure why the old code didn't work, but this stupid thing does so...
+				switch (LEGACY_STATS[gen][i]) {
+					case "hp":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+					break;
+					case "sa":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+					break;
+					case "sd":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*2/3 + fusion.bs[LEGACY_STATS[gen][i]]*1/3));
+					break;
+					case "at":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+					break;
+					case "df":
+						pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+					break;
+					case "sp":
+							pokeObj.find("." + LEGACY_STATS[gen][i] + " .base").val(Math.floor(pokemon.bs[LEGACY_STATS[gen][i]]*1/3 + fusion.bs[LEGACY_STATS[gen][i]]*2/3));
+					break;
+				}
+			}
 		} 
 		if (!pokeObj.find("#fusionToggle").prop("checked")) {
 			pokeObj.find(".type1").val(pokemon.types[0]);
@@ -1117,7 +1126,7 @@ function createPokemon(pokeInfo) {
 		var setName = pokeInfo.substring(pokeInfo.indexOf("(") + 1, pokeInfo.lastIndexOf(")"));
 		var isRandoms = $("#randoms").prop("checked");
 		var set = isRandoms ? randdex[name] : setdex[name][setName];
-
+			
 		var ivs = {};
 		var evs = {};
 		for (var i = 0; i < LEGACY_STATS[gen].length; i++) {
@@ -1847,7 +1856,431 @@ function loadCustomList(id) {
 		}
 	});
 }
+function openCloseItemBox(){
+	document.getElementById("item-box-frame").toggleAttribute("hidden");
+}
+function openCloseItemBoxR(){
+	document.getElementById("item-box-frame-right").toggleAttribute("hidden");
+}
 
+
+function openCloseNoteBox(){
+	document.getElementById("note-box-frame").toggleAttribute("hidden");
+	if(document.getElementById("note-box-frame").getAttribute("hidden") === null) {
+		document.getElementById("notes").value = localStorage.getItem("notes");
+	} else {
+		localStorage.setItem("notes", document.getElementById("notes").value);
+	}
+}
+
+function selectItem(ev){
+	var newItem = ev.target.getAttribute("data-id");
+	if ($(this).hasClass("icr")) {
+		document.getElementById("itemR1").value=newItem
+	} else {
+		document.getElementById("itemL1").value=newItem
+	}
+}
+
+function onFirstTime(){
+	document.getElementById("team-poke-list").setAttribute("data-placeholder", "You can drag & drop your pokemons here");
+	document.getElementById("box-poke-list2").setAttribute("data-placeholder","You can drag & drop your pokemons here");
+	document.getElementById("trash-box").setAttribute("data-placeholder", "drop here and click remove to remove");
+}
+function addBoxed(poke, box) {
+	if (document.getElementById(`${poke.name}${poke.nameProp}`)) {
+		//nothing to do it already exist
+		return
+	}
+	var newPoke = document.createElement("img");
+	newPoke.id = `${poke.name}${poke.nameProp}`
+	newPoke.className = "trainer-pok left-side";
+	newPoke.src = getSrcImgPokemon(poke);
+	newPoke.dataset.id = `${poke.name} (${poke.nameProp})`
+	newPoke.addEventListener("dragstart", dragstart_handler);
+	if (!box){
+		$('#box-poke-list')[0].appendChild(newPoke)
+	}else{
+		box.append(newPoke)
+	}
+}
+
+function topPokemonIcon(fullname, node) {
+	pokedex = calc.SPECIES[9]; // Import full dex
+	var mon = { name: fullname.split(" (")[0] };
+	var name = mon.name
+	var origin = pokedex[name].origin
+	var poke = {name: name, origin: origin}; // Building custom object
+	var src = getSrcImgPokemon(poke);
+	node.src = src;
+}
+
+$(document).on('click', '.right-side', function () {
+	var set = $(this).attr('data-id');
+	topPokemonIcon(set, $("#p2mon")[0])
+	$('.opposing').val(set);
+	$('.opposing').change();
+	$('.opposing .select2-chosen').text(set);
+})
+
+$(document).on('click', '.left-side', function () {
+	var set = $(this).attr('data-id'); 
+	topPokemonIcon(set, $("#p1mon")[0]); //Sets icon next to player
+	$('.player').val(set); //Changes pokemon to the one clicked
+	$('.player').change();
+	$('.player .select2-chosen').text(set);
+})
+
+function getSrcImgPokemon(poke) {
+	//edge case
+	if (!poke) {
+		return
+	}
+	if (poke.name == "Aegislash-Shield") {
+		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
+	} else {
+		pokeID = poke.name.replace(/ /g, "").toLowerCase().replace(/-/g,"");
+		switch (poke.origin) {
+			case "Pokeathlon":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/pokeathlon/iconsprites/${pokeID}.png`
+			case "Insurgence":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/insurgence/iconsprites/${pokeID}.png`
+			case "Uranium":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/uranium/iconsprites/${pokeID}.png`
+			case "Infinity":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/infinity/iconsprites/${pokeID}.png`
+			case "Mariomon":
+				return `https://play.pokeathlon.com/sprites/fangame-sprites/mariomon/iconsprites/${pokeID}.gif`
+			default:
+				return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
+			}
+	}
+}
+
+//select first mon of the box when loading
+function selectFirstMon() {
+	var pMons = document.getElementsByClassName("trainer-pok left-side")[0];
+	if(!pMons){
+		return
+	}
+	let set = pMons.getAttribute("data-id");
+	$('.player').val(set);
+	$('.player').change();
+	$('.player .select2-chosen').text(set);
+}
+
+function selectTrainer(value) {
+	document.getElementById("trainer-pok-list-opposing2").textContent="";
+	document.getElementById("trainer-pok-list-opposing").textContent="";
+	if(value >= 1620){
+		value = 1620;
+	}else if(value<=0){
+		value=1;
+	}
+	localStorage.setItem("lasttimetrainer", value);
+	all_poks = SETDEX_SS
+	for (const [pok_name, poks] of Object.entries(all_poks)) {
+		var pok_tr_names = Object.keys(poks)
+		for (i in pok_tr_names) {
+			var index = (poks[pok_tr_names[i]]["index"])
+			if (index == value) {
+				if (window.CURRENT_TRAINER == pok_tr_names[0]){
+					return false
+				}
+				window.CURRENT_TRAINER = pok_tr_names[0]
+				var set = `${pok_name} (${pok_tr_names[i]})`;
+				$('.opposing').val(set);
+				$('.opposing').change();
+				$('.opposing .select2-chosen').text(set);
+			}
+
+		}
+	}
+}
+
+function TrashPokemon() {
+	var maybeMultiple = document.getElementById("trash-box").getElementsByClassName("trainer-pok");
+	if (maybeMultiple.length == 0){
+		return; //nothing to delete
+	}
+	var numberPKM = maybeMultiple.length > 1 ? `${maybeMultiple.length} Pokemon(s)` : "this Pokemon"; 
+	var yes = confirm(`do you really want to remove ${numberPKM}?`);
+	if (!yes) {
+		return;
+	}
+	var customSets = JSON.parse(localStorage.customsets);
+	var length= maybeMultiple.length;
+	for( let i = 0; i<length; i++){
+		var pokeTrashed = maybeMultiple[i];
+		var name = pokeTrashed.getAttribute("data-id").split(" (")[0];
+		delete customSets[name];
+	}
+	document.getElementById("trash-box").innerHTML="";
+	localStorage.setItem("customsets", JSON.stringify(customSets));
+	$('#box-poke-list')[0].click();
+	//switch to the next pokemon automatically
+	
+}
+function RemoveAllPokemon() {
+	document.getEle
+}
+
+// Check whether control button is pressed
+$(document).keydown(function(event) {
+    if (event.which == "17")
+        cntrlIsPressed = true;
+    else if (event.which == 65 && cntrlIsPressed) {
+        // Cntrl+  A
+        selectAllRows();
+    }
+});
+$(document).keyup(function() {
+    cntrlIsPressed = false;
+});
+var cntrlIsPressed = false;
+/* dragging for pokemons in boxes*/
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+var pokeDragged = null;
+function dragstart_handler(ev) {
+	pokeDragged = ev.target;
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	if (ev.target.classList.contains("dropzone")) {
+		pokeDragged.parentNode.removeChild(pokeDragged);
+		if(ev.target.tagName=="LEGEND"){
+			ev.target.parentNode.children[1].appendChild(pokeDragged);
+		}else{
+			ev.target.appendChild(pokeDragged);
+		}
+			
+	}
+	// if it's a pokemon
+	else if(ev.target.classList.contains("left-side") || ev.target.classList.contains("right-side")) {
+		if (!cntrlIsPressed){
+			let prev1 = pokeDragged.previousElementSibling
+			if (!prev1){
+				ev.target.after(pokeDragged)
+			} else {
+				ev.target.before(pokeDragged)
+				prev1.after(ev.target)
+			}
+			//swaps
+		} else {
+			//appends before
+			ev.target.before(pokeDragged)
+		}
+	}
+	ev.target.classList.remove('over');
+}
+
+function handleDragEnter(ev) {
+	ev.target.classList.add('over');
+	ev.target.removeAttribute("data-placeholder");
+}
+
+function handleDragLeave(ev) {
+	ev.target.classList.remove('over');
+}
+/* dragging for the item box, note box*/
+// target elements with the "box-frame-header" class
+interact('.box-frame-header').draggable({
+    inertia: true,
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: document.body,
+        endOnly: true
+      })
+    ],
+    autoScroll: true,
+
+    listeners: {
+      // call this function on every dragmove event
+      move: dragMoveListener,
+    }
+  })
+
+function dragMoveListener (event) {
+	var target = event.target;
+	var parent = target.parentNode;
+	// special case for the screen box frame
+	if (target.classList.contains("screen-box-frame")) {
+		parent = target;
+	}
+    var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+    var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy ;
+	parent.style.left=x+"px";
+	parent.style.top=y+"px";
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+}
+
+window.dragMoveListener = dragMoveListener
+
+function onFirstTime(){
+	document.getElementById("box-poke-list").setAttribute("data-placeholder","You can drag & drop your pokemons here");
+	document.getElementById("trash-box").setAttribute("data-placeholder", "drop here and click remove to remove");
+}
+
+function sideArrowToggle(){
+	var btn = document.getElementById("side-arrow-toggle");
+	var onShow= btn.getAttribute("data-id")
+	if (onShow=="true"){
+		btn.setAttribute("data-id", "false");
+		btn.innerText="Hide Side Arrows";
+		localStorage.setItem("hsidearrow", "1");
+	}else{
+		btn.setAttribute("data-id", "true");
+		btn.innerText="Show Side Arrows";
+		localStorage.setItem("hsidearrow", "0");
+	}
+	for(pannel of document.getElementsByClassName("side-pannel")){
+		pannel.toggleAttribute("hidden")
+	}
+	setupSideCollapsers()
+}
+
+function setupSideCollapsers(){
+	var applyF = (btns) => {
+		for (var i = 0; i < btns.length; i++) {
+			let btn = btns[i];
+			btn.cum = btn.offsetHeight;
+			btn.sisterEl = document.getElementsByClassName(btn.getAttribute("data-set"))[0];
+			btn.prevEl = btns[i-1] || null;
+			if (btn.prevEl){
+				btn.cum += btn.prevEl.cum
+			}else{
+				btn.cum = 0;
+			}
+			btn.nextEl = btns[i+1] || null;
+			btn.onclick = sideCollapsersCorrection
+		}
+	}
+	var leftBtns = document.getElementsByClassName("l-side-button");
+	var rigtBtns = document.getElementsByClassName("r-side-button");
+	applyF(leftBtns);
+	applyF(rigtBtns);
+	/*
+		readjust the left buttons
+		Because i couldn't find a proper way to do it with css
+	*/
+	for(let btn of leftBtns){
+		btn.style.left = "-" + btn.offsetWidth + "px";
+	}
+	leftBtns[0].onclick();
+	rigtBtns[0].onclick();
+}
+function sideCollapsersCorrection(ev){
+	if (ev){
+		var arrow = ev.target.children[0] || ev.target.parentNode.children[0];
+		collapseArrow(arrow);
+	}
+	var node = this;
+	if (node.tagName != "BUTTON"){
+		node = this.target.parentNode;
+	}
+	var prev = node.prevEl;
+	var offset = node.sisterEl.offsetTop;
+	var relativeHeight = node.parentNode.offsetTop;
+	if(prev){
+		//since the position is absolute, this will prevent from eating fellows.
+		var prevLowPos = prev.offsetTop + prev.offsetHeight; - relativeHeight ;
+		if(offset==0){// collapsed
+			offset = prevLowPos;
+		}else{// standing
+			offset = offset - relativeHeight;
+			if (offset < prevLowPos){
+				offset = prevLowPos;
+			}
+		}
+	}else{
+		if(offset==0){// collapsed
+			offset = node.offsetTop;
+		}else{// standing
+			offset = offset - relativeHeight;
+		}
+	}
+	node.style.top = offset + "px"
+	//propagate to next buttons
+	if(node.nextEl){
+		node.nextEl.onclick()
+	}
+}
+function collapseArrow(arrow){
+	var arrBtn = arrow.parentNode;
+	var target = arrBtn.getAttribute("data-set");
+	for (let div of document.getElementsByClassName(target)){
+		div.toggleAttribute("hidden");
+	}
+	if (arrBtn.classList.contains("l-side-button")){
+		if (arrow.classList.contains("arrowdown")){
+			arrow.classList.remove("arrowdown");
+			arrow.classList.add("arrowright");
+		}else{
+			arrow.classList.remove("arrowright");
+			arrow.classList.add("arrowdown");
+		}
+	}
+	else if (arrBtn.classList.contains("r-side-button")){
+		if (arrow.classList.contains("arrowdown")){
+			arrow.classList.remove("arrowdown");
+			arrow.classList.add("arrowleft");
+		}else{
+			arrow.classList.remove("arrowleft");
+			arrow.classList.add("arrowdown");
+		}
+	}
+}
+var screenDivCount = 0;
+function closeScreenCalc(id){
+	var screenDiv = document.getElementById("calc-screen-id"+id);
+	screenDiv.parentNode.removeChild(screenDiv);
+	screenDivCount--
+}
+function onClickScreenCalc(){
+	var screenDiv = document.createElement("div");
+	// box frame header here so it's less code in the end;
+	screenDiv.className = "box-frame screen-box-frame box-frame-header";
+	screenDiv.id = "calc-screen-id"+screenDivCount;
+	screenDiv.dataset.x="500";
+	screenDiv.dataset.y="250";
+	screenDiv.innerHTML=` <div class="screen-box-frame-header"><legend>Calculation ${screenDivCount+1}</legend>
+	<div class="close-frame" id="close-calc-box-${screenDivCount}" onclick="closeScreenCalc(${screenDivCount})"><div class="mdiv"><div class="md"></div></div></div></div>`;
+	var moveResults = document.getElementsByClassName("move-result-group");
+	var mainResults = document.getElementsByClassName("main-result-group");
+	for (let i = 0; i<moveResults.length; i++) {
+		if(moveResults[i].parentNode.classList.contains("box-frame")){
+			continue
+		}
+		if(mainResults[i].parentNode.classList.contains("box-frame")){
+			continue
+		}
+		screenDiv.appendChild(moveResults[i].cloneNode(true));
+		screenDiv.appendChild(mainResults[i].cloneNode(true));
+	}
+	document.body.append(screenDiv);
+	for ( let label of document.querySelectorAll('.box-frame label')){
+		label.removeAttribute("for");
+	}
+	for ( let span of document.querySelectorAll('.box-frame span')){
+		span.removeAttribute("id");
+	}
+	for ( let input of document.querySelectorAll('.box-frame input')){
+		input.removeAttribute("id");
+	}
+	for (let group of document.querySelectorAll('.box-frame .move-result-group')){
+		group.classList.remove("move-result-group");
+	}
+	for (let group of document.querySelectorAll('.box-frame .main-result-group')){
+		group.classList.remove("main-result-group");
+	}
+	screenDivCount++
+}
+
+window.AUTO_REFRESH = false;
 $(document).ready(function () {
 	var params = new URLSearchParams(window.location.search);
 	var g = GENERATION[params.get('gen')] || 9;
@@ -1873,6 +2306,19 @@ $(document).ready(function () {
 	
 	$(".fusion-selector").val(getFirstValidFusionOption().id);
 	$(".fusion-selector").change();
+	$('#trash-pok').click(TrashPokemon);
+	$('#fusionToggle').click(createPokemon);
+	$('#save-change').click(saveTrainerPokemon);
+	$('#close-item-box, #ball-item').click(openCloseItemBox);
+	$('#close-item-box-r, #ball-item-r').click(openCloseItemBoxR);
+	$('#close-note-box, #open-note').click(openCloseNoteBox);
+	$('.ic, .icr').click(selectItem);
+	for (let dropzone of document.getElementsByClassName("dropzone")){
+		dropzone.ondragenter=handleDragEnter;
+		dropzone.ondragleave=handleDragLeave;
+		dropzone.ondrop=drop;
+		dropzone.ondragover=allowDrop;
+	}
 });
 
 /* Click-to-copy function */

@@ -270,7 +270,9 @@ const XY = BW.concat([
   'Rebuild',
   'Sharp Coral',
   'Sound Boost',
-  'Stormbringer'
+  'Stormbringer',
+  // Infinity
+  'Pure Focus'
 ]);
 
 const SM = XY.concat([
@@ -399,6 +401,9 @@ const SV = SS.concat([
   'Wind Power',
   'Wind Rider',
   'Zero to Hero',
+  // Mariomon
+  'Chaos Emeralds',
+  'Transmutate',
   //Pokeathlon
   'Sacred Treasures',
   'Consumer Exchange',
@@ -420,7 +425,19 @@ const SV = SS.concat([
   'Starfall',
   'Zealous Flock',
   'Multitasker',
-  'Glutinous Rice'
+  'Glutinous Rice',
+  'Clairvoyance',
+  'Cannoneer',
+  'Psycho Slider',
+  'Spitting Fire',
+  'Hue Shift',
+  'Bursting Spores',
+  'Belligerent Quills',
+  'Full Plate',
+  'Aqua Guard',
+  'Lucky Charm',
+  'Kleptomancy',
+  'Crystal Mana'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

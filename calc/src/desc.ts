@@ -158,6 +158,13 @@ export function getRecovery(
     }
   }
 
+  if (attacker.hasAbility('Belligerent Quills') && move.flags.contact) {
+    const dmg = Math.round(defender.maxHP()/16)
+    const dmgDisplay = toDisplay(notation, dmg, defender.maxHP());
+    text = `${dmgDisplay}${notation} additional damage`
+    return {recovery, text};
+  }
+
   if (recovery[1] === 0) return {recovery, text};
 
   const minHealthRecovered = toDisplay(notation, recovery[0], attacker.maxHP());
@@ -202,6 +209,10 @@ export function getRecoil(
     }
     if (!attacker.hasAbility('Rock Head')) {
       recoil = [minRecoilDamage, maxRecoilDamage];
+      text = `${minRecoilDamage} - ${maxRecoilDamage}${notation} recoil damage`;
+    }
+    if (attacker.hasItem('Padded Helmet')) {
+      recoil = [minRecoilDamage/2, maxRecoilDamage/2];
       text = `${minRecoilDamage} - ${maxRecoilDamage}${notation} recoil damage`;
     }
   } else if (move.hasCrashDamage) {
@@ -445,6 +456,7 @@ function combine(damage: Damage) {
 const TRAPPING = [
   'Bind', 'Clamp', 'Fire Spin', 'Infestation', 'Magma Storm', 'Sand Tomb',
   'Thunder Cage', 'Whirlpool', 'Wrap', 'G-Max Sandblast', 'G-Max Centiferno',
+  'Metal Whip', 'Cable Crusher',
 ];
 
 function getHazards(gen: Generation, defender: Pokemon, defenderSide: Side) {
@@ -586,7 +598,7 @@ function getEndOfTurn(
     texts.push('Fallout');
   }
 
-  const loseItem = move.named('Knock Off', 'Pixie Trick') && !defender.hasAbility('Sticky Hold');
+  const loseItem = move.named('Knock Off', 'Pixie Trick', 'Dino Kick') && !defender.hasAbility('Sticky Hold');
   if (defender.hasItem('Leftovers') && !loseItem) {
     damage += Math.floor(defender.maxHP() / 16);
     texts.push('Leftovers recovery');
@@ -619,6 +631,11 @@ function getEndOfTurn(
       damage -= Math.floor(defender.maxHP() / 16);
       texts.push('Zealous Flock damage');
     }
+  }
+
+  if (attacker.hasAbility('Belligerent Quills') && move.flags.contact) {
+    damage -= Math.floor(defender.maxHP() / 16);
+    texts.push('Belligerent Quills damage')
   }
 
   if (field.attackerSide.isSeeded && !attacker.hasAbility('Magic Guard', 'Ivy Wall')) {

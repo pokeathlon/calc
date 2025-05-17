@@ -105,7 +105,8 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
       (pokemon.hasAbility('Swift Swim') && weather.includes('Rain')) ||
       (pokemon.hasAbility('Slush Rush', 'Ice Cleats') && ['Hail', 'Snow'].includes(weather)) ||
       (pokemon.hasAbility('Surge Surfer') && terrain === 'Electric') ||
-      (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness'))
+      (pokemon.hasAbility('Shadow Dance') && weather.includes('Darkness')) ||
+      (pokemon.hasAbility('Psycho Slider') && terrain === 'Psychic')
   ) {
     speedMods.push(8192);
   } else if (pokemon.hasAbility('Quick Feet') && pokemon.status) {
@@ -121,6 +122,8 @@ export function getFinalSpeed(gen: Generation, pokemon: Pokemon, field: Field, s
   } else if (pokemon.hasItem('Iron Ball', ...EV_ITEMS)) {
     speedMods.push(2048);
   } else if (pokemon.hasItem('Quick Powder') && pokemon.named('Ditto', 'Ditto-Delta')) {
+    speedMods.push(8192);
+  } else if (pokemon.hasItem('Goomba Boots') && pokemon.named('Goomba', 'Goomba Stack')) {
     speedMods.push(8192);
   }
 
@@ -147,7 +150,7 @@ export function getMoveEffectiveness(
     return 1;
   } else if (move.named('Superheated Crash') && type === 'Water') {
     return 1;
-  } else if (move.named('Freeze-Dry') && type === 'Water') {
+  } else if (move.named('Freeze-Dry', 'Ice Blast') && type === 'Water') {
     return 2;
   } else if (move.named('Flying Press')) {
     return (
@@ -160,6 +163,10 @@ export function getMoveEffectiveness(
       gen.types.get('fairy' as ID)!.effectiveness[type]!
     );
   } else if (move.named('Corrode') && type === 'Steel') {
+    return 2;
+  } else if (move.named('Expunge') && type === 'Nuclear') {
+    return 2;
+  } else if (move.named('Infernal Blade') && type === 'Fairy') {
     return 2;
   } else {
     return gen.types.get(toID(move.type))!.effectiveness[type]!;
@@ -598,7 +605,7 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   let stabMod = 4096;
   if (pokemon.hasOriginalType(move.type)) {
     stabMod += 2048;
-  } else if (pokemon.hasAbility('Protean', 'Libero') && !pokemon.teraType) {
+  } else if (pokemon.hasAbility('Protean', 'Libero', 'Hue Shift') && !pokemon.teraType) {
     stabMod += 2048;
     desc.attackerAbility = pokemon.ability;
   } else if (pokemon.hasAbility('Ancient Presence')) {

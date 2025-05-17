@@ -6950,7 +6950,7 @@ var SETDEX_SV = {
         'moves': ['Shell Smash', 'Moonblast', 'Dragon Pulse', 'Draco Meteor']
     }
 },
-'Metagross-Delta-S': {
+'Metagross-Delta-Spider': {
     'Hazard Support': {
         "level": 120,
         'ability': 'Poison Heal',
@@ -6962,9 +6962,33 @@ var SETDEX_SV = {
             'sd': 4
         },
         'moves': ['Sticky Web', 'Stealth Rock', 'U-turn', 'Earthquake']
-    }
+    },
+    'Bulky Hazards Spikes': {
+      "level": 120,
+      'ability': 'Poison Heal',
+      'item': 'Toxic Orb',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Spikes', 'Earthquake', 'U-turn']
+  },
+  'Bulky Hazards Rocks': {
+    "level": 120,
+    'ability': 'Poison Heal',
+    'item': 'Eviolite',
+    'nature': 'Impish',
+    'evs': {
+        'hp': 252,
+        'df': 252,
+        'sd': 4
+    },
+    'moves': ['Sticky Web', 'Stealth Rock', 'Earthquake', 'U-turn']
+}
 },
-'Metagross-Delta-S-Mega': {
+'Metagross-Delta-Spider-Mega': {
     'Offensive Pivot': {
         "level": 120,
         'ability': 'Mold Breaker',
@@ -6978,8 +7002,8 @@ var SETDEX_SV = {
         'moves': ['Earthquake', 'U-turn', 'Stone Edge', 'Knock Off']
     }
 },
-'Metagross-Delta-R': {
-    'Choice Banded': {
+'Metagross-Delta-Ruin': {
+    'Fast Band': {
         "level": 120,
         'ability': 'Rock Head',
         'item': 'Choice Band',
@@ -6990,9 +7014,33 @@ var SETDEX_SV = {
             'sp': 252
         },
         'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
-    }
+    },
+    'Bulky Band': {
+      "level": 120,
+      'ability': 'Rock Head',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
+  },
+  'Rock Polish': {
+    "level": 120,
+    'ability': 'Rock Head',
+    'item': 'Lum Berry',
+    'nature': 'Adamant',
+    'evs': {
+        'at': 252,
+        'sd': 4,
+        'sp': 252
+    },
+    'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Rock Polish']
+}
 },
-'Metagross-Delta-R-Mega': {
+'Metagross-Delta-Ruin-Mega': {
     'Physical Breaker': {
         "level": 120,
         'ability': 'Rock Head',
@@ -7006,7 +7054,7 @@ var SETDEX_SV = {
         'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Volt Switch']
     }
 },
-'Metagross-Delta-R-Crystal': {
+'Metagross-Delta-Ruin-Crystal': {
     'Physical Cleaner': {
         "level": 120,
         'ability': 'Weak Armor',
@@ -7574,7 +7622,7 @@ var SETDEX_SV = {
         'moves': ['Lava Plume', 'Stealth Rock', 'Knock Off', 'Recover']
     }
 },
-'Meloetta-Delta-Mime': {
+'Meloetta-Delta': {
     'Offensive Pivot': {
         "level": 120,
         'ability': 'Filter',
@@ -7586,6 +7634,30 @@ var SETDEX_SV = {
             'sp': 252
         },
         'moves': ['Knock Off', 'Play Rough', 'U-turn', 'Iron Head']
+    },
+    'Choice Band': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
+    },
+    'Boots Pivot': {
+      "level": 120,
+      'ability': 'Filter',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'sp': 252
+      },
+    'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
     }
 },
 'Meloetta-Delta-Magician': {
@@ -8043,6 +8115,820 @@ var SETDEX_SV = {
           'sp': 252
       },
       'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
+  }
+},
+'Garbodor': {
+  'Physically Defensive': {
+      "level": 120,
+      'ability': 'Aftermath',
+      'item': 'Rocky Helmet',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Toxic Spikes', 'Spikes', 'Gunk Shot', 'Stomping Tantrum']
+  }
+},
+'Porygon': {
+  'Porygod': {
+      "level": 120,
+      'ability': 'Trace',
+      'item': 'Eviolite',
+      'nature': 'Calm',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'sa': 4,
+          'sd': 252
+      },
+      'moves': ['Recover', 'Teleport', 'Thunder Wave', 'Ice Beam']
+  }
+},
+'Dottler': {
+  'Sticky Web': {
+      "level": 120,
+      'ability': 'Compound Eyes',
+      'item': 'Eviolite',
+      'nature': 'Bold',
+      'ivs': {
+          'at': 0
+      },
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sticky Web', 'Recover', 'Body Press', 'Iron Defense']
+  }
+},
+
+// PoA
+
+'Bewitwing': {
+  'Dual Screens': {
+      "level": 100,
+      'ability': 'Prankster',
+      'item': 'Light Clay',
+      'nature': 'Sassy',
+      'evs': {
+          'hp': 252,
+          'df': 4,
+          'sd': 252
+      },
+      'ivs': {
+          'spe': 0
+      },
+      'moves': ['Light Screen', 'Reflect', 'U-turn', 'Destiny Bond']
+  }
+},
+'Carcharus': {
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Strong Jaw',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Flip Turn', 'Gorgon Fang', 'Earthquake', 'Fire Fang']
+  }
+},
+'Enchantobra': {
+  'Life Orb': {
+      "level": 100,
+      'ability': 'Magic Guard',
+      'item': 'Life Orb',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Fire Blast', 'Moonblast', 'Giga Drain', 'Glare']
+  }
+},
+'Entei-Supra': {
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Adaptability',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Ice Shard', 'Subzero Storm', 'U-turn', 'Superpower']
+  },
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Adaptability',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Subzero Storm', 'Ice Shard', 'Superpower']
+  }
+},
+'Feidan': {
+  'Spikes': {
+      "level": 100,
+      'ability': 'Unaware',
+      'item': 'Leftovers',
+      'nature': 'Sassy',
+      'evs': {
+          'hp': 252,
+          'at': 4,
+          'sd': 252
+      },
+      'moves': ['Spikes', 'Knock Off', 'Spiky Shield', 'Shadow Ball']
+  },
+  'RestTalk': {
+      "level": 100,
+      'ability': 'Unaware',
+      'item': 'Leftovers',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Hex', 'Will-O-Wisp', 'Rest', 'Sleep Talk']
+  }
+},
+'Felapstan': {
+  'Choice Scarf': {
+      "level": 100,
+      'ability': 'Multitasker',
+      'item': 'Choice Scarf',
+      'nature': 'Modest',
+      'evs': {
+          'hp': 60,
+          'sa': 252,
+          'spe': 196
+      },
+      'moves': ['Poltergeist', 'Thunderbolt', 'Volt Switch', 'Aqua Tail']
+  },
+  'Physically Defensive': {
+      "level": 100,
+      'ability': 'Multitasker',
+      'item': 'Rocky Helmet',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 248,
+          'df': 252,
+          'sd': 8
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Shadow Ball', 'Volt Switch', 'Toxic Spikes', 'Recover']
+  }
+},
+'Gelazura': {
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Sticky Hold',
+      'item': 'Black Sludge',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Liquidation', 'Void Tentacle', 'Knock Off']
+  }
+},
+'Gilotherma': {
+  'Physically Defensive': {
+      "level": 100,
+      'ability': 'Poison Heal',
+      'item': 'Toxic Orb',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 244,
+          'df': 176,
+          'spe': 88
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Venomous Roar', 'Earth Power', 'Glare', 'Spikes']
+  }
+},
+'Grand Mirage': {
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Protosynthesis',
+      'item': 'Booster Energy',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Close Combat', 'Knock Off', 'Taunt']
+  },
+  'Nasty Plot': {
+      "level": 100,
+      'ability': 'Protosynthesis',
+      'item': 'Booster Energy',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Nasty Plot', 'Dark Pulse', 'Sludge Bomb', 'Focus Blast']
+  }
+},
+'Harportia': {
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Tough Claws',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Brave Bird', 'Supercell Slam', 'Superpower', 'Rift Jump']
+  },
+  'Offensive Pivot': {
+      "level": 100,
+      'ability': 'Tough Claws',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Superpower', 'Rift Jump', 'Brave Bird', 'Supercell Slam']
+  }
+},
+'Heatran-Supra': {
+  'SubSeed': {
+      "level": 100,
+      'ability': 'Dancer',
+      'item': 'Leftovers',
+      'nature': 'Calm',
+      'evs': {
+          'hp': 248,
+          'sd': 132,
+          'spe': 128
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Fiery Dance', 'Giga Drain', 'Leech Seed', 'Substitute']
+  }
+},
+'Incineroar-Olul': {
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Iron Fist',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Mach Punch', 'Bullet Punch', 'Foul Strike', 'Close Combat']
+  }
+},
+'Jovianshk': {
+  'Calm Mind': {
+      "level": 100,
+      'ability': 'Slow Light',
+      'item': 'Life Orb',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Psyshock', 'Earth Power', 'Fire Blast', 'Calm Mind']
+  },
+  'Choice Scarf': {
+      "level": 100,
+      'ability': 'Slow Light',
+      'item': 'Choice Scarf',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Psyshock', 'Earth Power', 'Fire Blast', 'Trick']
+  }
+},
+'Kaleidleon': {
+  'Specially Defensive': {
+      "level": 100,
+      'ability': 'Hue Shift',
+      'item': 'Leftovers',
+      'nature': 'Careful',
+      'evs': {
+          'hp': 252,
+          'at': 4,
+          'sd': 252
+      },
+      'moves': ['Fire Lash', 'U-turn', 'Spikes', 'Recover']
+  }
+},
+'Kleavor-Delta': {
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Flash Fire',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Triple Axel', 'Flare Blitz', 'Knock Off']
+  }
+},
+'Loxicant': {
+  'Assault Vest': {
+      "level": 100,
+      'ability': 'Levitate',
+      'item': 'Assault Vest',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 152,
+          'at': 100,
+          'df': 4,
+          'sd': 252
+      },
+      'moves': ['Rapid Spin', 'Rocket Grab', 'Gunk Shot', 'Knock Off']
+  }
+},
+'Lunachi': {
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Sacred Treasures',
+      'item': 'Choice Band',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Darkest Lariat', 'Play Rough', 'Pursuit', 'Sucker Punch']
+  },
+  'Calm Mind': {
+      "level": 100,
+      'ability': 'Sacred Treasures',
+      'item': 'Life Orb',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Moonblast', 'Dark Pulse', 'Calm Mind', 'Hidden Power [Fire]']
+  }
+},
+'Magnegauss': {
+  'Sitrus Berry': {
+      "level": 100,
+      'ability': 'Harvest',
+      'item': 'Sitrus Berry',
+      'nature': 'Modest',
+      'evs': {
+          'hp': 248,
+          'sa': 252,
+          'sd': 8
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Spud Mortar', 'Stealth Rock', 'Volt Switch', 'Fire Blast']
+  },
+  'Choice Specs': {
+      "level": 100,
+      'ability': 'Analytic',
+      'item': 'Choice Specs',
+      'nature': 'Quiet',
+      'evs': {
+          'hp': 248,
+          'sa': 252,
+          'sd': 8
+      },
+      'ivs': {
+          'at': 0,
+          'spe': 0
+      },
+      'moves': ['Volt Switch', 'Thunderbolt', 'Energy Ball', 'Fire Blast']
+  }
+},
+'Mochimechi': {
+  'Rapid Spin': {
+      "level": 100,
+      'ability': 'Glutinous Rice',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Careful',
+      'evs': {
+          'hp': 252,
+          'at': 4,
+          'sd': 252
+      },
+      'moves': ['Rapid Spin', 'Body Slam', 'Knock Off', 'Soft-Boiled']
+  }
+},
+'Mosster': {
+  'CRAB': {
+      "level": 100,
+      'ability': 'Phototroph',
+      'item': 'Leftovers',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Stealth Rock', 'Wood Hammer', 'Body Press', 'Synthesis']
+  }
+},
+'Nestitan': {
+  'IronPress': {
+      "level": 100,
+      'ability': 'Heatproof',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Body Press', 'Iron Defense', 'Roost', 'U-turn']
+  },
+  'Defog': {
+      "level": 100,
+      'ability': 'Heatproof',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 248,
+          'df': 252,
+          'sd': 8
+      },
+      'moves': ['Defog', 'Roost', 'U-turn', 'Body Press']
+  }
+},
+'Niandertroll': {
+  'Specially Defensive': {
+      "level": 100,
+      'ability': 'Seed Sower',
+      'item': 'Leftovers',
+      'nature': 'Careful',
+      'evs': {
+          'hp': 252,
+          'at': 4,
+          'sd': 252
+      },
+      'moves': ['Power Whip', 'Knock Off', 'Stealth Rock', 'Synthesis']
+  },
+  'Physically Defensive': {
+      "level": 100,
+      'ability': 'Seed Sower',
+      'item': 'Leftovers',
+      'nature': 'Impish',
+      'evs': {
+          'hp': 252,
+          'at': 4,
+          'df': 252
+      },
+      'moves': ['Power Whip', 'Body Press', 'Stealth Rock', 'Synthesis']
+  }
+},
+'Ockthane': {
+  'Nasty Plot': {
+      "level": 100,
+      'ability': 'Supreme Overlord',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Nasty Plot', 'Ice Beam', 'Thunderbolt', 'Focus Blast']
+  },
+  'Choice Scarf': {
+      "level": 100,
+      'ability': 'Supreme Overlord',
+      'item': 'Choice Scarf',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Thunderbolt', 'Ice Beam', 'Volt Switch', 'Focus Blast']
+  }
+},
+'Paldemaria': {
+  'Assault Vest': {
+      "level": 100,
+      'ability': 'Regenerator',
+      'item': 'Assault Vest',
+      'nature': 'Calm',
+      'evs': {
+          'hp': 252,
+          'sd': 168,
+          'spe': 88
+      },
+      'moves': ['Scald', 'Moonblast', 'Psychic Noise', 'Flip Turn']
+  }
+},
+'Pestri': {
+  'Corrosion': {
+      "level": 100,
+      'ability': 'Corrosion',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 252,
+          'df': 252,
+          'sd': 4
+      },
+      'moves': ['Sludge Bomb', 'Toxic', 'Roost', 'U-turn']
+  },
+  'Intimidate': {
+      "level": 100,
+      'ability': 'Intimidate',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 248,
+          'df': 252,
+          'sd': 8
+      },
+      'moves': ['Sludge Bomb', 'Flamethrower', 'Roost', 'U-turn']
+  }
+},
+'Porygon-Z-Rhinian': {
+  'Choice Scarf': {
+      "level": 100,
+      'ability': 'Adaptability',
+      'item': 'Choice Scarf',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Thunderbolt', 'Volt Switch', 'Energy Ball', 'Flamethrower']
+  }
+},
+'Rotom-Hisui-Armored': {
+  'Choice Scarf': {
+      "level": 100,
+      'ability': 'Dry Skin',
+      'item': 'Choice Scarf',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Quaking Thrust', 'Temper Flare', 'Gunk Shot', 'U-turn']
+  },
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Dry Skin',
+      'item': 'Life Orb',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Quaking Thrust', 'Gunk Shot', 'Temper Flare']
+  }
+},
+'Scaleslash': {
+  'Rapid Spin': {
+      "level": 100,
+      'ability': 'Belligerent Quills',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Rapid Spin', 'Play Rough', 'High Horsepower']
+  }
+},
+'Scorching Kiln': {
+  'Stripping Kiln': {
+      "level": 100,
+      'ability': 'Protosynthesis',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Calm',
+      'evs': {
+          'hp': 252,
+          'df': 4,
+          'sd': 252
+      },
+      'moves': ['Rapid Spin', 'Flamethrower', 'Morning Sun', 'Teleport']
+  }
+},
+'Sekrilon-Mega': {
+  'All-Out Attacker': {
+      "level": 100,
+      'ability': 'Scrappy',
+      'item': 'Sekrilite',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Triple Axel', 'High Jump Kick', 'Grounding Stomp', 'U-turn']
+  }
+},
+'Sinister Sickle': {
+  'Calm Mind': {
+      "level": 100,
+      'ability': 'Protosynthesis',
+      'item': 'Booster Energy',
+      'nature': 'Timid',
+      'evs': {
+          'hp': 32,
+          'sa': 224,
+          'spe': 252
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Calm Mind', 'Flamethrower', 'Sludge Wave', 'Severing Wind']
+  }
+},
+'Sirentom': {
+  'Specially Defensive': {
+      "level": 100,
+      'ability': 'Comatose',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Calm',
+      'evs': {
+          'hp': 248,
+          'df': 8,
+          'sd': 252
+      },
+      'moves': ['Teleport', 'Rapid Spin', 'Shadow Ball', 'Slack Off']
+  },
+  'Calm Mind': {
+      "level": 100,
+      'ability': 'Comatose',
+      'item': 'Leftovers',
+      'nature': 'Bold',
+      'evs': {
+          'hp': 248,
+          'df': 252,
+          'sa': 8
+      },
+      'ivs': {
+          'at': 0
+      },
+      'moves': ['Calm Mind', 'Will-O-Wisp', 'Hex', 'Slack Off']
+  }
+},
+'Staruhz': {
+  'Can we pretend that': {
+      "level": 100,
+      'ability': 'Starfall',
+      'item': 'Eject Bandage',
+      'nature': 'Timid',
+      'evs': {
+          'hp': 248,
+          'sa': 8,
+          'spe': 252
+      },
+      'moves': ['Mindwipe', 'Ice Beam', 'Recover', 'Flip Turn']
+  }
+},
+'Tinkashank': {
+  'Swords Dance': {
+      "level": 100,
+      'ability': 'Guts',
+      'item': 'Flame Orb',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Swords Dance', 'Knock Off', 'Sucker Punch', 'Iron Head']
+  }
+},
+'Tyranisacer': {
+  'Dragon Dance': {
+      "level": 100,
+      'ability': 'Tough Claws',
+      'item': 'Heavy-Duty Boots',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Dragon Dance', 'Leech Life', 'Knock Off', 'Ice Fang']
+  },
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Tough Claws',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 248,
+          'at': 252,
+          'sd': 8
+      },
+      'moves': ['Knock Off', 'Leech Life', 'Head Smash', 'Ice Fang']
+  }
+},
+'Tyranitar-Delta': {
+  'Dragon Dance': {
+      "level": 100,
+      'ability': 'Psychic Surge',
+      'item': 'Lum Berry',
+      'nature': 'Jolly',
+      'evs': {
+          'at': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Dragon Dance', 'Psychic Fangs', 'Ice Punch', 'Fire Punch']
+  },
+  'Choice Band': {
+      "level": 100,
+      'ability': 'Psychic Surge',
+      'item': 'Choice Band',
+      'nature': 'Adamant',
+      'evs': {
+          'hp': 252,
+          'at': 252,
+          'sd': 4
+      },
+      'moves': ['Psychic Fangs', 'Mindtrap', 'Earthquake', 'Ice Punch']
+  }
+},
+'Wrighvern': {
+  'Choice Specs': {
+      "level": 100,
+      'ability': 'Technician',
+      'item': 'Choice Specs',
+      'nature': 'Timid',
+      'evs': {
+          'sa': 252,
+          'sd': 4,
+          'spe': 252
+      },
+      'moves': ['Twin Gust', 'Draco Meteor', 'U-turn', 'Switcheroo']
   }
 }
 

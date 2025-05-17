@@ -4,9 +4,24 @@ function placeBsBtn() {
 
 	$("#import.bs-btn").click(function () {
 		var pokes = document.getElementsByClassName("import-team-text")[0].value;
-		var name = document.getElementsByClassName("import-name-text")[0].value.trim() === "" ? "Custom Set" : document.getElementsByClassName("import-name-text")[0].value;
+		var name = "Custom Set";
 		addSets(pokes, name);
+		//erase the import text area
+		document.getElementsByClassName("import-team-text")[0].value="";
 	});
+}
+
+
+/*
+	for now only save the current trainer #p1
+*/
+function saveTrainerPokemon(){
+	ExportPokemon($("#p1"));
+	$("#import.bs-btn").click()
+	document.getElementById('savedTooltip').style.visibility = 'visible';
+		setTimeout(function () {
+			document.getElementById('savedTooltip').style.visibility = 'hidden';
+		}, 1500);
 }
 
 function ExportPokemon(pokeInfo) {
@@ -16,23 +31,8 @@ function ExportPokemon(pokeInfo) {
 	finalText = pokemon.name + (pokemon.item ? " @ " + pokemon.item : "") + "\n";
 	finalText += "Level: " + pokemon.level + "\n";
 	finalText += pokemon.nature && gen > 2 ? pokemon.nature + " Nature" + "\n" : "";
-	if (gen === 9) {
-		var teraType = pokeInfo.find(".teraType").val();
-		if (teraType !== undefined && teraType !== pokemon.types[0]) {
-			finalText += "Tera Type: " + teraType + "\n";
-		}
-	}
+	finalText += pokemon.teraType && gen > 8 ? "Tera Type: " + pokemon.teraType : "";
 	finalText += pokemon.ability ? "Ability: " + pokemon.ability + "\n" : "";
-
-	// FUSION EXPORT
-	var fusionSetName = pokeInfo.find("input.fusion-selector").val();
-	var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
-
-	if (pokeInfo.find("#fusionToggle").prop("checked")) {
-		finalText += fusionName ? "Fusion: " + fusionName + "\n" : "";
-	}
-	//END OF FUSION EXPORT
-
 	if (gen > 2) {
 		var EVs_Array = [];
 		for (var stat in pokemon.evs) {
@@ -49,6 +49,16 @@ function ExportPokemon(pokeInfo) {
 			finalText += "\n";
 		}
 	}
+
+	// FUSION EXPORT
+	var fusionSetName = pokeInfo.find("input.fusion-selector").val();
+	var fusionName = fusionSetName.substring(0, fusionSetName.indexOf(" ("));
+
+	if (pokeInfo.find("#fusionToggle").prop("checked")) {
+		finalText += fusionName ? "Fusion: " + fusionName + "\n" : "";
+	}
+	//END OF FUSION EXPORT
+
 
 	var IVs_Array = [];
 	for (var stat in pokemon.ivs) {
@@ -71,14 +81,21 @@ function ExportPokemon(pokeInfo) {
 	}
 	finalText = finalText.trim();
 	$("textarea.import-team-text").val(finalText);
+	return finalText;
 }
 
 $("#exportL").click(function () {
-	ExportPokemon($("#p1"));
+	var exportData = ExportPokemon($("#p1"));
+	$("textarea.import-team-text").val(exportData);
+	navigator.clipboard.writeText(exportData).then(function () {
+	});
 });
 
 $("#exportR").click(function () {
-	ExportPokemon($("#p2"));
+	var exportData = ExportPokemon($("#p2"));
+	$("textarea.import-team-text").val(exportData);
+	navigator.clipboard.writeText(exportData).then(function () {
+	});
 });
 
 function serialize(array, separator) {
@@ -280,9 +297,22 @@ function updateDex(customsets) {
 			SETDEX_GSC[pokemon][moveset] = customsets[pokemon][moveset];
 			if (!SETDEX_RBY[pokemon]) SETDEX_RBY[pokemon] = {};
 			SETDEX_RBY[pokemon][moveset] = customsets[pokemon][moveset];
+
+			// Origin for fangame compatibility
+			pokedex = calc.SPECIES[9];
+			var origin = pokedex[pokemon].origin
+			var poke = {name: pokemon, nameProp: moveset, origin: origin};
+			addBoxed(poke);
 		}
 	}
 	localStorage.customsets = JSON.stringify(customsets);
+}
+function sortImports (a,b){
+	var sorted = [a.name, b.name].sort()[0]
+	if (sorted == b.name){
+		return 1
+	}
+	return -1
 }
 
 function addSets(pokes, name) {
@@ -290,6 +320,7 @@ function addSets(pokes, name) {
 	var currentRow;
 	var currentPoke;
 	var addedpokes = 0;
+	var pokelist = []
 	for (var i = 0; i < rows.length; i++) {
 		currentRow = rows[i].split(/[()@]/);
 		for (var j = 0; j < currentRow.length; j++) {
@@ -308,13 +339,20 @@ function addSets(pokes, name) {
 				currentPoke.teraType = getTeraType(rows[i + 1].split(":"));
 				currentPoke = getStats(currentPoke, rows, i + 1);
 				currentPoke = getMoves(currentPoke, rows, i);
-				addToDex(currentPoke);
+				if (currentPoke.nature == "-") {
+					currentPoke.nature = "Serious";
+				}
+				pokelist.push(currentPoke);
 				addedpokes++;
+				break;
 			}
 		}
 	}
+	pokelist.sort(sortImports)
+	for(var i=0 ; i<pokelist.length; i++){
+		addToDex(pokelist[i]);
+	}
 	if (addedpokes > 0) {
-		alert("Successfully imported " + addedpokes + " set(s)");
 		$(allPokemon("#importedSetsOptions")).css("display", "inline");
 	} else {
 		alert("No sets imported, please check your syntax and try again");
@@ -358,26 +396,23 @@ function checkExeptions(poke) {
 	case 'Florges-Yellow':
 		poke = "Florges";
 		break;
-	case 'Shellos-East':
-		poke = "Shellos";
-		break;
-	case 'Deerling-Summer':
-	case 'Deerling-Autumn':
-	case 'Deerling-Winter':
-		poke = "Deerling";
-		break;
 	}
 	return poke;
 
 }
 
-$(allPokemon("#clearSets")).click(function () {
-	if (confirm("Are you sure you want to delete your custom sets? This action cannot be undone.")) {
-		localStorage.removeItem("customsets");
-		alert("Custom Sets successfully cleared. Please refresh the page.");
-		$(allPokemon("#importedSetsOptions")).hide();
-		loadDefaultLists();
+$("#clearSets").click(function () {
+	var yes = confirm("Do you really wish to delete all your mons?")
+	if (!yes){
+		return
 	}
+	localStorage.removeItem("customsets");
+	//$(allPokemon("#importedSetsOptions")).hide();
+	loadDefaultLists();
+	for (let zone of document.getElementsByClassName("dropzone")){
+		zone.innerHTML="";
+	}
+
 });
 
 $(allPokemon("#importedSets")).click(function () {
@@ -396,8 +431,11 @@ $(document).ready(function () {
 	if (localStorage.customsets) {
 		customSets = JSON.parse(localStorage.customsets);
 		updateDex(customSets);
+		selectFirstMon();
 		$(allPokemon("#importedSetsOptions")).css("display", "inline");
 	} else {
 		loadDefaultLists();
 	}
+	//adjust the side buttons that collapse the data wished to be hidden
+	//setupSideCollapsers();
 });
