@@ -47,6 +47,7 @@ import {
   isQPActive,
   getStabMod,
   getStellarStabMod,
+  checkAdaptiveArmor,
 } from './util';
 import { Types } from '../data/types';
 import { types } from 'util';
@@ -87,6 +88,8 @@ export function calculateSMSSSV(
   checkDownload(defender, attacker, field.isWonderRoom);
   checkIntrepidSword(attacker, gen);
   checkIntrepidSword(defender, gen);
+  checkAdaptiveArmor(attacker, defender);
+  checkAdaptiveArmor(defender, attacker);
 
   if (move.named('Meteor Beam', 'Electro Shot')) {
     attacker.boosts.spa +=
@@ -950,8 +953,23 @@ export function calculateBasePowerSMSSSV(
     basePower = attacker.teraType === 'Stellar' ? 100 : 80;
     desc.moveBP = basePower;
     break;
-    case 'Quaking Thrust':
+  case 'Quaking Thrust':
     basePower = move.bp * (turnOrder !== 'last' ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Vengeful Pulse':
+    basePower = move.bp * (attacker.status ? 1.5 : 1);
+    desc.moveBP = basePower;
+    break;
+  case 'Lucky 7s':
+    var sevens = 0;
+				sevens += (attacker.stats.hp.toString().match(/7/g) || []).length;
+				sevens += (attacker.stats.atk.toString().match(/7/g) || []).length;
+				sevens += (attacker.stats.def.toString().match(/7/g) || []).length;
+				sevens += (attacker.stats.spa.toString().match(/7/g) || []).length;
+				sevens += (attacker.stats.spd.toString().match(/7/g) || []).length;
+				sevens += (attacker.stats.spe.toString().match(/7/g) || []).length;
+    basePower = move.bp + sevens*5;
     desc.moveBP = basePower;
     break;
   default:
@@ -1119,7 +1137,7 @@ export function calculateBPModsSMSSSV(
     }
   }
   if (isGrounded(defender, field)) {
-    if ((field.hasTerrain('Misty') && move.hasType('Dragon')) ||
+    if ((field.hasTerrain('Misty') && move.hasType('Dragon') && !move.named('Mist Barrage')) ||
         (field.hasTerrain('Grassy') && move.named('Bulldoze', 'Earthquake'))
     ) {
       bpMods.push(2048);
@@ -1140,7 +1158,8 @@ export function calculateBPModsSMSSSV(
     (attacker.hasAbility('Steely Spirit') && move.hasType('Steel')) ||
     (attacker.hasAbility('Sharpness') && move.flags.slicing) ||
     (attacker.hasAbility('Acceleration') && move.priority>0) ||
-    (attacker.hasAbility('Cannoneer') && move.flags.bullet)
+    (attacker.hasAbility('Cannoneer') && move.flags.bullet) ||
+    (attacker.hasAbility('Pixie Power') && move.hasType('Fairy'))
   ) {
     bpMods.push(6144);
     desc.attackerAbility = attacker.ability;
@@ -1227,7 +1246,10 @@ export function calculateBPModsSMSSSV(
 
   // The -ate abilities already changed move typing earlier, so most checks are done and desc is set
   // However, Max Moves also don't boost -ate Abilities
-  if (!move.isMax && hasAteAbilityTypeChange) {
+  if (
+      (!move.isMax && hasAteAbilityTypeChange) ||
+      (attacker.hasAbility('Windy Spirit') && move.flags.wind)
+    ) {
     bpMods.push(4915);
   }
 
@@ -1235,7 +1257,8 @@ export function calculateBPModsSMSSSV(
     move.flags.sound = 1;
   }
 
-  if ((attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
+  if (
+      (attacker.hasAbility('Reckless') && (move.recoil || move.hasCrashDamage)) ||
       (attacker.hasAbility('Iron Fist') && move.flags.punch) ||
       (attacker.hasAbility('Spitting Fire') && move.flags.sound)
   ) {
@@ -1808,7 +1831,8 @@ export function calculateFinalModsSMSSSV(
   } else if (
     (defender.hasAbility('Punk Rock') && move.flags.sound) ||
     (defender.hasAbility('Ice Scales') && move.category === 'Special') || 
-    (defender.hasAbility('Ivy Wall') && move.hasType('Ground', 'Water', 'Grass', 'Electric'))
+    (defender.hasAbility('Ivy Wall') && move.hasType('Ground', 'Water', 'Grass', 'Electric')) ||
+    (checkAdaptiveArmor(defender, attacker))
   ) {
     finalMods.push(2048);
     desc.defenderAbility = defender.ability;

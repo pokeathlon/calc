@@ -341,6 +341,15 @@ export function checkSeedBoost(pokemon: Pokemon, field: Field) {
   }
 }
 
+
+export function checkAdaptiveArmor(source: Pokemon, target: Pokemon) {
+  if (source.hasAbility('Adaptive Armor') && source.abilityOn) {
+    return true
+  } else {
+    return false
+  }
+}
+
 // NOTE: We only need to handle guaranteed, damage-relevant boosts here for multi-hit accuracy
 export function checkMultihitBoost(
   gen: Generation,

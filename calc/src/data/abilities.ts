@@ -437,7 +437,13 @@ const SV = SS.concat([
   'Aqua Guard',
   'Lucky Charm',
   'Kleptomancy',
-  'Crystal Mana'
+  'Crystal Mana',
+  'Kleptomancy',
+  'Adaptive Armor',
+  'Momentum',
+  'Pixel Perfect',
+  'Pixie Power',
+  'Windy Spirit'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
