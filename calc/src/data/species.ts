@@ -15255,6 +15255,7 @@ weightkg: 75,
 abilities: {0: 'Magic Bounce'},
 origin: 'Infinity'
 },
+
 // Mariomon
 'Piranha Plant':{
 types: ['Grass'],
@@ -15674,7 +15675,7 @@ weightkg: 22,
 abilities: {0: 'Iron Fist'},
 origin: 'Mariomon'
 },
-'Chargin\u2019 Chuck':{
+"Chargin' Chuck":{
 types: ['Fighting'],
 bs: {hp:120, at:95, df:110, sa:30, sd:80, sp:45}, 
 weightkg: 55,
@@ -15853,7 +15854,7 @@ origin: 'Mariomon'
 },
 'Mollusque-Lanceur':{
 types: ['Water', 'Fire'],
-bs: {hp:140, at:55, df:90, sa:110, sd:100, sp:25}, 
+bs: {hp:120, at:55, df:90, sa:110, sd:100, sp:25}, 
 weightkg: 195,
 abilities: {0: 'Swift Swim'},
 origin: 'Mariomon'
@@ -15901,7 +15902,7 @@ weightkg: 39.5,
 abilities: {0: 'Keen Eye'},
 origin: 'Mariomon'
 },
-'Strollin\u2019 Stu':{
+"Strollin' Stu":{
 types: ['Water'],
 bs: {hp:50, at:80, df:80, sa:80, sd:80, sp:80}, 
 weightkg: 28.5,
@@ -16011,7 +16012,7 @@ abilities: {0: 'Magic Bounce'},
 origin: 'Mariomon'
 },
 'Tuff Puff':{
-types: ['Poison'],
+types: ['Poison', 'Electric'],
 bs: {hp:40, at:60, df:45, sa:65, sd:95, sp:35}, 
 weightkg: 1,
 abilities: {0: 'Neutralizing Gas'},
@@ -16019,7 +16020,7 @@ nfe: true,
 origin: 'Mariomon'
 },
 'Huff n Puff':{
-types: ['Poison'],
+types: ['Poison', 'Electric'],
 bs: {hp:65, at:85, df:70, sa:90, sd:120, sp:60}, 
 weightkg: 2,
 abilities: {0: 'Neutralizing Gas'},
@@ -16088,7 +16089,7 @@ origin: 'Mariomon'
 types: ['Electric', 'Steel'],
 bs: {hp:85, at:100, df:80, sa:100, sd:80, sp:55}, 
 weightkg: 66.6,
-abilities: {0: 'Truant'},
+abilities: {0: 'Comatose'},
 origin: 'Mariomon'
 },
 'Happy Moon':{
@@ -16245,7 +16246,7 @@ origin: 'Mariomon'
 },
 'Mr. I':{
 types: ['Psychic', 'Dark'],
-bs: {hp:85, at:90, df:110, sa:60, sd:90, sp:5}, 
+bs: {hp:85, at:100, df:110, sa:80, sd:90, sp:5}, 
 weightkg: 40,
 abilities: {0: 'Keen Eye'},
 origin: 'Mariomon'
@@ -16439,12 +16440,12 @@ weightkg: 55.7,
 abilities: {0: 'Chaos Emeralds'},
 origin: 'Mariomon'
 },
-'Tiptron': {
-  types: ['Fairy', 'Steel'],
-  bs: { hp: 100, at: 100, df: 100, sa: 100, sd: 100, sp: 100 },
-  weightkg: 1,
-  abilities: { 0: 'Adaptability' },
-  origin: 'Mariomon'
+'Tiptron':{
+types: ['Fairy', 'Steel'],
+bs: {hp:100, at:100, df:100, sa:100, sd:100, sp:100}, 
+weightkg: 1,
+abilities: {0: 'Download'},
+origin: 'Mariomon'
 },
 
 // PoA 
