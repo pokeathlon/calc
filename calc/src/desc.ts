@@ -941,7 +941,7 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
       ` ${description.alliesFainted === 1 ? 'ally' : 'allies'} fainted `;
   }
   if (description.heads) {
-    output += Math.min(5, description.heads) + ` heads `;
+    output += Math.max(5, description.heads) + ` heads `;
   }
   if (description.attackerTera) {
     output += `Tera ${description.attackerTera} `;

@@ -366,7 +366,7 @@ export const MEGA_STONES: {[species: string]: string} = {
   Jirachite: 'Jirachi',
   Chatotite: 'Chatot',
   Spiritombite: 'Spiritomb',
-  Forslassite: 'Froslass',
+  Froslassite: 'Froslass',
   Zebstrikite: 'Zebstrika',
   Zoronite: 'Zoroark',
   Gothitite: 'Gothitelle',

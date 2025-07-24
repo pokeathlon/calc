@@ -1251,6 +1251,7 @@ export function calculateBPModsSMSSSV(
       (attacker.hasAbility('Windy Spirit') && move.flags.wind)
     ) {
     bpMods.push(4915);
+    desc.attackerAbility = attacker.ability;
   }
 
   if (attacker.hasAbility('Spitting Fire') && move.hasType('Fire')) {
