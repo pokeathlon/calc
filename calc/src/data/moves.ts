@@ -6466,6 +6466,14 @@ Mudslide: {
   zp: 0,
   maxPower: 0,
 },
+"Solar Flare": {
+  bp: 40,
+  type: 'Psychic',
+  category: 'Special',
+  multihit: 2,
+  zp: 140,
+  maxPower: 120,
+},
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
