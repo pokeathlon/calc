@@ -443,7 +443,9 @@ const SV = SS.concat([
   'Momentum',
   'Pixel Perfect',
   'Pixie Power',
-  'Windy Spirit'
+  'Windy Spirit',
+  'Strange Anatomy',
+  'Tailgun Railgun'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

@@ -17140,6 +17140,13 @@ weightkg: 255,
 abilities: {0: 'Clear Body'},
 origin: "Pokeathlon"
 },
+'Reneguana':{
+types: ['Electric', 'Dragon'],
+bs: {hp:70, at:100, df:110, sa:100, sd:50, sp:75}, 
+weightkg: 55,
+abilities: {0: 'Battle Armor'},
+origin: "Pokeathlon"
+},
 'Rotom-Hisui':{
 types: ['Poison', 'Fairy'],
 bs: {hp:60, at:81, df:67, sa:50, sd:67, sp:115}, 

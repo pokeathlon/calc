@@ -6474,6 +6474,13 @@ Mudslide: {
   zp: 140,
   maxPower: 120,
 },
+"Severed Sidearm": {
+  bp: 55,
+  type: 'Electric',
+  category: 'Special',
+  zp: 100,
+  maxPower: 110,
+},
 };
 
 const SV: {[name: string]: MoveData} = extend(true, {}, SS, SV_PATCH);
