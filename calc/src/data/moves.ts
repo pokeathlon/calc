@@ -6191,7 +6191,7 @@ Mudslide: {
   makesContact: true,
 },
 'Megaton Slice': {
-  bp: 120,
+  bp: 110,
   type: 'Dark',
   category: 'Physical',
   zp: 100,
