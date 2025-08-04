@@ -1300,6 +1300,10 @@ export function calculateBPModsSMSSSV(
     bpMods.push(5120);
     desc.attackerAbility = attacker.ability;
   }
+  if (attacker.hasAbility('Hidden Ambush') && move.flags.charge) {
+    bpMods.push(5120);
+    desc.attackerAbility = attacker.ability;
+  }
 
   // Items
 

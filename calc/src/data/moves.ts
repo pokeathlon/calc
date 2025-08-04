@@ -40,6 +40,7 @@ export interface MoveData {
   readonly isPulse?: boolean;
   readonly isSlicing?: boolean;
   readonly isWind?: boolean;
+  readonly isCharge?: boolean;
 }
 
 const RBY: {[name: string]: MoveData} = {
@@ -4150,6 +4151,22 @@ for (const m of LGPE_MOVES) {
 }
 
 const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
+  'Dive': {isCharge: true},
+  'Bounce': {isCharge: true},
+  'Dig': {isCharge: true},
+  'Electroshot': {isCharge: true},
+  'Fly': {isCharge: true},
+  'Freeze Shock': {isCharge: true},
+  'Geomancy': {isCharge: true},
+  'Ice Burn': {isCharge: true},
+  'Meteor Beam': {isCharge: true},
+  'Phantom Force': {isCharge: true},
+  'Razor Wind': {isCharge: true},
+  'Shadow Force': {isCharge: true},
+  'Skull Bash': {isCharge: true},
+  'Sky Attack': {isCharge: true},
+  'Sky Drop': {isCharge: true},
+  'Solar Beam': {isCharge: true},
   'Aerial Ace': {isSlicing: true},
   Aeroblast: {isWind: true},
   'Air Cutter': {isSlicing: true, isWind: true},
@@ -4178,7 +4195,7 @@ const SV_PATCH: {[name: string]: DeepPartial<MoveData>} = {
   'Secret Sword': {isSlicing: true},
   Sandstorm: {isWind: true},
   Slash: {isSlicing: true},
-  'Solar Blade': {isSlicing: true},
+  'Solar Blade': {isSlicing: true, isCharge: true},
   Tailwind: {isWind: true},
   Twister: {isWind: true},
   Whirlwind: {isWind: true},
@@ -6570,6 +6587,7 @@ class Move implements I.Move {
     if (data.isPulse) this.flags.pulse = 1;
     if (data.isSlicing) this.flags.slicing = 1;
     if (data.isWind) this.flags.wind = 1;
+    if (data.isCharge) this.flags.charge = 1;
 
     assignWithout(this, data, Move.FLAGS);
 

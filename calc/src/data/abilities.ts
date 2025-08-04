@@ -445,7 +445,8 @@ const SV = SS.concat([
   'Pixie Power',
   'Windy Spirit',
   'Strange Anatomy',
-  'Tailgun Railgun'
+  'Tailgun Railgun',
+  'Hidden Ambush'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];

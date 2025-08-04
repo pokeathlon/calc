@@ -95,6 +95,7 @@ export interface MoveFlags {
   pulse?: 1 | 0;
   slicing?: 1 | 0;
   wind?: 1| 0;
+  charge?: 1 |0;
 }
 
 export interface SelfOrSecondaryEffect {

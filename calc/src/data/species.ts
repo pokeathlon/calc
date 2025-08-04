@@ -16578,6 +16578,13 @@ weightkg: 750,
 abilities: {0: 'Water Compaction'},
 origin: "Pokeathlon"
 },
+'Celestray':{
+types: ['Ghost', 'Flying'],
+bs: {hp:96, at:119, df:90, sa:60, sd:65, sp:95}, 
+weightkg: 750,
+abilities: {0: 'Infiltrator'},
+origin: "Pokeathlon"
+},
 'Chickix':{
 types: ['Fighting', 'Flying'],
 bs: {hp:46, at:70, df:34, sa:23, sd:24, sp:55}, 
