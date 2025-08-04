@@ -17183,6 +17183,13 @@ weightkg: 159,
 abilities: {0: 'Dry Skin'},
 origin: "Pokeathlon"
 },
+'Saturoceras':{
+types: ['Fire', 'Rock'],
+bs: {hp: 65, at: 60, df: 75, sa: 115, sd: 95, sp: 85},
+weightkg: 376,
+abilities: {0: 'Shell Armor'},
+origin: "Pokeathlon"
+},
 'Scaleslash':{
 types: ['Ground', 'Fairy'],
 bs: {hp:90, at:115, df:120, sa:45, sd:75, sp:105}, 
