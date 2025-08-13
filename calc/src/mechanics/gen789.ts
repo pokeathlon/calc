@@ -51,6 +51,7 @@ import {
 } from './util';
 import { Types } from '../data/types';
 import { types } from 'util';
+import { Generations } from '../data';
 
 export function calculateSMSSSV(
   gen: Generation,
@@ -68,7 +69,7 @@ export function calculateSMSSSV(
   checkForecast(attacker, field.weather);
   checkForecast(defender, field.weather);
   checkItem(attacker, field.isMagicRoom);
-  checkItem(defender, field.isMagicRoom);
+  checkItem(defender, field.isMagicRoom, attacker);
   checkWonderRoom(attacker, field.isWonderRoom);
   checkWonderRoom(defender, field.isWonderRoom);
   checkSeedBoost(attacker, field);
@@ -339,6 +340,13 @@ export function calculateSMSSSV(
         }
         else abilitytypemod = getMoveEffectiveness(gen, move, 'Grass', isGhostRevealed, field.isGravity,isRingTarget)
         desc.defenderAbility = defender.ability;
+        break;
+      case 'Coat of Arms':
+        if (defender.coat) {
+          abilitytypemod = getMoveEffectiveness(gen, move, defender.coat, isGhostRevealed, field.isGravity,isRingTarget); 
+          desc.coatDef = defender.coat;
+        }
+        else abilitytypemod = 1;
         break;
       default:
         abilitytypemod = 1;
@@ -1583,7 +1591,7 @@ export function calculateDefenseSMSSSV(
       (isCritical && defender.boosts[defenseStat] > 0) ||
       move.ignoreDefensive) {
     defense = defender.rawStats[defenseStat];
-  } else if (attacker.hasAbility('Unaware')) {
+  } else if (attacker.hasAbility('Unaware', 'Vacuum Bubble')) {
     defense = defender.rawStats[defenseStat];
     desc.attackerAbility = attacker.ability;
   } else {
@@ -1829,6 +1837,13 @@ export function calculateFinalModsSMSSSV(
     finalMods.push(2048);
     desc.defenderAbility = defender.ability;
   }
+
+  if (defender.hasAbility('Hive Mind') && defender.species.name === 'Zorblob' && 
+      calculateBaseDamageSMSSSV(Generations.get(9), attacker, defender, move.bp, attacker.stats.atk, defender.stats.def, move, field, desc, isCritical) > (defender.maxHP() / 4)
+    ) {
+      finalMods.push(2048)
+      desc.defenderAbility = defender.ability;
+    }
 
   if (defender.hasAbility('Fluffy') && move.flags.contact && !attacker.hasAbility('Long Reach')) {
     finalMods.push(2048);

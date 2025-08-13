@@ -294,6 +294,11 @@ $(".ability").bind("keyup change", function () {
 		$(this).closest(".poke-info").find(".heads").val('5');
 		$(this).closest(".poke-info").find(".heads").hide();
 	}
+	if (ability === "Coat of Arms") {
+		$(this).closest(".poke-info").find(".coat").show()
+	} else {
+		$(this).closest(".poke-info").find(".coat").hide();
+	}
 	if (ability === "Slow Light") {
 		$("#gravity").prop("checked", true);
 	} else {
@@ -1197,6 +1202,7 @@ function createPokemon(pokeInfo) {
 		var item = pokeInfo.find(".item").val();
 		var isDynamaxed = pokeInfo.find(".max").prop("checked");
 		var teraType = pokeInfo.find(".teraToggle").is(":checked") ? pokeInfo.find(".teraType").val() : undefined;
+		var coat = pokeInfo.find(".coat").val();
 		pokeInfo.isDynamaxed = isDynamaxed;
 		calcHP(pokeInfo);
 		var curHP = ~~pokeInfo.find(".current-hp").val();
@@ -1216,6 +1222,7 @@ function createPokemon(pokeInfo) {
 			isSaltCure: pokeInfo.find(".saltcure").is(":checked"),
 			alliesFainted: parseInt(pokeInfo.find(".alliesFainted").val()),
 			heads: parseInt(pokeInfo.find(".heads").val()),
+			coat: coat,
 			boostedStat: pokeInfo.find(".boostedStat").val() || undefined,
 			season: pokeInfo.find(".season").val() || undefined,
 			teraType: teraType,

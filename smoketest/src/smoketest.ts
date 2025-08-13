@@ -52,6 +52,7 @@ function createCalcPoke(battle: Battle, poke: Pokemon): calc.Pokemon {
       level: set.level,
       isDynamaxed: !!poke.volatiles['dynamax'],
       alliesFainted: poke.side.faints,
+      coat: poke.coat,
       gender: set.gender as GenderName,
       status: poke.status,
       teraType: poke.isTerastallized ? poke.teraType : undefined,

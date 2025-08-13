@@ -52,6 +52,8 @@ export interface RawDesc {
   heads?: number;
   season?: number;
   isZealousFlock?: boolean;
+  coatDef?: TypeName;
+  coatAtk?: TypeName;
 }
 
 export function display(
@@ -943,6 +945,9 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   if (description.heads) {
     output += Math.max(5, description.heads) + ` heads `;
   }
+  if (description.coatAtk) {
+    output +=  `${description.coatAtk} Coat `;
+  }
   if (description.attackerTera) {
     output += `Tera ${description.attackerTera} `;
   }
@@ -1039,6 +1044,9 @@ function buildDescription(description: RawDesc, attacker: Pokemon, defender: Pok
   }
   if (description.isWonderRoom) {
     output += ' in Wonder Room';
+  }
+  if (description.coatDef) {
+    output +=  ` ${description.coatDef} Coat `;
   }
   return output;
 }

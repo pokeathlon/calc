@@ -28,6 +28,7 @@ export class Pokemon implements State.Pokemon {
   teraType?: I.TypeName;
   heads?: number;
   season?: number;
+  coat?: I.TypeName;
 
   nature: I.NatureName;
   ivs: I.StatsTable;
@@ -78,6 +79,7 @@ export class Pokemon implements State.Pokemon {
     this.ivs = Pokemon.withDefault(gen, options.ivs, 31);
     this.evs = Pokemon.withDefault(gen, options.evs, gen.num >= 3 ? 0 : 252);
     this.boosts = Pokemon.withDefault(gen, options.boosts, 0, false);
+    this.coat = options.coat;
 
     // Gigantamax 'forms' inherit weight from their base species when not dynamaxed
     // TODO: clean this up with proper Gigantamax support
@@ -172,6 +174,7 @@ export class Pokemon implements State.Pokemon {
       heads: this.heads,
       boostedStat: this.boostedStat,
       season: this.season,
+      coat: this.coat,
       item: this.item,
       gender: this.gender,
       nature: this.nature,

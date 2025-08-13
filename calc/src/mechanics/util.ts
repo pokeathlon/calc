@@ -213,12 +213,12 @@ export function checkForecast(pokemon: Pokemon, weather?: Weather) {
   }
 }
 
-export function checkItem(pokemon: Pokemon, magicRoomActive?: boolean) {
+export function checkItem(pokemon: Pokemon, magicRoomActive?: boolean, attacker?: Pokemon) {
   // Pokemon with Klutz still get their speed dropped in generation 4
   if (pokemon.gen.num === 4 && pokemon.hasItem('Iron Ball')) return;
   if (
     pokemon.hasAbility('Klutz') && !EV_ITEMS.includes(pokemon.item!) ||
-    magicRoomActive
+    magicRoomActive || attacker?.hasAbility('Vacuum Bubble')
   ) {
     pokemon.item = '' as ItemName;
   }
@@ -620,6 +620,9 @@ export function getStabMod(pokemon: Pokemon, move: Move, desc: RawDesc) {
   } else if (pokemon.hasAbility('Ancient Presence')) {
     stabMod += 2048;
     desc.attackerAbility = pokemon.ability;
+  } else if (pokemon.hasAbility('Coat of Arms') && move.type === pokemon.coat) {
+    stabMod += 2048;
+    desc.coatAtk = pokemon.coat;
   }
   const teraType = pokemon.teraType;
   if (teraType === move.type && teraType !== 'Stellar') {
