@@ -5180,3758 +5180,629 @@ var SETDEX_SV = {
     "ZU Showdown Usage": {"ability":"Libero","item":"Heavy-Duty Boots","nature":"Jolly","teraType":"Fire","evs":{"at":252,"sd":4,"sp":252},"moves":["U-turn","High Jump Kick","Flare Blitz","Sucker Punch"]}
   },
   "Eiscue": {
-    "ZU Showdown Usage": {
-      "ability":"Ice Face",
-      "item":"Salac Berry",
-      "nature":"Naive",
-      "teraType":"Ice",
-      "evs":{"hp":4,"at":252,"sp":252},
-      "moves":["Belly Drum","Ice Spinner","Tera Blast","Substitute"]}
+    "ZU Showdown Usage": {"ability":"Ice Face","item":"Salac Berry","nature":"Naive","teraType":"Ice","evs":{"hp":4,"at":252,"sp":252},"moves":["Belly Drum","Ice Spinner","Tera Blast","Substitute"]}
   },
-  'Venusaur-Delta': {
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Regenerator',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sa': 4
-        },
-        'moves': ['Calm Mind', 'Moonblast', 'Psychic', 'Moonlight']
-    }
-},
-'Venusaur-Delta-Mega': {
-    'Bulky Offense': {
-        "level": 120,
-        'ability': 'Hubris',
-        'item': 'Delta Venusaurite',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 252,
-            'sp': 4
-        },
-        'moves': ['Psychic', 'Moonblast', 'Moonlight', 'Thunderbolt']
-    }
-},
-'Charizard-Delta': {
-    'Dragon Dance': {
-        "level": 120,
-        'ability': 'Spirit Call',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Dragon Dance', 'Shadow Bone', 'Outrage', 'Iron Head']
-    }
-},
-'Charizard-Delta-Mega': {
-    'Dragon Dance': {
-        "level": 120,
-        'ability': 'Noctem',
-        'item': 'Delta Charizardite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Dragon Dance', 'Phantom Force', 'Outrage', 'Iron Head']
-    },
-    'Special': {
-        "level": 120,
-        'ability': 'Noctem',
-        'item': 'Delta Charizardite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Shadow Ball', 'Draco Meteor', 'Sludge Bomb', 'Will-O-Wisp']
-    },
-    'Hone Claws': {
-        "level": 120,
-        'ability': 'Noctem',
-        'item': 'Delta Charizardite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Hone Claws', 'Shadow Sneak', 'Dragon Rush', 'Iron Tail']
-    }
-},
-'Blastoise-Delta': {
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Shadow Dance',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Hone Claws', 'Knock Off', 'Close Combat', 'Poison Jab']
-    },
-    'Special Sweeper': {
-        "level": 120,
-        'ability': 'Shadow Dance',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Nasty Plot', 'Lunar Cannon', 'Focus Blast', 'Flash Cannon']
-    }
-},
-'Blastoise-Delta-Mega': {
-    'Special Offensive': {
-        "level": 120,
-        'ability': 'Mega Launcher',
-        'item': 'Delta Blastoisite',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Aura Sphere', 'Dark Pulse', 'Flash Cannon', 'U-turn']
-    }
-},
-'Bisharp-Delta': {
-    'Scarfed': {
-        "level": 120,
-        'ability': 'Wind Force',
-        'item': 'Choice Scarf',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['U-turn', 'Close Combat', 'Knock Off', 'Iron Head']
-    }
-},
-'Bisharp-Delta-Mega': {
-    'Bulk Up': {
-        "level": 120,
-        'ability': 'Technician',
-        'item': 'Delta Bisharpite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Bulk Up', 'Close Combat', 'Aerial Ace', 'Roost']
-    }
-},
-'Gardevoir-Delta': {
-    'Scarfed': {
-        "level": 120,
-        'ability': 'Lightning Rod',
-        'item': 'Choice Scarf',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Ice Beam', 'Volt Switch', 'Earth Power', 'Psychic']
-    }
-},
-'Gardevoir-Delta-Mega': {
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Lightning Rod',
-        'item': 'Delta Gardevoirite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Ice Beam', 'Thunderbolt', 'Calm Mind', 'Earth Power']
-    }
-},
-'Gallade-Delta': {
-    'Scarfed': {
-        "level": 120,
-        'ability': 'Volt Absorb',
-        'item': 'Choice Scarf',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Icicle Crash', 'Wild Charge', 'Close Combat', 'Knock Off']
-    }
-},
-'Gallade-Delta-Mega': {
-    'Swords Dance': {
-        "level": 120,
-        'ability': 'Volt Absorb',
-        'item': 'Delta Galladite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Icicle Crash', 'Ice Shard', 'Wild Charge']
-    }
-},
-'Sunflora-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Flame Body',
-        'item': 'Black Sludge',
-        'nature': 'Sassy',
-        'ivs': {
-            'at': 0,
-            'sp': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Pain Split', 'Corrode', 'Will-O-Wisp', 'Knock Off']
-    }
-},
-'Sunflora-Delta-Mega': {
-    'Trick Room': {
-        "level": 120,
-        'ability': 'Chlorofury',
-        'item': 'Delta Sunflorite',
-        'nature': 'Quiet',
-        'ivs': {
-            'at': 0,
-            'sp': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sa': 252
-        },
-        'moves': ['Trick Room', 'Nasty Plot', 'Corrode', 'Earth Power']
-    }
-},
-'Avalugg-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Sand Stream',
-        'item': 'Smooth Rock',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'df': 252
-        },
-        'moves': ['Stealth Rock', 'Rapid Spin', 'Slack Off', 'Rock Slide']
-    },
-    'Weakness Policy': {
-        "level": 120,
-        'ability': 'Solid Rock',
-        'item': 'Weakness Policy',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Rock Polish', 'Stone Edge', 'Outrage', 'Earthquake']
-    }
-},
-'Scyther-Delta': {
-    'Hone Claws': {
-        "level": 120,
-        'ability': 'Hustle',
-        'item': 'Eviolite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Hone Claws', 'Roost', 'Icicle Crash', 'Close Combat']
-    }
-},
-'Scizor-Delta': {
-    'Hail Sweeper': {
-        "level": 120,
-        'ability': 'Slush Rush',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Icicle Crash', 'Close Combat', 'U-turn']
-    },
-    'Physical Attacker': {
-        "level": 120,
-        'ability': 'Tough Claws',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sp': 4
-        },
-        'moves': ['Swords Dance', 'Ice Punch', 'Close Combat', 'Ice Shard']
-    }
-},
-'Scizor-Delta-Mega': {
-    'Breaker': {
-        "level": 120,
-        'ability': 'Adaptability',
-        'item': 'Delta Scizorite',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sp': 4
-        },
-        'moves': ['Swords Dance', 'Icicle Crash', 'Ice Shard', 'Close Combat']
-    }
-},
-'Scrafty-Delta': {
-    'Defensive': {
-        "level": 120,
-        'ability': 'Rough Skin',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Synthesis', 'Super Fang', 'Seed Bomb', 'Knock Off']
-    },
-    'Bulk Up': {
-        "level": 120,
-        'ability': 'Rough Skin',
-        'item': 'Leftovers',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Bulk Up', 'Synthesis', 'Seed Bomb', 'Rock Slide']
-    }
-},
-'Vespiquen-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Levitate',
-        'item': 'Leftovers',
-        'nature': 'Calm',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Roost', 'Stealth Rock', 'Lava Plume', 'Volt Switch']
-    },
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Speed Boost',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Roost', 'Calm Mind', 'Lava Plume', 'Energy Ball']
-    },
-    'Shift Gear': {
-        "level": 120,
-        'ability': 'Levitate',
-        'item': 'Leftovers',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Shift Gear', 'Flare Blitz', 'Iron Head', 'Roost']
-    }
-},
-'Weezing-Delta': {
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Amplifier',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Calm Mind', 'Roost', 'Boomburst', 'Overdrive']
-    },
-    'Belly Drum': {
-        "level": 120,
-        'ability': 'Volt Absorb',
-        'item': 'Sitrus Berry',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Belly Drum', 'Acrobatics', 'Wild Charge', 'Tailwind']
-    }
-},
-'Liepard-Delta': {
-    'Physical': {
-        "level": 120,
-        'ability': 'Illusion',
-        'item': 'Expert Belt',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Swors Dance', 'Play Rough', 'Shadow Claw', 'U-turn']
-    },
-    'Special': {
-        "level": 120,
-        'ability': 'Illusion',
-        'item': 'Expert Belt',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Nasty Plot', 'Shadow Ball', 'Moonblast', 'U-turn']
-    }
-},
-'Glalie-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Rock Head',
-        'item': 'Focus Sash',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'sp': 252
-        },
-        'moves': ['Stealth Rock', 'Spikes', 'Head Smash', 'Flare Blitz']
-    }
-},
-'Glalie-Delta-Mega': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Reckless',
-        'item': 'Delta Glalitite',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Flame Charge', 'Flare Blitz', 'Head Smash', 'Earthquake']
-    }
-},
-'Froslass-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Competitive',
-        'item': 'Focus Sash',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 4,
-            'sp': 252
-        },
-        'moves': ['Spikes', 'Stealth Rock', 'Lava Plume', 'Taunt']
-    }
-},
-'Froslass-Delta-Mega': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Magic Guard',
-        'item': 'Delta Froslassite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Eruption', 'Shadow Ball', 'Earth Power', 'Fiery Dance']
-    }
-},
-'Luxray-Delta': {
-    'Physical Support': {
-        "level": 120,
-        'ability': 'Vampiric',
-        'item': 'Black Sludge',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sp': 4
-        },
-        'moves': ['Gunk Shot', 'Iron Head', 'Earthquake', 'Toxic Spikes']
-    },
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Vampiric',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Agility', 'Gunk Shot', 'Close Combat', 'Earthquake']
-    }
-},
-'Noivern-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Chlorophyll',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Leech Seed', 'Super Fang', 'Roost', 'Flash Cannon']
-    },
-    'Physical Sun': {
-        "level": 120,
-        'ability': 'Flower Gift',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Growth', 'Iron Head', 'Solar Blade', 'Earthquake']
-    },
-    'Special Sun': {
-        "level": 120,
-        'ability': 'Solar Power',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Growth', 'Flash Cannon', 'Solar Beam', 'Weather Ball']
-    }
-},
-'Roserade-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Limber',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 4,
-            'sp': 252
-        },
-        'moves': ['Spikes', 'Moonlight', 'Moonblast', 'Heal Bell']
-    },
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Limber',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Moonlight', 'Moonblast', 'Dark Pulse']
-    },
-    'Darkness Sweeper': {
-        "level": 120,
-        'ability': 'Shadow Dance',
-        'item': 'Choice Specs',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Lunar Cannon', 'Moonblast', 'Sludge Wave', 'Trick']
-    }
-},
-'Drifblim-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Flash Fire',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Will-O-Wisp', 'Roost', 'U-turn', 'Fire Lash']
-    },
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'No Guard',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Roost', 'Inferno', 'Hurricane']
-    }
-},
-'Muk-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Sap Sipper',
-        'item': 'Leftovers',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Earthquake', 'Recover', 'Stealth Rock', 'Toxic']
-    }
-},
-'Quagsire-Delta': {
-    'SpDef': {
-        "level": 120,
-        'ability': 'Flash Fire',
-        'item': 'Leftovers',
-        'nature': 'Calm',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Leech Seed', 'Will-O-Wisp', 'Strength Sap', 'Flamethrower']
-    }
-},
-'Snorlax-Delta': {
-    'Bulk Up': {
-        "level": 120,
-        'ability': 'Thick Fat',
-        'item': 'Leftovers',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'sd': 252
-        },
-        'moves': ['Bulk Up', 'Synthesis', 'Seed Bomb', 'Rock Slide']
-    },
-    'Belly Drum': {
-        "level": 120,
-        'ability': 'Adaptability',
-        'item': 'Sitrus Berry',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'df': 4
-        },
-        'moves': ['Belly Drum', 'Seed Bomb', 'Drain Punch', 'Rock Slide']
-    }
-},
-'Mismagius-Delta': {
-    'Scarfed': {
-        "level": 120,
-        'ability': 'Magic Guard',
-        'item': 'Choice Scarf',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Moonblast', 'Freeze-Dry', 'U-turn', 'Trick']
-    },
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Magic Guard',
-        'item': 'Life Orb',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Moonblast', 'Freeze-Dry', 'Thunderbolt', 'Calm Mind']
-    }
-},
-'Typhlosion-Delta': {
-    'Scarfed': {
-        "level": 120,
-        'ability': 'Lightning Rod',
-        'item': 'Choice Scarf',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Volt Switch', 'Flash Cannon', 'Energy Ball', 'Dazzling Gleam']
-    }
-},
-'Typhlosion-Delta-Mega': {
-    'Breaker (Rain)': {
-        "level": 120,
-        'ability': 'Motor Drive',
-        'item': 'Delta Typhlosionite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Thunder', 'Flash Cannon', 'Energy Ball', 'Dazzling Gleam']
-    },
-    'Breaker (Darkness)': {
-        "level": 120,
-        'ability': 'Motor Drive',
-        'item': 'Delta Typhlosionite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Volt Switch', 'Flash Cannon', 'Energy Ball', 'Dark Pulse']
-    }
-},
-'Sceptile-Delta': {
-    'Guts Breaker': {
-        "level": 120,
-        'ability': 'Guts',
-        'item': 'Flame Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Dragon Dance', 'Close Combat', 'Outrage', 'Poison Jab']
-    }
-},
-'Blaziken-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Gale Wings',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 4,
-            'sp': 252
-        },
-        'moves': ['Defog', 'Roost', 'Air Slash', 'U-turn']
-    },
-    'Physical Scarfed': {
-        "level": 120,
-        'ability': 'Gale Wings',
-        'item': 'Choice Scarf',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Brave Bird', 'Earthquake', 'U-turn', 'Knock Off']
-    },
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Gale Wings',
-        'item': 'Sky Plate',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Hurricane', 'Psychic', 'Focus Blast', 'Calm Mind']
-    }
-},
-'Torterra-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Water Absorb',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Stealth Rock', 'Recover', 'Spikes', 'Earthquake']
-    },
-    'Curse': {
-        "level": 120,
-        'ability': 'Water Absorb',
-        'item': 'Leftovers',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sd': 252
-        },
-        'moves': ['Curse', 'Recover', 'Earthquake', 'Avalanche']
-    },
-    'Physical Rain': {
-        "level": 120,
-        'ability': 'Swift Swim',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Earthquake', 'Liquidation', 'Leech Life', 'Rock Slide']
-    },
-    'Special Rain': {
-        "level": 120,
-        'ability': 'Swift Swim',
-        'item': 'Choice Specs',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Water Spout', 'Earth Power', 'Ice Beam', 'Hydro Pump']
-    }
-},
-'Serperior-Delta': {
-    'Rain Support': {
-        "level": 120,
-        'ability': 'Drizzle',
-        'item': 'Damp Rock',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 4,
-            'sp': 252
-        },
-        'moves': ['Slack Off', 'U-turn', 'Scald', 'Glare']
-    },
-    'Physical Set-Up': {
-        "level": 120,
-        'ability': 'Multiscale',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Dragon Dance', 'Liquidation', 'Outrage', 'Earthquake']
-    },
-    'Special Set-Up': {
-        "level": 120,
-        'ability': 'Multiscale',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Slack Off', 'Scald', 'Ice Beam']
-    }
-},
-'Greninja-Delta': {
-    'Support': {
-        "level": 120,
-        'ability': 'Prankster',
-        'item': 'Focus Sash',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Spikes', 'U-turn', 'Will-O-Wisp', 'Endeavor']
-    },
-    'Physical Attacker': {
-        "level": 120,
-        'ability': 'Steadfast',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Flare Blitz', 'Leaf Blade', 'Knock Off']
-    },
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Steadfast',
-        'item': 'Choice Specs',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Fire Blast', 'Leaf Storm', 'Focus Blast', 'U-turn']
-    }
-},
-'Pidgeot-Delta': {
-    'Dragon Dance': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Dragon Dance', 'Crunch', 'Outrage', 'Iron Tail']
-    }
-},
-'Pidgeot-Delta-Mega': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Delta Pidgeotite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Draco Meteor', 'Dark Pulse', 'Sludge Wave', 'U-turn']
-    }
-},
-'Dugtrio-Delta': {
-    'Offensive': {
-        "level": 120,
-        'ability': 'Fur Coat',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Head Charge', 'Icicle Crash', 'Earthquake', 'Extreme Speed']
-    }
-},
-'Arcanine-Delta': {
-    'Extreme Killer': {
-        "level": 120,
-        'ability': 'Multiscale',
-        'item': 'Silk Scarf',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Extreme Speed', 'Earthquake', 'Draco Jet']
-    }
-},
-'Golem-Delta': {
-    'Defensive Pivot': {
-        "level": 120,
-        'ability': 'Regenerator',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Stealth Rock', 'Stone Edge', 'Knock Off', 'Earthquake']
-    },
-    'Bulky Offensive': {
-        "level": 120,
-        'ability': 'Magic Bounce',
-        'item': 'Leftovers',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sd': 4
-        },
-        'moves': ['Stone Edge', 'Zen Headbutt', 'Earthquake', 'Ice Punch']
-    }
-},
-'Tentacruel-Delta': {
-    'Defensive': {
-        "level": 120,
-        'ability': 'Storm Drain',
-        'item': 'Black Sludge',
-        'nature': 'Calm',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sd': 252,
-            'sp': 4
-        },
-        'moves': ['Corrode', 'Giga Drain', 'Strength Sap', 'Knock Off']
-    }
-},
-'Dodrio-Delta': {
-    'Offensive': {
-        "level": 120,
-        'ability': 'Psycho Call',
-        'item': 'Choice Band',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Zen Headbutt', 'Brave Bird', 'Low Kick', 'Knock Off']
-    }
-},
-'Tangrowth-Delta': {
-    'Defensive': {
-        "level": 120,
-        'ability': 'Dry Skin',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'df': 252
-        },
-        'moves': ['Earthquake', 'Knock Off', 'Close Combat', 'Stealth Rock']
-    }
-},
-'Ditto-Delta': {
-    'Nope.': {
-        "level": 120,
-        'ability': 'Protean',
-        'item': 'Quick Powder',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'sa': 4,
-            'sp': 252
-        },
-        'moves': ['Morph', 'Retrograde', 'Mirror Move', 'Me First']
-    }
-},
-'Kabutops-Delta': {
-    'Offensive': {
-        "level": 120,
-        'ability': 'Tough Claws',
-        'item': 'Choice Scarf',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Knock Off', 'Leech Life', 'Play Rough', 'Superpower']
-    }
-},
-'Dragonite-Delta': {
-    'Physical Rain Sweeper': {
-        "level": 120,
-        'ability': 'Swift Swim',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Wild Charge', 'Liquidation', 'Ice Punch', 'Flip Turn']
-    },
-    'Special Rain Sweeper': {
-        "level": 120,
-        'ability': 'Swift Swim',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Thunder', 'Hydro Pump', 'Hurricane', 'Flip Turn']
-    }
-},
-'Noctowl-Delta': {
-    'Offensive': {
-        "level": 120,
-        'ability': 'No Guard',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Blizzard', 'Hurricane', 'Tailwind', 'Roost']
-    }
-},
-'Lanturn-Delta': {
-    'Defensive Utility': {
-        "level": 120,
-        'ability': 'Levitate',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'df': 252,
-            'sd': 252
-        },
-        'moves': ['Will-O-Wisp', 'Hex', 'Flamethrower', 'Clear Smog']
-    }
-},
-'Raichu-Delta': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Gale Wings',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Hurricane', 'Moonblast', 'Volt Switch', 'Focus Blast']
-    },
-    'Utility': {
-        "level": 120,
-        'ability': 'Gale Wings',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Defog', 'Roost', 'Moonblast', 'Knock Off']
-    }
-},
-'Ambipom-Delta': {
-    'Physical Attacker': {
-        "level": 120,
-        'ability': 'Technician',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Poltergeist', 'Fake Out', 'Tail Slap', 'U-turn']
-    }
-},
-'Yanmega-Delta': {
-    'Special Sun Sweeper': {
-        "level": 120,
-        'ability': 'Chlorophyll',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Air Slash', 'Solar Beam', 'Weather Ball', 'Growth']
-    },
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Adaptability',
-        'item': 'Choice Specs',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Leaf Storm', 'Hurricane', 'U-turn', 'Giga Drain']
-    }
-},
-'Girafarig-Delta': {
-    'Utility': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Black Sludge',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Toxic Spikes', 'Corrode', 'Knock Off', 'Taunt']
-    }
-},
-'Girafarig-Delta-Mega': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Delta Etigirafarigite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'sa': 252,
-            'sd': 4,
-            'sp': 252
-        },
-        'moves': ['Corrode', 'Giga Drain', 'Autotomize', 'Nasty Plot']
-    }
-},
-'Dunsparce-Delta': {
-    'Physical Attacker': {
-        "level": 120,
-        'ability': 'Skill Link',
-        'item': 'Silver Powder',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 248,
-            'at': 252,
-            'df': 8
-        },
-        'moves': ['First Impression', 'Liquidation', 'Icicle Spear', 'Pin Missile']
-    },
-    'Rain Sweeper': {
-        "level": 120,
-        'ability': 'Swift Swim',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Liquidation', 'Swords Dance', 'Lunge', 'Aqua Jet']
-    }
-},
-'Shuckle-Delta': {
-    'Defensive Utility': {
-        "level": 120,
-        'ability': 'Iron Barbs',
-        'item': 'Chesto Berry',
-        'nature': 'Bold',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Spikes', 'Seismic Toss', 'Knock Off', 'Toxic']
-    },
-    'Bulk Up': {
-        "level": 120,
-        'ability': 'Iron Barbs',
-        'item': 'Leftovers',
-        'nature': 'Careful',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'sd': 252
-        },
-        'moves': ['Bulk Up', 'Rest', 'Sleep Talk', 'Drain Punch']
-    }
-},
-'Octillery-Delta': {
-    'Contrary Breaker': {
-        "level": 120,
-        'ability': 'Contrary',
-        'item': 'Assault Vest',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 248,
-            'sa': 252,
-            'sd': 8
-        },
-        'moves': ['Overheat', 'Energy Ball', 'Earth Power', 'Vacuum Wave']
-    }
-},
-'Electivire-Delta': {
-    'Moon Sweeper': {
-        "level": 120,
-        'ability': 'Shadow Dance',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 4,
-            'at': 252,
-            'sp': 252
-        },
-        'moves': ['Hone Claws', 'Stone Edge', 'Outrage', 'Earthquake']
-    }
-},
-'Magmortar-Delta': {
-    'Bulky Offense': {
-        "level": 120,
-        'ability': 'Mega Launcher',
-        'item': 'Assault Vest',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Water Pulse', 'Flash Cannon', 'Aura Sphere', 'Ice Beam']
-    }
-},
-'Ludicolo-Delta': {
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Magic Bounce',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 248,
-            'df': 8,
-            'sa': 252
-        },
-        'moves': ['Calm Mind', 'Psyshock', 'Scald', 'Focus Blast']
-    }
-},
-'Shiftry-Delta': {
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Hubris',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Nasty Plot', 'Thunderbolt', 'Energy Ball', 'Dazzling Gleam']
-    }
-},
-'Sableye-Delta': {
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Weak Armor',
-        'item': 'Charcoal',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Flare Blitz', 'Stone Edge', 'Earthquake']
-    }
-},
-'Sableye-Delta-Mega': {
-    'Bulky Offensive': {
-        "level": 120,
-        'ability': 'Dry Skin',
-        'item': 'Delta Sablenite',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 248,
-            'at': 252,
-            'df': 8
-        },
-        'moves': ['Swords Dance', 'Flare Blitz', 'Stone Edge', 'Earthquake']
-    }
-},
-'Mawile-Delta': {
-    'Hazard Support': {
-        "level": 120,
-        'ability': 'Aroma Veil',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Spikes', 'Toxic Spikes', 'Knock Off', 'Taunt']
-    },
-    'Physical Attacker': {
-        "level": 120,
-        'ability': 'Immunity',
-        'item': 'Black Glasses',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'df': 4
-        },
-        'moves': ['Swords Dance', 'Sucker Punch', 'Knock Off', 'Power Whip']
-    }
-},
-'Mawile-Delta-Mega': {
-    'Offensive Trapper': {
-        "level": 120,
-        'ability': 'Arena Trap',
-        'item': 'Delta Mawilite',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'df': 4
-        },
-        'moves': ['Power Whip', 'Knock Off', 'Sucker Punch', 'Spikes']
-    }
-},
-'Aggron-Delta': {
-    'Sun Breaker': {
-        "level": 120,
-        'ability': 'Drought',
-        'item': 'Choice Band',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sd': 4
-        },
-        'moves': ['Flare Blitz', 'Iron Head', 'Knock Off', 'Earthquake']
-    }
-},
-'Medicham-Delta': {
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Athenian',
-        'item': 'Leftovers',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Earth Power', 'Moonblast', 'Calm Mind', 'Slack Off']
-    }
-},
-'Medicham-Delta-Mega': {
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Athenian',
-        'item': 'Delta Medichamite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Earth Power', 'Moonblast', 'Calm Mind', 'Slack Off']
-    }
-},
-'Camerupt-Delta': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Poison Point',
-        'item': 'Black Sludge',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sa': 252
-        },
-        'moves': ['Toxic Spikes', 'Corrode', 'Flamethrower', 'Scald']
-    }
-},
-'Camerupt-Delta-Mega': {
-    'Special Attacker': {
-        "level": 120,
-        'ability': 'Venomous',
-        'item': 'Delta Cameruptite',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sa': 252
-        },
-        'moves': ['Corrode', 'Toxic Spikes', 'Flamethrower', 'Scald']
-    }
-},
-'Plusle-Delta': {
-    'Quiver Dance Sweeper': {
-        "level": 120,
-        'ability': 'Pixilate',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Quiver Dance', 'Hyper Voice', 'Fire Blast', 'Energy Ball']
-    }
-},
-'Minun-Delta': {
-    'Quiver Dance Sweeper': {
-        "level": 120,
-        'ability': 'Pixilate',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Quiver Dance', 'Hyper Voice', 'Ice Beam', 'Hyper Beam']
-    }
-},
-'Wailord-Delta': {
-    'Hail Support': {
-        "level": 120,
-        'ability': 'Snow Warning',
-        'item': 'Icy Rock',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 248,
-            'df': 252,
-            'sd': 8
-        },
-        'moves': ['Blizzard', 'Air Slash', 'Roost', 'U-turn']
-    },
-    'Special Sweeper': {
-        "level": 120,
-        'ability': 'Refrigerate',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Hyper Voice', 'Hurricane', 'Rock Polish', 'Surf']
-    }
-},
-'Milotic-Delta': {
-    'Bulky Pivot': {
-        "level": 120,
-        'ability': 'Regenerator',
-        'item': 'Leftovers',
-        'nature': 'Calm',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 248,
-            'df': 252,
-            'sd': 8
-        },
-        'moves': ['Will-O-Wisp', 'Recover', 'Shadow Ball', 'Aura Sphere']
-    }
-},
-'Milotic-Delta-Mega': {
-    'Calm Mind': {
-        "level": 120,
-        'ability': 'Absolution',
-        'item': 'Delta Milotite',
-        'nature': 'Calm',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 248,
-            'df': 252,
-            'sd': 8
-        },
-        'moves': ['Calm Mind', 'Recover', 'Shadow Ball', 'Aura Sphere']
-    }
-},
-'Huntail-Delta': {
-    'Shell Smash Sweeper': {
-        "level": 120,
-        'ability': 'Strong Jaw',
-        'item': 'White Herb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Shell Smash', 'Crunch', 'Outrage', 'Iron Head']
-    }
-},
-'Gorebyss-Delta': {
-    'Shell Smash Sweeper': {
-        "level": 120,
-        'ability': 'Marvel Scale',
-        'item': 'White Herb',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Shell Smash', 'Moonblast', 'Dragon Pulse', 'Draco Meteor']
-    }
-},
-'Metagross-Delta-Spider': {
-    'Hazard Support': {
-        "level": 120,
-        'ability': 'Poison Heal',
-        'item': 'Toxic Orb',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Sticky Web', 'Stealth Rock', 'U-turn', 'Earthquake']
-    },
-    'Bulky Hazards Spikes': {
-      "level": 120,
-      'ability': 'Poison Heal',
-      'item': 'Toxic Orb',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Sticky Web', 'Spikes', 'Earthquake', 'U-turn']
+  "Venusaur-Delta": {
+    "Calm Mind": {"level": 120,"ability": "Regenerator","item": "Leftovers","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sa": 4},"moves": ["Calm Mind", "Moonblast", "Psychic", "Moonlight"]}
   },
-  'Bulky Hazards Rocks': {
-    "level": 120,
-    'ability': 'Poison Heal',
-    'item': 'Eviolite',
-    'nature': 'Impish',
-    'evs': {
-        'hp': 252,
-        'df': 252,
-        'sd': 4
-    },
-    'moves': ['Sticky Web', 'Stealth Rock', 'Earthquake', 'U-turn']
-}
-},
-'Metagross-Delta-Spider-Mega': {
-    'Offensive Pivot': {
-        "level": 120,
-        'ability': 'Mold Breaker',
-        'item': 'Delta Metagrossite Spider',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Earthquake', 'U-turn', 'Stone Edge', 'Knock Off']
-    }
-},
-'Metagross-Delta-Ruin': {
-    'Fast Band': {
-        "level": 120,
-        'ability': 'Rock Head',
-        'item': 'Choice Band',
-        'nature': 'Adamant',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
-    },
-    'Bulky Band': {
-      "level": 120,
-      'ability': 'Rock Head',
-      'item': 'Choice Band',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Crystal Rush']
+  "Venusaur-Delta-Mega": {
+    "Bulky Offense": {"level": 120,"ability": "Hubris","item": "Delta Venusaurite","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"sa": 252,"sp": 4},"moves": ["Psychic", "Moonblast", "Moonlight", "Thunderbolt"]}
   },
-  'Rock Polish': {
-    "level": 120,
-    'ability': 'Rock Head',
-    'item': 'Lum Berry',
-    'nature': 'Adamant',
-    'evs': {
-        'at': 252,
-        'sd': 4,
-        'sp': 252
-    },
-    'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Rock Polish']
-}
-},
-'Metagross-Delta-Ruin-Mega': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Rock Head',
-        'item': 'Delta Metagrossite Ruin',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Head Smash', 'Wood Hammer', 'Earthquake', 'Volt Switch']
-    }
-},
-'Metagross-Delta-Ruin-Crystal': {
-    'Physical Cleaner': {
-        "level": 120,
-        'ability': 'Weak Armor',
-        'item': 'Crystal Fragment',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Wood Hammer', 'Earthquake', 'Crystal Rush', 'Diamond Storm']
-    }
-},
-'Lopunny-Delta': {
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Inner Focus',
-        'item': 'Leftovers',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'sd': 4,
-            'sp': 252
-        },
-        'moves': ['Bulk Up', 'Close Combat', 'Knock Off', 'Poison Jab']
-    }
-},
-'Lopunny-Delta-Mega': {
-    'Physical Pivot': {
-        "level": 120,
-        'ability': 'Infiltrator',
-        'item': 'Delta Lopunnite',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Close Combat', 'Zen Headbutt', 'Knock Off', 'U-turn']
-    }
-},
-'Lucario-Delta': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Justified',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Earthquake', 'Knock Off', 'Stone Edge', 'Sucker Punch']
-    },
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Mummy',
-        'item': 'Life Orb',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Earth Power', 'Dark Pulse', 'Blizzard', 'Nasty Plot']
-    }
-},
-'Lucario-Delta-Mega': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Defiant',
-        'item': 'Delta Lucarionite',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Earthquake', 'Knock Off', 'Stone Edge', 'Swords Dacne']
-    },
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Defiant',
-        'item': 'Delta Lucarionite',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Earth Power', 'Dark Pulse', 'Blizzard', 'Nasty Plot']
-    }
-},
-'Toxicroak-Delta': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Hustle',
-        'item': 'Choice Scarf',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Flare Blitz', 'Knock Off', 'Thunder Punch', 'Earthquake']
-    }
-},
-'Scolipede-Delta': {
-    'Hazard Lead': {
-        "level": 120,
-        'ability': 'Mold Breaker',
-        'item': 'Focus Sash',
-        'nature': 'Jolly',
-        'evs': {
-            'hp': 252,
-            'at': 4,
-            'sp': 252
-        },
-        'moves': ['Stealth Rock', 'Spikes', 'Endeavor', 'Flare Blitz']
-    },
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Weak Armor',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Flare Blitz', 'Stone Edge', 'Earthquake']
-    }
-},
-'Lilligant-Delta-W': {
-    'Calm Mind Sweeper': {
-        "level": 120,
-        'ability': 'Storm Drain',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Recover', 'Scald', 'Fire Blast']
-    }
-},
-'Lilligant-Delta-F': {
-    'Calm Mind Sweeper': {
-        "level": 120,
-        'ability': 'Serene Grace',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Timid',
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Roost', 'Air Slash', 'Aura Sphere']
-    }
-},
-'Reuniclus-Delta': {
-    'Trick Room Offense': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0,
-            'sp': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sa': 252
-        },
-        'moves': ['Trick Room', 'Shadow Ball', 'Power Gem', 'Focus Blast']
-    }
-},
-'Darmanitan-Delta': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Wonder Skin',
-        'item': 'Choice Band',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Poltergeist', 'Knock Off', 'U-turn', 'Superpower']
-    }
-},
-'Maractus-Delta': {
-    'Shift Gear Sweeper': {
-        "level": 120,
-        'ability': 'Motor Drive',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Shift Gear', 'Meteor Mash', 'Knock Off', 'Wild Charge']
-    }
-},
-'Crustle-Delta-B': {
-    'Hazard Lead': {
-        "level": 120,
-        'ability': 'Harvest',
-        'item': 'Black Sludge',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Spikes', 'Earthquake', 'Gunk Shot', 'Synthesis']
-    },
-    'Sun Sweeper': {
-        "level": 120,
-        'ability': 'Chlorophyll',
-        'item': 'Life Orb',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Gunk Shot', 'Earthquake', 'Leaf Blade']
-    }
-},
-'Crustle-Delta-C': {
-    'Shell Smash Sweeper': {
-        "level": 120,
-        'ability': 'Simple',
-        'item': 'White Herb',
-        'nature': 'Adamant',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Shell Smash', 'Play Rough', 'Knock Off', 'Brick Break']
-    }
-},
-'Cofagrigus-Delta': {
-    'Physical Wall': {
-        "level": 120,
-        'ability': 'Aftermath',
-        'item': 'Black Sludge',
-        'nature': 'Bold',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Sludge Bomb', 'Earth Power', 'Pain Split', 'Will-O-Wisp']
-    }
-},
-'Emolga-Delta': {
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Fired Up',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Flare Blitz', 'Knock Off', 'Wood Hammer', 'U-turn']
-    },
-    'Special Sweeper': {
-        "level": 120,
-        'ability': 'Fired Up',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Fire Blast', 'Dark Pulse', 'Energy Ball', 'U-turn']
-    }
-},
-'Escavalier-Delta': {
-    'Trick Room Sweeper': {
-        "level": 120,
-        'ability': 'Simple',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'ivs': {
-            'sp': 0
-        },
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'df': 4
-        },
-        'moves': ['Trick Room', 'Swords Dance', 'Play Rough', 'Knock Off']
-    }
-},
-'Amoonguss-Delta': {
-    'Defensive Pivot': {
-        "level": 120,
-        'ability': 'Intimidate',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Will-O-Wisp', 'Hex', 'Foul Play', 'Knock Off']
-    }
-},
-'Chandelure-Delta': {
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Fairy Aura',
-        'item': 'Choice Scarf',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Moonblast', 'Fire Blast', 'Earth Power', 'Trick']
-    },
-    'Special Sweeper': {
-        "level": 120,
-        'ability': 'Weak Armor',
-        'item': 'Leftovers',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Moonblast', 'Fire Blast', 'Earth Power']
-    }
-},
-'Haxorus-Delta': {
-    'Swords Dance Sweeper': {
-        "level": 120,
-        'ability': 'Water Veil',
-        'item': 'Leftovers',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Swords Dance', 'Liquidation', 'Anchor Shot', 'Knock Off']
-    }
-},
-'Golurk-Delta': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Guts',
-        'item': 'Flame Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'df': 4
-        },
-        'moves': ['Close Combat', 'Facade', 'Knock Off', 'Bullet Punch']
-    },
-    'Bulk Up Offense': {
-        "level": 120,
-        'ability': 'Iron Fist',
-        'item': 'Leftovers',
-        'nature': 'Adamant',
-        'evs': {
-            'hp': 252,
-            'at': 252,
-            'sd': 4
-        },
-        'moves': ['Bulk Up', 'Drain Punch', 'Bullet Punch', 'Ice Punch']
-    }
-},
-'Heatmor-Delta': {
-    'Physical Breaker': {
-        "level": 120,
-        'ability': 'Sheer Force',
-        'item': 'Life Orb',
-        'nature': 'Adamant',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Shift Gear', 'Gunk Shot', 'Iron Head', 'Crunch']
-    },
-    'Special Breaker': {
-        "level": 120,
-        'ability': 'Sheer Force',
-        'item': 'Life Orb',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Shift Gear', 'Sludge Wave', 'Flamethrower', 'Energy Ball']
-    }
-},
-'Hydreigon-Delta': {
-    'Physical Sweeper': {
-        "level": 120,
-        'ability': 'Intoxicate',
-        'item': 'Leftovers',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Coil', 'Earthquake', 'Gunk Shot', 'Roost']
-    },
-    'Special Offense': {
-        "level": 120,
-        'ability': 'Intoxicate',
-        'item': 'Life Orb',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Earth Power', 'Hyper Voice', 'U-turn', 'Fire Blast']
-    }
-},
-'Volcarona-Delta': {
-    'New Moon Breaker': {
-        "level": 120,
-        'ability': 'Absolution',
-        'item': 'Life Orb',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Corrode', 'Lunar Cannon', 'Earth Power', 'Dazzling Gleam']
-    }
-},
-'Volcarona-Delta-Armor': {
-    'Stallbreaker': {
-        "level": 120,
-        'ability': 'Levitate',
-        'item': 'Volcarona-Delta Armor',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Corrode', 'Dark Pulse', 'Roost', 'Taunt']
-    }
-},
-'Aurorus-Delta': {
-    'Defensive Pivot': {
-        "level": 120,
-        'ability': 'Phototroph',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Scald', 'Recover', 'Flip Turn', 'Ice Beam']
-    }
-},
-'Goodra-Delta': {
-    'Special Pivot': {
-        "level": 120,
-        'ability': 'Water Absorb',
-        'item': 'Leftovers',
-        'nature': 'Modest',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'hp': 252,
-            'df': 4,
-            'sa': 252
-        },
-        'moves': ['Earth Power', 'Scald', 'Ice Beam', 'Stealth Rock']
-    }
-},
-'Regirock-Delta': {
-    'Bulky Support': {
-        "level": 120,
-        'ability': 'Dry Skin',
-        'item': 'Leftovers',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Earthquake', 'Stealth Rock', 'Knock Off', 'Recover']
-    }
-},
-'Regice-Delta': {
-    'Bulky Support': {
-        "level": 120,
-        'ability': 'Storm Drain',
-        'item': 'Leftovers',
-        'nature': 'Bold',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Scald', 'Stealth Rock', 'Knock Off', 'Recover']
-    }
-},
-'Registeel-Delta': {
-    'Bulky Support': {
-        "level": 120,
-        'ability': 'Foundry',
-        'item': 'Heavy-Duty Boots',
-        'nature': 'Bold',
-        'evs': {
-            'hp': 252,
-            'df': 128,
-            'sd': 128
-        },
-        'moves': ['Lava Plume', 'Stealth Rock', 'Knock Off', 'Recover']
-    }
-},
-'Meloetta-Delta': {
-    'Offensive Pivot': {
-        "level": 120,
-        'ability': 'Filter',
-        'item': 'Choice Band',
-        'nature': 'Jolly',
-        'evs': {
-            'at': 252,
-            'df': 4,
-            'sp': 252
-        },
-        'moves': ['Knock Off', 'Play Rough', 'U-turn', 'Iron Head']
-    },
-    'Choice Band': {
-      "level": 120,
-      'ability': 'Filter',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
-    },
-    'Boots Pivot': {
-      "level": 120,
-      'ability': 'Filter',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-    'moves': ['Knock Off', 'Play Rough', 'Sucker Punch', 'U-turn']
-    }
-},
-'Meloetta-Delta-Magician': {
-    'Special Offense': {
-        "level": 120,
-        'ability': 'Filter',
-        'item': 'Leftovers',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Calm Mind', 'Psychic', 'Dark Pulse', 'Focus Blast']
-    }
-},
-'Hoopa-Delta': {
-    'Special Offense': {
-        "level": 120,
-        'ability': 'Cloud Nine',
-        'item': 'Choice Scarf',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Aeroblast', 'Moonblast', 'Heat Wave', 'U-turn']
-    }
-},
-'Hoopa-Delta-Unbound': {
-    'Special Offense': {
-        "level": 120,
-        'ability': 'Cloud Nine',
-        'item': 'Choice Specs',
-        'nature': 'Timid',
-        'ivs': {
-            'at': 0
-        },
-        'evs': {
-            'df': 4,
-            'sa': 252,
-            'sp': 252
-        },
-        'moves': ['Aeroblast', 'Moonblast', 'Heat Wave', 'Volt Switch']
-    }
-},
-'Grotle-Delta': {
-    'Physically Defensive': {
-        "level": 120,
-        'ability': 'Water Absorb',
-        'item': 'Eviolite',
-        'nature': 'Impish',
-        'evs': {
-            'hp': 252,
-            'df': 252,
-            'sd': 4
-        },
-        'moves': ['Shore Up', 'Stealth Rock', 'Earthquake', 'Toxic']
-    }
-},
-'Poliwrath-Mega': {
-  'Sleeper Offense': {
-      "level": 120,
-      'ability': 'No Guard',
-      'item': 'Poliwrathite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Hypnosis', 'Focus Punch', 'Dynamic Punch', 'Liquidation']
-  }
-},
-'Donphan-Mega': {
-  'Offensive Spinner': {
-      "level": 120,
-      'ability': 'Irrelephant',
-      'item': 'Donphanite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Earthquake', 'Knock Off', 'Ice Shard', 'Rapid Spin']
-  }
-},
-
-'Meganium-Mega': {
-  'Specially Defensive': {
-      "level": 120,
-      'ability': 'Magic Bounce',
-      'item': 'Meganiumite',
-      'nature': 'Calm',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 4,
-          'sd': 252
-      },
-      'moves': ['Moonblast', 'Giga Drain', 'Leech Seed', 'Synthesis']
-  }
-},
-
-'Meganium-Mega': {
-  'Calm Mind': {
-      "level": 120,
-      'ability': 'Magic Bounce',
-      'item': 'Meganiumite',
-      'nature': 'Bold',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Moonblast', 'Giga Drain', 'Calm Mind', 'Synthesis']
-  }
-},
-
-'Crawdaunt-Mega': {
-  'Dragon Dance': {
-      "level": 120,
-      'ability': 'Adaptability',
-      'item': 'Crawdauntite',
-      'nature': 'Adamant',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Dragon Dance', 'Crabhammer', 'Knock Off', 'Aqua Jet']
-  }
-},
-
-'Chatot-Mega': {
-  'Boombird': {
-      "level": 120,
-      'ability': 'Amplifier',
-      'item': 'Chatotite',
-      'nature': 'Timid',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Boomburst', 'Heat Wave', 'U-turn', 'Nasty Plot',]
-  }
-},
-
-'Spiritombite-Mega': {
-  'Remember Noctem in Base Form': {
-      "level": 120,
-      'ability': 'Tough Claws',
-      'item': 'Spiritombite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Knock Off', 'Brick Break', 'Sucker Punch', 'Shadow Sneak']
-  }
-},
-
-'Stunfisk-Mega': {
-  'Bulky Offense': {
-      "level": 120,
-      'ability': 'Athenian',
-      'item': 'Stunfiskite',
-      'nature': 'Modest',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'sa': 252,
-          'sp': 4
-      },
-      'moves': ['Earth Power', 'Thunderbolt', 'Volt Switch', 'Sludge Wave']
-  }
-},
-
-'Flygon-Mega': {
-  'Special Attacker': {
-      "level": 120,
-      'ability': 'Amplifier',
-      'item': 'Flygonite',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Drakon Voice', 'Boomburst', 'Fire Blast', 'U-turn']
-  }
-},
-
-'Marowak-Mega': {
-  'Physical Attacker': {
-      "level": 120,
-      'ability': 'Parental Bond',
-      'item': 'Marowakite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Earthquake', 'Shadow Claw', 'Shadow Sneak', 'Power-Up Punch']
-  }
-},
-
-'Milotic-Mega': {
-  'Physically Defensive': {
-      "level": 120,
-      'ability': 'Prism Guard',
-      'item': 'Milotite',
-      'nature': 'Bold',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Recover', 'Refresh', 'Moonblast', 'Scald']
-  }
-},
-
-'Zebstrika-Mega': {
-  'Special Attacker': {
-      "level": 120,
-      'ability': 'Competitive',
-      'item': 'Zebstrikite',
-      'nature': 'Timid',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
-  }
-},
-'Poliwrath-Mega': {
-  'Sleeper Offense': {
-      "level": 120,
-      'ability': 'No Guard',
-      'item': 'Poliwrathite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Hypnosis', 'Focus Punch', 'Dynamic Punch', 'Liquidation']
-  }
-},
-'Donphan-Mega': {
-  'Offensive Spinner': {
-      "level": 120,
-      'ability': 'Irrelephant',
-      'item': 'Donphanite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Earthquake', 'Knock Off', 'Ice Shard', 'Rapid Spin']
-  }
-},
-
-'Meganium-Mega': {
-  'Specially Defensive': {
-      "level": 120,
-      'ability': 'Magic Bounce',
-      'item': 'Meganiumite',
-      'nature': 'Calm',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 4,
-          'sd': 252
-      },
-      'moves': ['Moonblast', 'Giga Drain', 'Leech Seed', 'Synthesis']
-  }
-},
-
-'Meganium-Mega': {
-  'Calm Mind': {
-      "level": 120,
-      'ability': 'Magic Bounce',
-      'item': 'Meganiumite',
-      'nature': 'Bold',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Moonblast', 'Giga Drain', 'Calm Mind', 'Synthesis']
-  }
-},
-
-'Crawdaunt-Mega': {
-  'Dragon Dance': {
-      "level": 120,
-      'ability': 'Adaptability',
-      'item': 'Crawdauntite',
-      'nature': 'Adamant',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Dragon Dance', 'Crabhammer', 'Knock Off', 'Aqua Jet']
-  }
-},
-
-'Chatot-Mega': {
-  'Boombird': {
-      "level": 120,
-      'ability': 'Amplifier',
-      'item': 'Chatotite',
-      'nature': 'Timid',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Boomburst', 'Heat Wave', 'U-turn', 'Nasty Plot',]
-  }
-},
-
-'Spiritombite-Mega': {
-  'Remember Noctem in Base Form': {
-      "level": 120,
-      'ability': 'Tough Claws',
-      'item': 'Spiritombite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Knock Off', 'Brick Break', 'Sucker Punch', 'Shadow Sneak']
-  }
-},
-
-'Stunfisk-Mega': {
-  'Bulky Offense': {
-      "level": 120,
-      'ability': 'Athenian',
-      'item': 'Stunfiskite',
-      'nature': 'Modest',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'sa': 252,
-          'sp': 4
-      },
-      'moves': ['Earth Power', 'Thunderbolt', 'Volt Switch', 'Sludge Wave']
-  }
-},
-
-'Flygon-Mega': {
-  'Special Attacker': {
-      "level": 120,
-      'ability': 'Amplifier',
-      'item': 'Flygonite',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Drakon Voice', 'Boomburst', 'Fire Blast', 'U-turn']
-  }
-},
-
-'Marowak-Mega': {
-  'Physical Attacker': {
-      "level": 120,
-      'ability': 'Parental Bond',
-      'item': 'Marowakite',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Earthquake', 'Shadow Claw', 'Shadow Sneak', 'Power-Up Punch']
-  }
-},
-
-'Milotic-Mega': {
-  'Physically Defensive': {
-      "level": 120,
-      'ability': 'Prism Guard',
-      'item': 'Milotite',
-      'nature': 'Bold',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Recover', 'Refresh', 'Moonblast', 'Scald']
-  }
-},
-
-'Zebstrika-Mega': {
-  'Special Attacker': {
-      "level": 120,
-      'ability': 'Competitive',
-      'item': 'Zebstrikite',
-      'nature': 'Timid',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'sp': 252
-      },
-      'moves': ['Thunderbolt', 'Dazzling Gleam', 'Volt Switch', 'Overheat']
-  }
-},
-'Garbodor': {
-  'Physically Defensive': {
-      "level": 120,
-      'ability': 'Aftermath',
-      'item': 'Rocky Helmet',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Toxic Spikes', 'Spikes', 'Gunk Shot', 'Stomping Tantrum']
-  }
-},
-'Porygon': {
-  'Porygod': {
-      "level": 120,
-      'ability': 'Trace',
-      'item': 'Eviolite',
-      'nature': 'Calm',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'sa': 4,
-          'sd': 252
-      },
-      'moves': ['Recover', 'Teleport', 'Thunder Wave', 'Ice Beam']
-  }
-},
-'Dottler': {
-  'Sticky Web': {
-      "level": 120,
-      'ability': 'Compound Eyes',
-      'item': 'Eviolite',
-      'nature': 'Bold',
-      'ivs': {
-          'at': 0
-      },
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Sticky Web', 'Recover', 'Body Press', 'Iron Defense']
-  }
-},
-
-// PoA
-
-'Bewitwing': {
-  'Dual Screens': {
-      "level": 100,
-      'ability': 'Prankster',
-      'item': 'Light Clay',
-      'nature': 'Sassy',
-      'evs': {
-          'hp': 252,
-          'df': 4,
-          'sd': 252
-      },
-      'ivs': {
-          'spe': 0
-      },
-      'moves': ['Light Screen', 'Reflect', 'U-turn', 'Destiny Bond']
-  }
-},
-'Carcharus': {
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Strong Jaw',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Flip Turn', 'Gorgon Fang', 'Earthquake', 'Fire Fang']
-  }
-},
-'Enchantobra': {
-  'Life Orb': {
-      "level": 100,
-      'ability': 'Magic Guard',
-      'item': 'Life Orb',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Fire Blast', 'Moonblast', 'Giga Drain', 'Glare']
-  }
-},
-'Entei-Supra': {
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Adaptability',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Ice Shard', 'Subzero Storm', 'U-turn', 'Superpower']
+  "Charizard-Delta": {
+    "Dragon Dance": {"level": 120,"ability": "Spirit Call","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Dragon Dance", "Shadow Bone", "Outrage", "Iron Head"]}
   },
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Adaptability',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Subzero Storm', 'Ice Shard', 'Superpower']
-  }
-},
-'Feidan': {
-  'Spikes': {
-      "level": 100,
-      'ability': 'Unaware',
-      'item': 'Leftovers',
-      'nature': 'Sassy',
-      'evs': {
-          'hp': 252,
-          'at': 4,
-          'sd': 252
-      },
-      'moves': ['Spikes', 'Knock Off', 'Spiky Shield', 'Shadow Ball']
+  "Charizard-Delta-Mega": {
+    "Dragon Dance": {"level": 120,"ability": "Noctem","item": "Delta Charizardite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Dragon Dance", "Phantom Force", "Outrage", "Iron Head"]},
+    "Special": {"level": 120,"ability": "Noctem","item": "Delta Charizardite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Shadow Ball", "Draco Meteor", "Sludge Bomb", "Will-O-Wisp"]},
+    "Hone Claws": {"level": 120,"ability": "Noctem","item": "Delta Charizardite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Hone Claws", "Shadow Sneak", "Dragon Rush", "Iron Tail"]}
   },
-  'RestTalk': {
-      "level": 100,
-      'ability': 'Unaware',
-      'item': 'Leftovers',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Hex', 'Will-O-Wisp', 'Rest', 'Sleep Talk']
-  }
-},
-'Felapstan': {
-  'Choice Scarf': {
-      "level": 100,
-      'ability': 'Multitasker',
-      'item': 'Choice Scarf',
-      'nature': 'Modest',
-      'evs': {
-          'hp': 60,
-          'sa': 252,
-          'spe': 196
-      },
-      'moves': ['Poltergeist', 'Thunderbolt', 'Volt Switch', 'Aqua Tail']
+  "Blastoise-Delta": {
+    "Physical Sweeper": {"level": 120,"ability": "Shadow Dance","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Hone Claws", "Knock Off", "Close Combat", "Poison Jab"]},
+    "Special Sweeper": {"level": 120,"ability": "Shadow Dance","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Nasty Plot", "Lunar Cannon", "Focus Blast", "Flash Cannon"]}
   },
-  'Physically Defensive': {
-      "level": 100,
-      'ability': 'Multitasker',
-      'item': 'Rocky Helmet',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 248,
-          'df': 252,
-          'sd': 8
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Shadow Ball', 'Volt Switch', 'Toxic Spikes', 'Recover']
-  }
-},
-'Gelazura': {
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Sticky Hold',
-      'item': 'Black Sludge',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Liquidation', 'Void Tentacle', 'Knock Off']
-  }
-},
-'Gilotherma': {
-  'Physically Defensive': {
-      "level": 100,
-      'ability': 'Poison Heal',
-      'item': 'Toxic Orb',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 244,
-          'df': 176,
-          'spe': 88
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Venomous Roar', 'Earth Power', 'Glare', 'Spikes']
-  }
-},
-'Grand Mirage': {
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Protosynthesis',
-      'item': 'Booster Energy',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Close Combat', 'Knock Off', 'Taunt']
+  "Blastoise-Delta-Mega": {
+    "Special Offensive": {"level": 120,"ability": "Mega Launcher","item": "Delta Blastoisite","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Aura Sphere", "Dark Pulse", "Flash Cannon", "U-turn"]}
   },
-  'Nasty Plot': {
-      "level": 100,
-      'ability': 'Protosynthesis',
-      'item': 'Booster Energy',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Nasty Plot', 'Dark Pulse', 'Sludge Bomb', 'Focus Blast']
-  }
-},
-'Harportia': {
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Tough Claws',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Brave Bird', 'Supercell Slam', 'Superpower', 'Rift Jump']
+  "Bisharp-Delta": {
+    "Scarfed": {"level": 120,"ability": "Wind Force","item": "Choice Scarf","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["U-turn", "Close Combat", "Knock Off", "Iron Head"]}
   },
-  'Offensive Pivot': {
-      "level": 100,
-      'ability': 'Tough Claws',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Superpower', 'Rift Jump', 'Brave Bird', 'Supercell Slam']
-  }
-},
-'Heatran-Supra': {
-  'SubSeed': {
-      "level": 100,
-      'ability': 'Dancer',
-      'item': 'Leftovers',
-      'nature': 'Calm',
-      'evs': {
-          'hp': 248,
-          'sd': 132,
-          'spe': 128
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Fiery Dance', 'Giga Drain', 'Leech Seed', 'Substitute']
-  }
-},
-'Incineroar-Olul': {
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Iron Fist',
-      'item': 'Choice Band',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Mach Punch', 'Bullet Punch', 'Foul Strike', 'Close Combat']
-  }
-},
-'Jovianshk': {
-  'Calm Mind': {
-      "level": 100,
-      'ability': 'Slow Light',
-      'item': 'Life Orb',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Psyshock', 'Earth Power', 'Fire Blast', 'Calm Mind']
+  "Bisharp-Delta-Mega": {
+    "Bulk Up": {"level": 120,"ability": "Technician","item": "Delta Bisharpite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Bulk Up", "Close Combat", "Aerial Ace", "Roost"]}
   },
-  'Choice Scarf': {
-      "level": 100,
-      'ability': 'Slow Light',
-      'item': 'Choice Scarf',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Psyshock', 'Earth Power', 'Fire Blast', 'Trick']
-  }
-},
-'Kaleidleon': {
-  'Specially Defensive': {
-      "level": 100,
-      'ability': 'Hue Shift',
-      'item': 'Leftovers',
-      'nature': 'Careful',
-      'evs': {
-          'hp': 252,
-          'at': 4,
-          'sd': 252
-      },
-      'moves': ['Fire Lash', 'U-turn', 'Spikes', 'Recover']
-  }
-},
-'Kleavor-Delta': {
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Flash Fire',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Triple Axel', 'Flare Blitz', 'Knock Off']
-  }
-},
-'Loxicant': {
-  'Assault Vest': {
-      "level": 100,
-      'ability': 'Levitate',
-      'item': 'Assault Vest',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 152,
-          'at': 100,
-          'df': 4,
-          'sd': 252
-      },
-      'moves': ['Rapid Spin', 'Rocket Grab', 'Gunk Shot', 'Knock Off']
-  }
-},
-'Lunachi': {
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Sacred Treasures',
-      'item': 'Choice Band',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Darkest Lariat', 'Play Rough', 'Pursuit', 'Sucker Punch']
+  "Gardevoir-Delta": {
+    "Scarfed": {"level": 120,"ability": "Lightning Rod","item": "Choice Scarf","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Ice Beam", "Volt Switch", "Earth Power", "Psychic"]}
   },
-  'Calm Mind': {
-      "level": 100,
-      'ability': 'Sacred Treasures',
-      'item': 'Life Orb',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Moonblast', 'Dark Pulse', 'Calm Mind', 'Hidden Power [Fire]']
-  }
-},
-'Magnegauss': {
-  'Sitrus Berry': {
-      "level": 100,
-      'ability': 'Harvest',
-      'item': 'Sitrus Berry',
-      'nature': 'Modest',
-      'evs': {
-          'hp': 248,
-          'sa': 252,
-          'sd': 8
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Spud Mortar', 'Stealth Rock', 'Volt Switch', 'Fire Blast']
+  "Gardevoir-Delta-Mega": {
+    "Calm Mind": {"level": 120,"ability": "Lightning Rod","item": "Delta Gardevoirite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Ice Beam", "Thunderbolt", "Calm Mind", "Earth Power"]}
   },
-  'Choice Specs': {
-      "level": 100,
-      'ability': 'Analytic',
-      'item': 'Choice Specs',
-      'nature': 'Quiet',
-      'evs': {
-          'hp': 248,
-          'sa': 252,
-          'sd': 8
-      },
-      'ivs': {
-          'at': 0,
-          'spe': 0
-      },
-      'moves': ['Volt Switch', 'Thunderbolt', 'Energy Ball', 'Fire Blast']
-  }
-},
-'Mochimechi': {
-  'Rapid Spin': {
-      "level": 100,
-      'ability': 'Glutinous Rice',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Careful',
-      'evs': {
-          'hp': 252,
-          'at': 4,
-          'sd': 252
-      },
-      'moves': ['Rapid Spin', 'Body Slam', 'Knock Off', 'Soft-Boiled']
-  }
-},
-'Mosster': {
-  'CRAB': {
-      "level": 100,
-      'ability': 'Phototroph',
-      'item': 'Leftovers',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Stealth Rock', 'Wood Hammer', 'Body Press', 'Synthesis']
-  }
-},
-'Nestitan': {
-  'IronPress': {
-      "level": 100,
-      'ability': 'Heatproof',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Body Press', 'Iron Defense', 'Roost', 'U-turn']
+  "Gallade-Delta": {
+    "Scarfed": {"level": 120,"ability": "Volt Absorb","item": "Choice Scarf","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Icicle Crash", "Wild Charge", "Close Combat", "Knock Off"]}
   },
-  'Defog': {
-      "level": 100,
-      'ability': 'Heatproof',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 248,
-          'df': 252,
-          'sd': 8
-      },
-      'moves': ['Defog', 'Roost', 'U-turn', 'Body Press']
-  }
-},
-'Niandertroll': {
-  'Specially Defensive': {
-      "level": 100,
-      'ability': 'Seed Sower',
-      'item': 'Leftovers',
-      'nature': 'Careful',
-      'evs': {
-          'hp': 252,
-          'at': 4,
-          'sd': 252
-      },
-      'moves': ['Power Whip', 'Knock Off', 'Stealth Rock', 'Synthesis']
+  "Gallade-Delta-Mega": {
+    "Swords Dance": {"level": 120,"ability": "Volt Absorb","item": "Delta Galladite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Swords Dance", "Icicle Crash", "Ice Shard", "Wild Charge"]}
   },
-  'Physically Defensive': {
-      "level": 100,
-      'ability': 'Seed Sower',
-      'item': 'Leftovers',
-      'nature': 'Impish',
-      'evs': {
-          'hp': 252,
-          'at': 4,
-          'df': 252
-      },
-      'moves': ['Power Whip', 'Body Press', 'Stealth Rock', 'Synthesis']
-  }
-},
-'Ockthane': {
-  'Nasty Plot': {
-      "level": 100,
-      'ability': 'Supreme Overlord',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Nasty Plot', 'Ice Beam', 'Thunderbolt', 'Focus Blast']
+  "Sunflora-Delta": {
+    "Support": {"level": 120,"ability": "Flame Body","item": "Black Sludge","nature": "Sassy","ivs": {"at": 0,"sp": 0},"evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Pain Split", "Corrode", "Will-O-Wisp", "Knock Off"]}
   },
-  'Choice Scarf': {
-      "level": 100,
-      'ability': 'Supreme Overlord',
-      'item': 'Choice Scarf',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Thunderbolt', 'Ice Beam', 'Volt Switch', 'Focus Blast']
-  }
-},
-'Paldemaria': {
-  'Assault Vest': {
-      "level": 100,
-      'ability': 'Regenerator',
-      'item': 'Assault Vest',
-      'nature': 'Calm',
-      'evs': {
-          'hp': 252,
-          'sd': 168,
-          'spe': 88
-      },
-      'moves': ['Scald', 'Moonblast', 'Psychic Noise', 'Flip Turn']
-  }
-},
-'Pestri': {
-  'Corrosion': {
-      "level": 100,
-      'ability': 'Corrosion',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 252,
-          'df': 252,
-          'sd': 4
-      },
-      'moves': ['Sludge Bomb', 'Toxic', 'Roost', 'U-turn']
+  "Sunflora-Delta-Mega": {
+    "Trick Room": {"level": 120,"ability": "Chlorofury","item": "Delta Sunflorite","nature": "Quiet","ivs": {"at": 0,"sp": 0},"evs": {"hp": 252,"df": 4,"sa": 252},"moves": ["Trick Room", "Nasty Plot", "Corrode", "Earth Power"]}
   },
-  'Intimidate': {
-      "level": 100,
-      'ability': 'Intimidate',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 248,
-          'df': 252,
-          'sd': 8
-      },
-      'moves': ['Sludge Bomb', 'Flamethrower', 'Roost', 'U-turn']
-  }
-},
-'Porygon-Z-Rhinian': {
-  'Choice Scarf': {
-      "level": 100,
-      'ability': 'Adaptability',
-      'item': 'Choice Scarf',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Thunderbolt', 'Volt Switch', 'Energy Ball', 'Flamethrower']
-  }
-},
-'Rotom-Hisui-Armored': {
-  'Choice Scarf': {
-      "level": 100,
-      'ability': 'Dry Skin',
-      'item': 'Choice Scarf',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Quaking Thrust', 'Temper Flare', 'Gunk Shot', 'U-turn']
+  "Avalugg-Delta": {
+    "Support": {"level": 120,"ability": "Sand Stream","item": "Smooth Rock","nature": "Impish","evs": {"hp": 252,"at": 4,"df": 252},"moves": ["Stealth Rock", "Rapid Spin", "Slack Off", "Rock Slide"]},
+    "Weakness Policy": {"level": 120,"ability": "Solid Rock","item": "Weakness Policy","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Rock Polish", "Stone Edge", "Outrage", "Earthquake"]}
   },
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Dry Skin',
-      'item': 'Life Orb',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Quaking Thrust', 'Gunk Shot', 'Temper Flare']
-  }
-},
-'Scaleslash': {
-  'Rapid Spin': {
-      "level": 100,
-      'ability': 'Belligerent Quills',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Rapid Spin', 'Play Rough', 'High Horsepower']
-  }
-},
-'Scorching Kiln': {
-  'Stripping Kiln': {
-      "level": 100,
-      'ability': 'Protosynthesis',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Calm',
-      'evs': {
-          'hp': 252,
-          'df': 4,
-          'sd': 252
-      },
-      'moves': ['Rapid Spin', 'Flamethrower', 'Morning Sun', 'Teleport']
-  }
-},
-'Sekrilon-Mega': {
-  'All-Out Attacker': {
-      "level": 100,
-      'ability': 'Scrappy',
-      'item': 'Sekrilite',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Triple Axel', 'High Jump Kick', 'Grounding Stomp', 'U-turn']
-  }
-},
-'Sinister Sickle': {
-  'Calm Mind': {
-      "level": 100,
-      'ability': 'Protosynthesis',
-      'item': 'Booster Energy',
-      'nature': 'Timid',
-      'evs': {
-          'hp': 32,
-          'sa': 224,
-          'spe': 252
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Calm Mind', 'Flamethrower', 'Sludge Wave', 'Severing Wind']
-  }
-},
-'Sirentom': {
-  'Specially Defensive': {
-      "level": 100,
-      'ability': 'Comatose',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Calm',
-      'evs': {
-          'hp': 248,
-          'df': 8,
-          'sd': 252
-      },
-      'moves': ['Teleport', 'Rapid Spin', 'Shadow Ball', 'Slack Off']
+  "Scyther-Delta": {
+    "Hone Claws": {"level": 120,"ability": "Hustle","item": "Eviolite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Hone Claws", "Roost", "Icicle Crash", "Close Combat"]}
   },
-  'Calm Mind': {
-      "level": 100,
-      'ability': 'Comatose',
-      'item': 'Leftovers',
-      'nature': 'Bold',
-      'evs': {
-          'hp': 248,
-          'df': 252,
-          'sa': 8
-      },
-      'ivs': {
-          'at': 0
-      },
-      'moves': ['Calm Mind', 'Will-O-Wisp', 'Hex', 'Slack Off']
-  }
-},
-'Staruhz': {
-  'Can we pretend that': {
-      "level": 100,
-      'ability': 'Starfall',
-      'item': 'Eject Bandage',
-      'nature': 'Timid',
-      'evs': {
-          'hp': 248,
-          'sa': 8,
-          'spe': 252
-      },
-      'moves': ['Mindwipe', 'Ice Beam', 'Recover', 'Flip Turn']
-  }
-},
-'Tinkashank': {
-  'Swords Dance': {
-      "level": 100,
-      'ability': 'Guts',
-      'item': 'Flame Orb',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Swords Dance', 'Knock Off', 'Sucker Punch', 'Iron Head']
-  }
-},
-'Tyranisacer': {
-  'Dragon Dance': {
-      "level": 100,
-      'ability': 'Tough Claws',
-      'item': 'Heavy-Duty Boots',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Dragon Dance', 'Leech Life', 'Knock Off', 'Ice Fang']
+  "Scizor-Delta": {
+    "Hail Sweeper": {"level": 120,"ability": "Slush Rush","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Swords Dance", "Icicle Crash", "Close Combat", "U-turn"]},
+    "Physical Attacker": {"level": 120,"ability": "Tough Claws","item": "Life Orb","nature": "Adamant","evs": {"hp": 252,"at": 252,"sp": 4},"moves": ["Swords Dance", "Ice Punch", "Close Combat", "Ice Shard"]}
   },
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Tough Claws',
-      'item': 'Choice Band',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 248,
-          'at': 252,
-          'sd': 8
-      },
-      'moves': ['Knock Off', 'Leech Life', 'Head Smash', 'Ice Fang']
-  }
-},
-'Tyranitar-Delta': {
-  'Dragon Dance': {
-      "level": 100,
-      'ability': 'Psychic Surge',
-      'item': 'Lum Berry',
-      'nature': 'Jolly',
-      'evs': {
-          'at': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Dragon Dance', 'Psychic Fangs', 'Ice Punch', 'Fire Punch']
+  "Scizor-Delta-Mega": {
+    "Breaker": {"level": 120,"ability": "Adaptability","item": "Delta Scizorite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sp": 4},"moves": ["Swords Dance", "Icicle Crash", "Ice Shard", "Close Combat"]}
   },
-  'Choice Band': {
-      "level": 100,
-      'ability': 'Psychic Surge',
-      'item': 'Choice Band',
-      'nature': 'Adamant',
-      'evs': {
-          'hp': 252,
-          'at': 252,
-          'sd': 4
-      },
-      'moves': ['Psychic Fangs', 'Mindtrap', 'Earthquake', 'Ice Punch']
+  "Scrafty-Delta": {
+    "Defensive": {"level": 120,"ability": "Rough Skin","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Synthesis", "Super Fang", "Seed Bomb", "Knock Off"]},
+    "Bulk Up": {"level": 120,"ability": "Rough Skin","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Bulk Up", "Synthesis", "Seed Bomb", "Rock Slide"]}
+  },
+  "Vespiquen-Delta": {
+    "Support": {"level": 120,"ability": "Levitate","item": "Leftovers","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Roost", "Stealth Rock", "Lava Plume", "Volt Switch"]},
+    "Calm Mind": {"level": 120,"ability": "Speed Boost","item": "Leftovers","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Roost", "Calm Mind", "Lava Plume", "Energy Ball"]},
+    "Shift Gear": {"level": 120,"ability": "Levitate","item": "Leftovers","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Shift Gear", "Flare Blitz", "Iron Head", "Roost"]}
+  },
+  "Weezing-Delta": {
+    "Calm Mind": {"level": 120,"ability": "Amplifier","item": "Leftovers","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Calm Mind", "Roost", "Boomburst", "Overdrive"]},
+    "Belly Drum": {"level": 120,"ability": "Volt Absorb","item": "Sitrus Berry","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Belly Drum", "Acrobatics", "Wild Charge", "Tailwind"]}
+  },
+  "Liepard-Delta": {
+    "Physical": {"level": 120,"ability": "Illusion","item": "Expert Belt","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Swors Dance", "Play Rough", "Shadow Claw", "U-turn"]},
+    "Special": {"level": 120,"ability": "Illusion","item": "Expert Belt","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Nasty Plot", "Shadow Ball", "Moonblast", "U-turn"]}
+  },
+  "Glalie-Delta": {
+    "Support": {"level": 120,"ability": "Rock Head","item": "Focus Sash","nature": "Jolly","evs": {"hp": 252,"at": 4,"sp": 252},"moves": ["Stealth Rock", "Spikes", "Head Smash", "Flare Blitz"]}
+  },
+  "Glalie-Delta-Mega": {
+    "Physical Breaker": {"level": 120,"ability": "Reckless","item": "Delta Glalitite","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Flame Charge", "Flare Blitz", "Head Smash", "Earthquake"]}
+  },
+  "Froslass-Delta": {
+    "Support": {"level": 120,"ability": "Competitive","item": "Focus Sash","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sp": 252},"moves": ["Spikes", "Stealth Rock", "Lava Plume", "Taunt"]}
+  },
+  "Froslass-Delta-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Magic Guard","item": "Delta Froslassite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Eruption", "Shadow Ball", "Earth Power", "Fiery Dance"]}
+  },
+  "Luxray-Delta": {
+    "Physical Support": {"level": 120,"ability": "Vampiric","item": "Black Sludge","nature": "Adamant","evs": {"hp": 252,"at": 252,"sp": 4},"moves": ["Gunk Shot", "Iron Head", "Earthquake", "Toxic Spikes"]},
+    "Physical Sweeper": {"level": 120,"ability": "Vampiric","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Agility", "Gunk Shot", "Close Combat", "Earthquake"]}
+  },
+  "Noivern-Delta": {
+    "Support": {"level": 120,"ability": "Chlorophyll","item": "Leftovers","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sp": 252},"moves": ["Leech Seed", "Super Fang", "Roost", "Flash Cannon"]},
+    "Physical Sun": {"level": 120,"ability": "Flower Gift","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Growth", "Iron Head", "Solar Blade", "Earthquake"]},
+    "Special Sun": {"level": 120,"ability": "Solar Power","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Growth", "Flash Cannon", "Solar Beam", "Weather Ball"]}
+  },
+  "Roserade-Delta": {
+    "Support": {"level": 120,"ability": "Limber","item": "Leftovers","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sp": 252},"moves": ["Spikes", "Moonlight", "Moonblast", "Heal Bell"]},
+    "Calm Mind": {"level": 120,"ability": "Limber","item": "Leftovers","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Calm Mind", "Moonlight", "Moonblast", "Dark Pulse"]},
+    "Darkness Sweeper": {"level": 120,"ability": "Shadow Dance","item": "Choice Specs","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Lunar Cannon", "Moonblast", "Sludge Wave", "Trick"]}
+  },
+  "Drifblim-Delta": {
+    "Support": {"level": 120,"ability": "Flash Fire","item": "Heavy-Duty Boots","nature": "Careful","evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Will-O-Wisp", "Roost", "U-turn", "Fire Lash"]},
+    "Calm Mind": {"level": 120,"ability": "No Guard","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sp": 252},"moves": ["Calm Mind", "Roost", "Inferno", "Hurricane"]}
+  },
+  "Muk-Delta": {
+    "Support": {"level": 120,"ability": "Sap Sipper","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Earthquake", "Recover", "Stealth Rock", "Toxic"]}
+  },
+  "Quagsire-Delta": {
+    "SpDef": {"level": 120,"ability": "Flash Fire","item": "Leftovers","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Leech Seed", "Will-O-Wisp", "Strength Sap", "Flamethrower"]}
+  },
+  "Snorlax-Delta": {
+    "Bulk Up": {"level": 120,"ability": "Thick Fat","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Bulk Up", "Synthesis", "Seed Bomb", "Rock Slide"]},
+    "Belly Drum": {"level": 120,"ability": "Adaptability","item": "Sitrus Berry","nature": "Adamant","evs": {"hp": 252,"at": 252,"df": 4},"moves": ["Belly Drum", "Seed Bomb", "Drain Punch", "Rock Slide"]}
+  },
+  "Mismagius-Delta": {
+    "Scarfed": {"level": 120,"ability": "Magic Guard","item": "Choice Scarf","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Moonblast", "Freeze-Dry", "U-turn", "Trick"]},
+    "Special Attacker": {"level": 120,"ability": "Magic Guard","item": "Life Orb","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Moonblast", "Freeze-Dry", "Thunderbolt", "Calm Mind"]}
+  },
+  "Typhlosion-Delta": {
+    "Scarfed": {"level": 120,"ability": "Lightning Rod","item": "Choice Scarf","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Volt Switch", "Flash Cannon", "Energy Ball", "Dazzling Gleam"]}
+  },
+  "Typhlosion-Delta-Mega": {
+    "Breaker (Rain)": {"level": 120,"ability": "Motor Drive","item": "Delta Typhlosionite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Thunder", "Flash Cannon", "Energy Ball", "Dazzling Gleam"]},
+    "Breaker (Darkness)": {"level": 120,"ability": "Motor Drive","item": "Delta Typhlosionite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Volt Switch", "Flash Cannon", "Energy Ball", "Dark Pulse"]}
+  },
+  "Sceptile-Delta": {
+    "Guts Breaker": {"level": 120,"ability": "Guts","item": "Flame Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Dragon Dance", "Close Combat", "Outrage", "Poison Jab"]}
+  },
+  "Blaziken-Delta": {
+    "Support": {"level": 120,"ability": "Gale Wings","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sp": 252},"moves": ["Defog", "Roost", "Air Slash", "U-turn"]},
+    "Physical Scarfed": {"level": 120,"ability": "Gale Wings","item": "Choice Scarf","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Brave Bird", "Earthquake", "U-turn", "Knock Off"]},
+    "Special Attacker": {"level": 120,"ability": "Gale Wings","item": "Sky Plate","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Hurricane", "Psychic", "Focus Blast", "Calm Mind"]}
+  },
+  "Torterra-Delta": {
+    "Support": {"level": 120,"ability": "Water Absorb","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Stealth Rock", "Recover", "Spikes", "Earthquake"]},
+    "Curse": {"level": 120,"ability": "Water Absorb","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Curse", "Recover", "Earthquake", "Avalanche"]},
+    "Physical Rain": {"level": 120,"ability": "Swift Swim","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Earthquake", "Liquidation", "Leech Life", "Rock Slide"]},
+    "Special Rain": {"level": 120,"ability": "Swift Swim","item": "Choice Specs","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Water Spout", "Earth Power", "Ice Beam", "Hydro Pump"]}
+  },
+  "Serperior-Delta": {
+    "Rain Support": {"level": 120,"ability": "Drizzle","item": "Damp Rock","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sp": 252},"moves": ["Slack Off", "U-turn", "Scald", "Glare"]},
+    "Physical Set-Up": {"level": 120,"ability": "Multiscale","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Dragon Dance", "Liquidation", "Outrage", "Earthquake"]},
+    "Special Set-Up": {"level": 120,"ability": "Multiscale","item": "Leftovers","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Calm Mind", "Slack Off", "Scald", "Ice Beam"]}
+  },
+  "Greninja-Delta": {
+    "Support": {"level": 120,"ability": "Prankster","item": "Focus Sash","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Spikes", "U-turn", "Will-O-Wisp", "Endeavor"]},
+    "Physical Attacker": {"level": 120,"ability": "Steadfast","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Swords Dance", "Flare Blitz", "Leaf Blade", "Knock Off"]},
+    "Special Attacker": {"level": 120,"ability": "Steadfast","item": "Choice Specs","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Fire Blast", "Leaf Storm", "Focus Blast", "U-turn"]}
+  },
+  "Pidgeot-Delta": {
+    "Dragon Dance": {"level": 120,"ability": "Intimidate","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Dragon Dance", "Crunch", "Outrage", "Iron Tail"]}
+  },
+  "Pidgeot-Delta-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Intimidate","item": "Delta Pidgeotite","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Draco Meteor", "Dark Pulse", "Sludge Wave", "U-turn"]}
+  },
+  "Dugtrio-Delta": {
+    "Offensive": {"level": 120,"ability": "Fur Coat","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Head Charge", "Icicle Crash", "Earthquake", "Extreme Speed"]}
+  },
+  "Arcanine-Delta": {
+    "Extreme Killer": {"level": 120,"ability": "Multiscale","item": "Silk Scarf","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Swords Dance", "Extreme Speed", "Earthquake", "Draco Jet"]}
+  },
+  "Golem-Delta": {
+    "Defensive Pivot": {"level": 120,"ability": "Regenerator","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Stealth Rock", "Stone Edge", "Knock Off", "Earthquake"]},
+    "Bulky Offensive": {"level": 120,"ability": "Magic Bounce","item": "Leftovers","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Stone Edge", "Zen Headbutt", "Earthquake", "Ice Punch"]}
+  },
+  "Tentacruel-Delta": {
+    "Defensive": {"level": 120,"ability": "Storm Drain","item": "Black Sludge","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"sd": 252,"sp": 4},"moves": ["Corrode", "Giga Drain", "Strength Sap", "Knock Off"]}
+  },
+  "Dodrio-Delta": {
+    "Offensive": {"level": 120,"ability": "Psycho Call","item": "Choice Band","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Zen Headbutt", "Brave Bird", "Low Kick", "Knock Off"]}
+  },
+  "Tangrowth-Delta": {
+    "Defensive": {"level": 120,"ability": "Dry Skin","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"at": 4,"df": 252},"moves": ["Earthquake", "Knock Off", "Close Combat", "Stealth Rock"]}
+  },
+  "Ditto-Delta": {
+    "Nope.": {"level": 120,"ability": "Protean","item": "Quick Powder","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sp": 252},"moves": ["Morph", "Retrograde", "Mirror Move", "Me First"]}
+  },
+  "Kabutops-Delta": {
+    "Offensive": {"level": 120,"ability": "Tough Claws","item": "Choice Scarf","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Knock Off", "Leech Life", "Play Rough", "Superpower"]}
+  },
+  "Dragonite-Delta": {
+    "Physical Rain Sweeper": {"level": 120,"ability": "Swift Swim","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Wild Charge", "Liquidation", "Ice Punch", "Flip Turn"]},
+    "Special Rain Sweeper": {"level": 120,"ability": "Swift Swim","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Thunder", "Hydro Pump", "Hurricane", "Flip Turn"]}
+  },
+  "Noctowl-Delta": {
+    "Offensive": {"level": 120,"ability": "No Guard","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Blizzard", "Hurricane", "Tailwind", "Roost"]}
+  },
+  "Lanturn-Delta": {
+    "Defensive Utility": {"level": 120,"ability": "Levitate","item": "Heavy-Duty Boots","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 4,"df": 252,"sd": 252},"moves": ["Will-O-Wisp", "Hex", "Flamethrower", "Clear Smog"]}
+  },
+  "Raichu-Delta": {
+    "Special Attacker": {"level": 120,"ability": "Gale Wings","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Hurricane", "Moonblast", "Volt Switch", "Focus Blast"]},
+    "Utility": {"level": 120,"ability": "Gale Wings","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Defog", "Roost", "Moonblast", "Knock Off"]}
+  },
+  "Ambipom-Delta": {
+    "Physical Attacker": {"level": 120,"ability": "Technician","item": "Life Orb","nature": "Jolly","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Poltergeist", "Fake Out", "Tail Slap", "U-turn"]}
+  },
+  "Yanmega-Delta": {
+    "Special Sun Sweeper": {"level": 120,"ability": "Chlorophyll","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Air Slash", "Solar Beam", "Weather Ball", "Growth"]},
+    "Special Breaker": {"level": 120,"ability": "Adaptability","item": "Choice Specs","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Leaf Storm", "Hurricane", "U-turn", "Giga Drain"]}
+  },
+  "Girafarig-Delta": {
+    "Utility": {"level": 120,"ability": "Intimidate","item": "Black Sludge","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sp": 252},"moves": ["Toxic Spikes", "Corrode", "Knock Off", "Taunt"]}
+  },
+  "Girafarig-Delta-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Intimidate","item": "Delta Etigirafarigite","nature": "Timid","ivs": {"at": 0},"evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Corrode", "Giga Drain", "Autotomize", "Nasty Plot"]}
+  },
+  "Dunsparce-Delta": {
+    "Physical Attacker": {"level": 120,"ability": "Skill Link","item": "Silver Powder","nature": "Adamant","evs": {"hp": 248,"at": 252,"df": 8},"moves": ["First Impression", "Liquidation", "Icicle Spear", "Pin Missile"]},
+    "Rain Sweeper": {"level": 120,"ability": "Swift Swim","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Liquidation", "Swords Dance", "Lunge", "Aqua Jet"]}
+  },
+  "Shuckle-Delta": {
+    "Defensive Utility": {"level": 120,"ability": "Iron Barbs","item": "Chesto Berry","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Spikes", "Seismic Toss", "Knock Off", "Toxic"]},
+    "Bulk Up": {"level": 120,"ability": "Iron Barbs","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Bulk Up", "Rest", "Sleep Talk", "Drain Punch"]}
+  },
+  "Octillery-Delta": {
+    "Contrary Breaker": {"level": 120,"ability": "Contrary","item": "Assault Vest","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 248,"sa": 252,"sd": 8},"moves": ["Overheat", "Energy Ball", "Earth Power", "Vacuum Wave"]}
+  },
+  "Electivire-Delta": {
+    "Moon Sweeper": {"level": 120,"ability": "Shadow Dance","item": "Life Orb","nature": "Adamant","evs": {"hp": 4,"at": 252,"sp": 252},"moves": ["Hone Claws", "Stone Edge", "Outrage", "Earthquake"]}
+  },
+  "Magmortar-Delta": {
+    "Bulky Offense": {"level": 120,"ability": "Mega Launcher","item": "Assault Vest","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 4,"sa": 252,"sp": 252},"moves": ["Water Pulse", "Flash Cannon", "Aura Sphere", "Ice Beam"]}
+  },
+  "Ludicolo-Delta": {
+    "Calm Mind": {"level": 120,"ability": "Magic Bounce","item": "Leftovers","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 248,"df": 8,"sa": 252},"moves": ["Calm Mind", "Psyshock", "Scald", "Focus Blast"]}
+  },
+  "Shiftry-Delta": {
+    "Special Breaker": {"level": 120,"ability": "Hubris","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Nasty Plot", "Thunderbolt", "Energy Ball", "Dazzling Gleam"]}
+  },
+  "Sableye-Delta": {
+    "Physical Sweeper": {"level": 120,"ability": "Weak Armor","item": "Charcoal","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Swords Dance", "Flare Blitz", "Stone Edge", "Earthquake"]}
+  },
+  "Sableye-Delta-Mega": {
+    "Bulky Offensive": {"level": 120,"ability": "Dry Skin","item": "Delta Sablenite","nature": "Adamant","evs": {"hp": 248,"at": 252,"df": 8},"moves": ["Swords Dance", "Flare Blitz", "Stone Edge", "Earthquake"]}
+  },
+  "Mawile-Delta": {
+    "Hazard Support": {"level": 120,"ability": "Aroma Veil","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Spikes", "Toxic Spikes", "Knock Off", "Taunt"]},
+    "Physical Attacker": {"level": 120,"ability": "Immunity","item": "Black Glasses","nature": "Adamant","evs": {"hp": 252,"at": 252,"df": 4},"moves": ["Swords Dance", "Sucker Punch", "Knock Off", "Power Whip"]}
+  },
+  "Mawile-Delta-Mega": {
+    "Offensive Trapper": {"level": 120,"ability": "Arena Trap","item": "Delta Mawilite","nature": "Adamant","evs": {"hp": 252,"at": 252,"df": 4},"moves": ["Power Whip", "Knock Off", "Sucker Punch", "Spikes"]}
+  },
+  "Aggron-Delta": {
+    "Sun Breaker": {"level": 120,"ability": "Drought","item": "Choice Band","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Flare Blitz", "Iron Head", "Knock Off", "Earthquake"]}
+  },
+  "Medicham-Delta": {
+    "Special Breaker": {"level": 120,"ability": "Athenian","item": "Leftovers","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Earth Power", "Moonblast", "Calm Mind", "Slack Off"]}
+  },
+  "Medicham-Delta-Mega": {
+    "Special Breaker": {"level": 120,"ability": "Athenian","item": "Delta Medichamite","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Earth Power", "Moonblast", "Calm Mind", "Slack Off"]}
+  },
+  "Camerupt-Delta": {
+    "Special Attacker": {"level": 120,"ability": "Poison Point","item": "Black Sludge","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sa": 252},"moves": ["Toxic Spikes", "Corrode", "Flamethrower", "Scald"]}
+  },
+  "Camerupt-Delta-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Venomous","item": "Delta Cameruptite","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sa": 252},"moves": ["Corrode", "Toxic Spikes", "Flamethrower", "Scald"]}
+  },
+  "Plusle-Delta": {
+    "Quiver Dance Sweeper": {"level": 120,"ability": "Pixilate","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Quiver Dance", "Hyper Voice", "Fire Blast", "Energy Ball"]}
+  },
+  "Minun-Delta": {
+    "Quiver Dance Sweeper": {"level": 120,"ability": "Pixilate","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Quiver Dance", "Hyper Voice", "Ice Beam", "Hyper Beam"]}
+  },
+  "Wailord-Delta": {
+    "Hail Support": {"level": 120,"ability": "Snow Warning","item": "Icy Rock","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 248,"df": 252,"sd": 8},"moves": ["Blizzard", "Air Slash", "Roost", "U-turn"]},
+    "Special Sweeper": {"level": 120,"ability": "Refrigerate","item": "Heavy-Duty Boots","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Hyper Voice", "Hurricane", "Rock Polish", "Surf"]}
+  },
+  "Milotic-Delta": {
+    "Bulky Pivot": {"level": 120,"ability": "Regenerator","item": "Leftovers","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 248,"df": 252,"sd": 8},"moves": ["Will-O-Wisp", "Recover", "Shadow Ball", "Aura Sphere"]}
+  },
+  "Milotic-Delta-Mega": {
+    "Calm Mind": {"level": 120,"ability": "Absolution","item": "Delta Milotite","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 248,"df": 252,"sd": 8},"moves": ["Calm Mind", "Recover", "Shadow Ball", "Aura Sphere"]}
+  },
+  "Huntail-Delta": {
+    "Shell Smash Sweeper": {"level": 120,"ability": "Strong Jaw","item": "White Herb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Shell Smash", "Crunch", "Outrage", "Iron Head"]}
+  },
+  "Gorebyss-Delta": {
+    "Shell Smash Sweeper": {"level": 120,"ability": "Marvel Scale","item": "White Herb","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Shell Smash", "Moonblast", "Dragon Pulse", "Draco Meteor"]}
+  },
+  "Metagross-Delta-Spider": {
+    "Hazard Support": {"level": 120,"ability": "Poison Heal","item": "Toxic Orb","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sticky Web", "Stealth Rock", "U-turn", "Earthquake"]},
+    "Bulky Hazards Spikes": {"level": 120,"ability": "Poison Heal","item": "Toxic Orb","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sticky Web", "Spikes", "Earthquake", "U-turn"]},
+    "Bulky Hazards Rocks": {"level": 120,"ability": "Poison Heal","item": "Eviolite","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sticky Web", "Stealth Rock", "Earthquake", "U-turn"]}
+  },
+  "Metagross-Delta-Spider-Mega": {
+    "Offensive Pivot": {"level": 120,"ability": "Mold Breaker","item": "Delta Metagrossite Spider","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Earthquake", "U-turn", "Stone Edge", "Knock Off"]}
+  },
+  "Metagross-Delta-Ruin": {
+    "Fast Band": {"level": 120,"ability": "Rock Head","item": "Choice Band","nature": "Adamant","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Head Smash", "Wood Hammer", "Earthquake", "Crystal Rush"]},
+    "Bulky Band": {"level": 120,"ability": "Rock Head","item": "Choice Band","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Head Smash", "Wood Hammer", "Earthquake", "Crystal Rush"]},
+    "Rock Polish": {"level": 120,"ability": "Rock Head","item": "Lum Berry","nature": "Adamant","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Head Smash", "Wood Hammer", "Earthquake", "Rock Polish"]}
+  },
+  "Metagross-Delta-Ruin-Mega": {
+    "Physical Breaker": {"level": 120,"ability": "Rock Head","item": "Delta Metagrossite Ruin","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Head Smash", "Wood Hammer", "Earthquake", "Volt Switch"]}
+  },
+  "Metagross-Delta-Ruin-Crystal": {
+    "Physical Cleaner": {"level": 120,"ability": "Weak Armor","item": "Crystal Fragment","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Wood Hammer", "Earthquake", "Crystal Rush", "Diamond Storm"]}
+  },
+  "Lopunny-Delta": {
+    "Physical Sweeper": {"level": 120,"ability": "Inner Focus","item": "Leftovers","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Bulk Up", "Close Combat", "Knock Off", "Poison Jab"]}
+  },
+  "Lopunny-Delta-Mega": {
+    "Physical Pivot": {"level": 120,"ability": "Infiltrator","item": "Delta Lopunnite","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Close Combat", "Zen Headbutt", "Knock Off", "U-turn"]}
+  },
+  "Lucario-Delta": {
+    "Physical Breaker": {"level": 120,"ability": "Justified","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Earthquake", "Knock Off", "Stone Edge", "Sucker Punch"]},
+    "Special Breaker": {"level": 120,"ability": "Mummy","item": "Life Orb","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Earth Power", "Dark Pulse", "Blizzard", "Nasty Plot"]}
+  },
+  "Lucario-Delta-Mega": {
+    "Physical Breaker": {"level": 120,"ability": "Defiant","item": "Delta Lucarionite","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Earthquake", "Knock Off", "Stone Edge", "Swords Dacne"]},
+    "Special Breaker": {"level": 120,"ability": "Defiant","item": "Delta Lucarionite","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Earth Power", "Dark Pulse", "Blizzard", "Nasty Plot"]}
+  },
+  "Toxicroak-Delta": {
+    "Physical Breaker": {"level": 120,"ability": "Hustle","item": "Choice Scarf","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Flare Blitz", "Knock Off", "Thunder Punch", "Earthquake"]}
+  },
+  "Scolipede-Delta": {
+    "Hazard Lead": {"level": 120,"ability": "Mold Breaker","item": "Focus Sash","nature": "Jolly","evs": {"hp": 252,"at": 4,"sp": 252},"moves": ["Stealth Rock", "Spikes", "Endeavor", "Flare Blitz"]},
+    "Physical Sweeper": {"level": 120,"ability": "Weak Armor","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Swords Dance", "Flare Blitz", "Stone Edge", "Earthquake"]}
+  },
+  "Lilligant-Delta-W": {
+    "Calm Mind Sweeper": {"level": 120,"ability": "Storm Drain","item": "Leftovers","nature": "Timid","evs": {"hp": 252,"df": 4,"sp": 252},"moves": ["Calm Mind", "Recover", "Scald", "Fire Blast"]}
+  },
+  "Lilligant-Delta-F": {
+    "Calm Mind Sweeper": {"level": 120,"ability": "Serene Grace","item": "Heavy-Duty Boots","nature": "Timid","evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Calm Mind", "Roost", "Air Slash", "Aura Sphere"]}
+  },
+  "Reuniclus-Delta": {
+    "Trick Room Offense": {"level": 120,"ability": "Intimidate","item": "Life Orb","nature": "Modest","ivs": {"at": 0,"sp": 0},"evs": {"hp": 252,"df": 4,"sa": 252},"moves": ["Trick Room", "Shadow Ball", "Power Gem", "Focus Blast"]}
+  },
+  "Darmanitan-Delta": {
+    "Physical Breaker": {"level": 120,"ability": "Wonder Skin","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Poltergeist", "Knock Off", "U-turn", "Superpower"]}
+  },
+  "Maractus-Delta": {
+    "Shift Gear Sweeper": {"level": 120,"ability": "Motor Drive","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Shift Gear", "Meteor Mash", "Knock Off", "Wild Charge"]}
+  },
+  "Crustle-Delta-B": {
+    "Hazard Lead": {"level": 120,"ability": "Harvest","item": "Black Sludge","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Spikes", "Earthquake", "Gunk Shot", "Synthesis"]},
+    "Sun Sweeper": {"level": 120,"ability": "Chlorophyll","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Swords Dance", "Gunk Shot", "Earthquake", "Leaf Blade"]}
+  },
+  "Crustle-Delta-C": {
+    "Shell Smash Sweeper": {"level": 120,"ability": "Simple","item": "White Herb","nature": "Adamant","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Shell Smash", "Play Rough", "Knock Off", "Brick Break"]}
+  },
+  "Cofagrigus-Delta": {
+    "Physical Wall": {"level": 120,"ability": "Aftermath","item": "Black Sludge","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sludge Bomb", "Earth Power", "Pain Split", "Will-O-Wisp"]}
+  },
+  "Emolga-Delta": {
+    "Physical Sweeper": {"level": 120,"ability": "Fired Up","item": "Life Orb","nature": "Adamant","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Flare Blitz", "Knock Off", "Wood Hammer", "U-turn"]},
+    "Special Sweeper": {"level": 120,"ability": "Fired Up","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Fire Blast", "Dark Pulse", "Energy Ball", "U-turn"]}
+  },
+  "Escavalier-Delta": {
+    "Trick Room Sweeper": {"level": 120,"ability": "Simple","item": "Life Orb","nature": "Adamant","ivs": {"sp": 0},"evs": {"hp": 252,"at": 252,"df": 4},"moves": ["Trick Room", "Swords Dance", "Play Rough", "Knock Off"]}
+  },
+  "Amoonguss-Delta": {
+    "Defensive Pivot": {"level": 120,"ability": "Intimidate","item": "Leftovers","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Will-O-Wisp", "Hex", "Foul Play", "Knock Off"]}
+  },
+  "Chandelure-Delta": {
+    "Special Breaker": {"level": 120,"ability": "Fairy Aura","item": "Choice Scarf","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Moonblast", "Fire Blast", "Earth Power", "Trick"]},
+    "Special Sweeper": {"level": 120,"ability": "Weak Armor","item": "Leftovers","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Calm Mind", "Moonblast", "Fire Blast", "Earth Power"]}
+  },
+  "Haxorus-Delta": {
+    "Swords Dance Sweeper": {"level": 120,"ability": "Water Veil","item": "Leftovers","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Swords Dance", "Liquidation", "Anchor Shot", "Knock Off"]}
+  },
+  "Golurk-Delta": {
+    "Physical Breaker": {"level": 120,"ability": "Guts","item": "Flame Orb","nature": "Adamant","evs": {"hp": 252,"at": 252,"df": 4},"moves": ["Close Combat", "Facade", "Knock Off", "Bullet Punch"]},
+    "Bulk Up Offense": {"level": 120,"ability": "Iron Fist","item": "Leftovers","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Bulk Up", "Drain Punch", "Bullet Punch", "Ice Punch"]}
+  },
+  "Heatmor-Delta": {
+    "Physical Breaker": {"level": 120,"ability": "Sheer Force","item": "Life Orb","nature": "Adamant","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Shift Gear", "Gunk Shot", "Iron Head", "Crunch"]},
+    "Special Breaker": {"level": 120,"ability": "Sheer Force","item": "Life Orb","nature": "Modest","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Shift Gear", "Sludge Wave", "Flamethrower", "Energy Ball"]}
+  },
+  "Hydreigon-Delta": {
+    "Physical Sweeper": {"level": 120,"ability": "Intoxicate","item": "Leftovers","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Coil", "Earthquake", "Gunk Shot", "Roost"]},
+    "Special Offense": {"level": 120,"ability": "Intoxicate","item": "Life Orb","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Earth Power", "Hyper Voice", "U-turn", "Fire Blast"]}
+  },
+  "Volcarona-Delta": {
+    "New Moon Breaker": {"level": 120,"ability": "Absolution","item": "Life Orb","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Corrode", "Lunar Cannon", "Earth Power", "Dazzling Gleam"]}
+  },
+  "Volcarona-Delta-Armor": {
+    "Stallbreaker": {"level": 120,"ability": "Levitate","item": "Volcarona-Delta Armor","nature": "Timid","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sp": 252},"moves": ["Corrode", "Dark Pulse", "Roost", "Taunt"]}
+  },
+  "Aurorus-Delta": {
+    "Defensive Pivot": {"level": 120,"ability": "Phototroph","item": "Leftovers","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Scald", "Recover", "Flip Turn", "Ice Beam"]}
+  },
+  "Goodra-Delta": {
+    "Special Pivot": {"level": 120,"ability": "Water Absorb","item": "Leftovers","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sa": 252},"moves": ["Earth Power", "Scald", "Ice Beam", "Stealth Rock"]}
+  },
+  "Regirock-Delta": {
+    "Bulky Support": {"level": 120,"ability": "Dry Skin","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Earthquake", "Stealth Rock", "Knock Off", "Recover"]}
+  },
+  "Regice-Delta": {
+    "Bulky Support": {"level": 120,"ability": "Storm Drain","item": "Leftovers","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Scald", "Stealth Rock", "Knock Off", "Recover"]}
+  },
+  "Registeel-Delta": {
+    "Bulky Support": {"level": 120,"ability": "Foundry","item": "Heavy-Duty Boots","nature": "Bold","evs": {"hp": 252,"df": 128,"sd": 128},"moves": ["Lava Plume", "Stealth Rock", "Knock Off", "Recover"]}
+  },
+  "Meloetta-Delta": {
+    "Offensive Pivot": {"level": 120,"ability": "Filter","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"df": 4,"sp": 252},"moves": ["Knock Off", "Play Rough", "U-turn", "Iron Head"]},
+    "Choice Band": {"level": 120,"ability": "Filter","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Knock Off", "Play Rough", "Sucker Punch", "U-turn"]},
+    "Boots Pivot": {"level": 120,"ability": "Filter","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Knock Off", "Play Rough", "Sucker Punch", "U-turn"]}
+  },
+  "Meloetta-Delta-Magician": {
+    "Special Offense": {"level": 120,"ability": "Filter","item": "Leftovers","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Calm Mind", "Psychic", "Dark Pulse", "Focus Blast"]}
+  },
+  "Hoopa-Delta": {
+    "Special Offense": {"level": 120,"ability": "Cloud Nine","item": "Choice Scarf","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Aeroblast", "Moonblast", "Heat Wave", "U-turn"]}
+  },
+  "Hoopa-Delta-Unbound": {
+    "Special Offense": {"level": 120,"ability": "Cloud Nine","item": "Choice Specs","nature": "Timid","ivs": {"at": 0},"evs": {"df": 4,"sa": 252,"sp": 252},"moves": ["Aeroblast", "Moonblast", "Heat Wave", "Volt Switch"]}
+  },
+  "Grotle-Delta": {
+    "Physically Defensive": {"level": 120,"ability": "Water Absorb","item": "Eviolite","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Shore Up", "Stealth Rock", "Earthquake", "Toxic"]}
+  },
+  "Poliwrath-Mega": {
+    "Sleeper Offense": {"level": 120,"ability": "No Guard","item": "Poliwrathite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Hypnosis", "Focus Punch", "Dynamic Punch", "Liquidation"]}
+  },
+  "Donphan-Mega": {
+    "Offensive Spinner": {"level": 120,"ability": "Irrelephant","item": "Donphanite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Earthquake", "Knock Off", "Ice Shard", "Rapid Spin"]}
+  },
+  "Meganium-Mega": {
+    "Specially Defensive": {"level": 120,"ability": "Magic Bounce","item": "Meganiumite","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Moonblast", "Giga Drain", "Leech Seed", "Synthesis"]}
+  },
+  "Meganium-Mega": {
+    "Calm Mind": {"level": 120,"ability": "Magic Bounce","item": "Meganiumite","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Moonblast", "Giga Drain", "Calm Mind", "Synthesis"]}
+  },
+  "Crawdaunt-Mega": {
+    "Dragon Dance": {"level": 120,"ability": "Adaptability","item": "Crawdauntite","nature": "Adamant","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Dragon Dance", "Crabhammer", "Knock Off", "Aqua Jet"]}
+  },
+  "Chatot-Mega": {
+    "Boombird": {"level": 120,"ability": "Amplifier","item": "Chatotite","nature": "Timid","ivs": {"at": 0},"evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Boomburst", "Heat Wave", "U-turn", "Nasty Plot"]}
+  },
+  "Spiritombite-Mega": {
+    "Remember Noctem in Base Form": {"level": 120,"ability": "Tough Claws","item": "Spiritombite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Knock Off", "Brick Break", "Sucker Punch", "Shadow Sneak"]}
+  },
+  "Stunfisk-Mega": {
+    "Bulky Offense": {"level": 120,"ability": "Athenian","item": "Stunfiskite","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"sa": 252,"sp": 4},"moves": ["Earth Power", "Thunderbolt", "Volt Switch", "Sludge Wave"]}
+  },
+  "Flygon-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Amplifier","item": "Flygonite","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Drakon Voice", "Boomburst", "Fire Blast", "U-turn"]}
+  },
+  "Marowak-Mega": {
+    "Physical Attacker": {"level": 120,"ability": "Parental Bond","item": "Marowakite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Earthquake", "Shadow Claw", "Shadow Sneak", "Power-Up Punch"]}
+  },
+  "Milotic-Mega": {
+    "Physically Defensive": {"level": 120,"ability": "Prism Guard","item": "Milotite","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Recover", "Refresh", "Moonblast", "Scald"]}
+  },
+  "Zebstrika-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Competitive","item": "Zebstrikite","nature": "Timid","ivs": {"at": 0},"evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Thunderbolt", "Dazzling Gleam", "Volt Switch", "Overheat"]}
+  },
+  "Poliwrath-Mega": {
+    "Sleeper Offense": {"level": 120,"ability": "No Guard","item": "Poliwrathite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Hypnosis", "Focus Punch", "Dynamic Punch", "Liquidation"]}
+  },
+  "Donphan-Mega": {
+    "Offensive Spinner": {"level": 120,"ability": "Irrelephant","item": "Donphanite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Earthquake", "Knock Off", "Ice Shard", "Rapid Spin"]}
+  },
+  "Meganium-Mega": {
+    "Specially Defensive": {"level": 120,"ability": "Magic Bounce","item": "Meganiumite","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Moonblast", "Giga Drain", "Leech Seed", "Synthesis"]}
+  },
+  "Meganium-Mega": {
+    "Calm Mind": {"level": 120,"ability": "Magic Bounce","item": "Meganiumite","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Moonblast", "Giga Drain", "Calm Mind", "Synthesis"]}
+  },
+  "Crawdaunt-Mega": {
+    "Dragon Dance": {"level": 120,"ability": "Adaptability","item": "Crawdauntite","nature": "Adamant","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Dragon Dance", "Crabhammer", "Knock Off", "Aqua Jet"]}
+  },
+  "Chatot-Mega": {
+    "Boombird": {"level": 120,"ability": "Amplifier","item": "Chatotite","nature": "Timid","ivs": {"at": 0},"evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Boomburst", "Heat Wave", "U-turn", "Nasty Plot"]}
+  },
+  "Spiritombite-Mega": {
+    "Remember Noctem in Base Form": {"level": 120,"ability": "Tough Claws","item": "Spiritombite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Knock Off", "Brick Break", "Sucker Punch", "Shadow Sneak"]}
+  },
+  "Stunfisk-Mega": {
+    "Bulky Offense": {"level": 120,"ability": "Athenian","item": "Stunfiskite","nature": "Modest","ivs": {"at": 0},"evs": {"hp": 252,"sa": 252,"sp": 4},"moves": ["Earth Power", "Thunderbolt", "Volt Switch", "Sludge Wave"]}
+  },
+  "Flygon-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Amplifier","item": "Flygonite","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Drakon Voice", "Boomburst", "Fire Blast", "U-turn"]}
+  },
+  "Marowak-Mega": {
+    "Physical Attacker": {"level": 120,"ability": "Parental Bond","item": "Marowakite","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Earthquake", "Shadow Claw", "Shadow Sneak", "Power-Up Punch"]}
+  },
+  "Milotic-Mega": {
+    "Physically Defensive": {"level": 120,"ability": "Prism Guard","item": "Milotite","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Recover", "Refresh", "Moonblast", "Scald"]}
+  },
+  "Zebstrika-Mega": {
+    "Special Attacker": {"level": 120,"ability": "Competitive","item": "Zebstrikite","nature": "Timid","ivs": {"at": 0},"evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Thunderbolt", "Dazzling Gleam", "Volt Switch", "Overheat"]}
+  },
+  "Garbodor": {
+    "Physically Defensive": {"level": 120,"ability": "Aftermath","item": "Rocky Helmet","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Toxic Spikes", "Spikes", "Gunk Shot", "Stomping Tantrum"]}
+  },
+  "Porygon": {
+    "Porygod": {"level": 120,"ability": "Trace","item": "Eviolite","nature": "Calm","ivs": {"at": 0},"evs": {"hp": 252,"sa": 4,"sd": 252},"moves": ["Recover", "Teleport", "Thunder Wave", "Ice Beam"]}
+  },
+  "Dottler": {
+    "Sticky Web": {"level": 120,"ability": "Compound Eyes","item": "Eviolite","nature": "Bold","ivs": {"at": 0},"evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sticky Web", "Recover", "Body Press", "Iron Defense"]}
+  },
+  "Bewitwing": {
+    "Dual Screens": {"level": 100,"ability": "Prankster","item": "Light Clay","nature": "Sassy","evs": {"hp": 252,"df": 4,"sd": 252},"ivs": {
+    "sp": 0},"moves": ["Light Screen", "Reflect", "U-turn", "Destiny Bond"]}
+  },
+  "Carcharus": {
+    "Choice Band": {"level": 100,"ability": "Strong Jaw","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Flip Turn", "Gorgon Fang", "Earthquake", "Fire Fang"]}
+  },
+  "Enchantobra": {
+    "Life Orb": {"level": 100,"ability": "Magic Guard","item": "Life Orb","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Fire Blast", "Moonblast", "Giga Drain", "Glare"]}
+  },
+  "Entei-Supra": {
+    "Choice Band": {"level": 100,"ability": "Adaptability","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Ice Shard", "Subzero Storm", "U-turn", "Superpower"]},
+    "Swords Dance": {"level": 100,"ability": "Adaptability","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Subzero Storm", "Ice Shard", "Superpower"]}
+  },
+  "Feidan": {
+    "Spikes": {"level": 100,"ability": "Unaware","item": "Leftovers","nature": "Sassy","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Spikes", "Knock Off", "Spiky Shield", "Shadow Ball"]},
+    "RestTalk": {"level": 100,"ability": "Unaware","item": "Leftovers","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"ivs": {"at": 0},"moves": ["Hex", "Will-O-Wisp", "Rest", "Sleep Talk"]}
+  },
+  "Felapstan": {
+    "Choice Scarf": {"level": 100,"ability": "Multitasker","item": "Choice Scarf","nature": "Modest","evs": {"hp": 60,"sa": 252,"sp": 196},"moves": ["Poltergeist", "Thunderbolt", "Volt Switch", "Aqua Tail"]},
+    "Physically Defensive": {"level": 100,"ability": "Multitasker","item": "Rocky Helmet","nature": "Bold","evs": {"hp": 248,"df": 252,"sd": 8},"ivs": {"at": 0},"moves": ["Shadow Ball", "Volt Switch", "Toxic Spikes", "Recover"]}
+  },
+  "Gelazura": {
+    "Swords Dance": {"level": 100,"ability": "Sticky Hold","item": "Black Sludge","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Liquidation", "Void Tentacle", "Knock Off"]}
+  },
+  "Gilotherma": {
+    "Physically Defensive": {"level": 100,"ability": "Poison Heal","item": "Toxic Orb","nature": "Bold","evs": {"hp": 244,"df": 176,"sp": 88},"ivs": {"at": 0},"moves": ["Venomous Roar", "Earth Power", "Glare", "Spikes"]}
+  },
+  "Grand Mirage": {
+    "Swords Dance": {"level": 100,"ability": "Protosynthesis","item": "Booster Energy","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Close Combat", "Knock Off", "Taunt"]},
+    "Nasty Plot": {"level": 100,"ability": "Protosynthesis","item": "Booster Energy","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Nasty Plot", "Dark Pulse", "Sludge Bomb", "Focus Blast"]}
+  },
+  "Harportia": {
+    "Choice Band": {"level": 100,"ability": "Tough Claws","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Brave Bird", "Supercell Slam", "Superpower", "Rift Jump"]},
+    "Offensive Pivot": {"level": 100,"ability": "Tough Claws","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Superpower", "Rift Jump", "Brave Bird", "Supercell Slam"]}
+  },
+  "Heatran-Supra": {
+    "SubSeed": {"level": 100,"ability": "Dancer","item": "Leftovers","nature": "Calm","evs": {"hp": 248,"sd": 132,"sp": 128},"ivs": {"at": 0},"moves": ["Fiery Dance", "Giga Drain", "Leech Seed", "Substitute"]}
+  },
+  "Incineroar-Olul": {
+    "Choice Band": {"level": 100,"ability": "Iron Fist","item": "Choice Band","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Mach Punch", "Bullet Punch", "Foul Strike", "Close Combat"]}
+  },
+  "Jovianshk": {
+    "Calm Mind": {"level": 100,"ability": "Slow Light","item": "Life Orb","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Psyshock", "Earth Power", "Fire Blast", "Calm Mind"]},
+    "Choice Scarf": {"level": 100,"ability": "Slow Light","item": "Choice Scarf","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Psyshock", "Earth Power", "Fire Blast", "Trick"]}
+  },
+  "Kaleidleon": {
+    "Specially Defensive": {"level": 100,"ability": "Hue Shift","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Fire Lash", "U-turn", "Spikes", "Recover"]}
+  },
+  "Kleavor-Delta": {
+    "Swords Dance": {"level": 100,"ability": "Flash Fire","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Triple Axel", "Flare Blitz", "Knock Off"]}
+  },
+  "Loxicant": {
+    "Assault Vest": {"level": 100,"ability": "Levitate","item": "Assault Vest","nature": "Adamant","evs": {"hp": 152,"at": 100,"df": 4,"sd": 252},"moves": ["Rapid Spin", "Rocket Grab", "Gunk Shot", "Knock Off"]}
+  },
+  "Lunachi": {
+    "Choice Band": {"level": 100,"ability": "Sacred Treasures","item": "Choice Band","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Darkest Lariat", "Play Rough", "Pursuit", "Sucker Punch"]},
+    "Calm Mind": {"level": 100,"ability": "Sacred Treasures","item": "Life Orb","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Moonblast", "Dark Pulse", "Calm Mind", "Hidden Power [Fire]"]}
+  },
+  "Magnegauss": {
+    "Sitrus Berry": {"level": 100,"ability": "Harvest","item": "Sitrus Berry","nature": "Modest","evs": {"hp": 248,"sa": 252,"sd": 8},"ivs": {"at": 0},"moves": ["Spud Mortar", "Stealth Rock", "Volt Switch", "Fire Blast"]},
+    "Choice Specs": {"level": 100,"ability": "Analytic","item": "Choice Specs","nature": "Quiet","evs": {"hp": 248,"sa": 252,"sd": 8},"ivs": {"at": 0,"sp": 0},"moves": ["Volt Switch", "Thunderbolt", "Energy Ball", "Fire Blast"]}
+  },
+  "Mochimechi": {
+    "Rapid Spin": {"level": 100,"ability": "Glutinous Rice","item": "Heavy-Duty Boots","nature": "Careful","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Rapid Spin", "Body Slam", "Knock Off", "Soft-Boiled"]}
+  },
+  "Mosster": {
+    "CRAB": {"level": 100,"ability": "Phototroph","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Stealth Rock", "Wood Hammer", "Body Press", "Synthesis"]}
+  },
+  "Nestitan": {
+    "IronPress": {"level": 100,"ability": "Heatproof","item": "Heavy-Duty Boots","nature": "Impish","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Body Press", "Iron Defense", "Roost", "U-turn"]},
+    "Defog": {"level": 100,"ability": "Heatproof","item": "Heavy-Duty Boots","nature": "Impish","evs": {"hp": 248,"df": 252,"sd": 8},"moves": ["Defog", "Roost", "U-turn", "Body Press"]}
+  },
+  "Niandertroll": {
+    "Specially Defensive": {"level": 100,"ability": "Seed Sower","item": "Leftovers","nature": "Careful","evs": {"hp": 252,"at": 4,"sd": 252},"moves": ["Power Whip", "Knock Off", "Stealth Rock", "Synthesis"]},
+    "Physically Defensive": {"level": 100,"ability": "Seed Sower","item": "Leftovers","nature": "Impish","evs": {"hp": 252,"at": 4,"df": 252},"moves": ["Power Whip", "Body Press", "Stealth Rock", "Synthesis"]}
+  },
+  "Ockthane": {
+    "Nasty Plot": {"level": 100,"ability": "Supreme Overlord","item": "Heavy-Duty Boots","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Nasty Plot", "Ice Beam", "Thunderbolt", "Focus Blast"]},
+    "Choice Scarf": {"level": 100,"ability": "Supreme Overlord","item": "Choice Scarf","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Thunderbolt", "Ice Beam", "Volt Switch", "Focus Blast"]}
+  },
+  "Paldemaria": {
+    "Assault Vest": {"level": 100,"ability": "Regenerator","item": "Assault Vest","nature": "Calm","evs": {"hp": 252,"sd": 168,"sp": 88},"moves": ["Scald", "Moonblast", "Psychic Noise", "Flip Turn"]}
+  },
+  "Pestri": {
+    "Corrosion": {"level": 100,"ability": "Corrosion","item": "Heavy-Duty Boots","nature": "Bold","evs": {"hp": 252,"df": 252,"sd": 4},"moves": ["Sludge Bomb", "Toxic", "Roost", "U-turn"]},
+    "Intimidate": {"level": 100,"ability": "Intimidate","item": "Heavy-Duty Boots","nature": "Bold","evs": {"hp": 248,"df": 252,"sd": 8},"moves": ["Sludge Bomb", "Flamethrower", "Roost", "U-turn"]}
+  },
+  "Porygon-Z-Rhinian": {
+    "Choice Scarf": {"level": 100,"ability": "Adaptability","item": "Choice Scarf","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"ivs": {"at": 0},"moves": ["Thunderbolt", "Volt Switch", "Energy Ball", "Flamethrower"]}
+  },
+  "Rotom-Hisui-Armored": {
+    "Choice Scarf": {"level": 100,"ability": "Dry Skin","item": "Choice Scarf","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Quaking Thrust", "Temper Flare", "Gunk Shot", "U-turn"]},
+    "Swords Dance": {"level": 100,"ability": "Dry Skin","item": "Life Orb","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Quaking Thrust", "Gunk Shot", "Temper Flare"]}
+  },
+  "Scaleslash": {
+    "Rapid Spin": {"level": 100,"ability": "Belligerent Quills","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Rapid Spin", "Play Rough", "High Horsepower"]}
+  },
+  "Scorching Kiln": {
+    "Stripping Kiln": {"level": 100,"ability": "Protosynthesis","item": "Heavy-Duty Boots","nature": "Calm","evs": {"hp": 252,"df": 4,"sd": 252},"moves": ["Rapid Spin", "Flamethrower", "Morning Sun", "Teleport"]}
+  },
+  "Sekrilon-Mega": {
+    "All-Out Attacker": {"level": 100,"ability": "Scrappy","item": "Sekrilite","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Triple Axel", "High Jump Kick", "Grounding Stomp", "U-turn"]}
+  },
+  "Sinister Sickle": {
+    "Calm Mind": {"level": 100,"ability": "Protosynthesis","item": "Booster Energy","nature": "Timid","evs": {"hp": 32,"sa": 224,"sp": 252},"ivs": {"at": 0},"moves": ["Calm Mind", "Flamethrower", "Sludge Wave", "Severing Wind"]}
+  },
+  "Sirentom": {
+    "Specially Defensive": {"level": 100,"ability": "Comatose","item": "Heavy-Duty Boots","nature": "Calm","evs": {"hp": 248,"df": 8,"sd": 252},"moves": ["Teleport", "Rapid Spin", "Shadow Ball", "Slack Off"]},
+    "Calm Mind": {"level": 100,"ability": "Comatose","item": "Leftovers","nature": "Bold","evs": {"hp": 248,"df": 252,"sa": 8},"ivs": {"at": 0},"moves": ["Calm Mind", "Will-O-Wisp", "Hex", "Slack Off"]}
+  },
+  "Staruhz": {
+    "Can we pretend that": {"level": 100,"ability": "Starfall","item": "Eject Bandage","nature": "Timid","evs": {"hp": 248,"sa": 8,"sp": 252},"moves": ["Mindwipe", "Ice Beam", "Recover", "Flip Turn"]}
+  },
+  "Tinkashank": {
+    "Swords Dance": {"level": 100,"ability": "Guts","item": "Flame Orb","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Swords Dance", "Knock Off", "Sucker Punch", "Iron Head"]}
+  },
+  "Tyranisacer": {
+    "Dragon Dance": {"level": 100,"ability": "Tough Claws","item": "Heavy-Duty Boots","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Dragon Dance", "Leech Life", "Knock Off", "Ice Fang"]},
+    "Choice Band": {"level": 100,"ability": "Tough Claws","item": "Choice Band","nature": "Adamant","evs": {"hp": 248,"at": 252,"sd": 8},"moves": ["Knock Off", "Leech Life", "Head Smash", "Ice Fang"]}
+  },
+  "Tyranitar-Delta": {
+    "Dragon Dance": {"level": 100,"ability": "Psychic Surge","item": "Lum Berry","nature": "Jolly","evs": {"at": 252,"sd": 4,"sp": 252},"moves": ["Dragon Dance", "Psychic Fangs", "Ice Punch", "Fire Punch"]},
+    "Choice Band": {"level": 100,"ability": "Psychic Surge","item": "Choice Band","nature": "Adamant","evs": {"hp": 252,"at": 252,"sd": 4},"moves": ["Psychic Fangs", "Mindtrap", "Earthquake", "Ice Punch"]}
+  },
+  "Wrighvern": {
+    "Choice Specs": {"level": 100,"ability": "Technician","item": "Choice Specs","nature": "Timid","evs": {"sa": 252,"sd": 4,"sp": 252},"moves": ["Twin Gust", "Draco Meteor", "U-turn", "Switcheroo"]}
   }
-},
-'Wrighvern': {
-  'Choice Specs': {
-      "level": 100,
-      'ability': 'Technician',
-      'item': 'Choice Specs',
-      'nature': 'Timid',
-      'evs': {
-          'sa': 252,
-          'sd': 4,
-          'spe': 252
-      },
-      'moves': ['Twin Gust', 'Draco Meteor', 'U-turn', 'Switcheroo']
-  }
-}
-
-
-
 };
