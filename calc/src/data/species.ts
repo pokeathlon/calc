@@ -3975,7 +3975,7 @@ const BW_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
   Cofagrigus: {
     types: ['Ghost'],
     bs: {hp: 58, at: 50, df: 145, sa: 95, sd: 105, sp: 30},
-    weightkg: 76.5,
+    weightkg: 153.0,
     abilities: {0: 'Mummy'},
   },
   Conkeldurr: {
