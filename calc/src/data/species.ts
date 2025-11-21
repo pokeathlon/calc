@@ -14480,7 +14480,7 @@ origin: 'Infinity'
 },
 'Kablowfish':{
 types: ['Water', 'Steel'],
-bs: {hp:85, at:95, df:125, sa:65, sd:85, sp:75}, 
+bs: {hp:85, at:100, df:125, sa:65, sd:85, sp:75}, 
 weightkg: 60,
 abilities: {0: 'Poison Point'},
 origin: 'Infinity'
@@ -15153,7 +15153,7 @@ origin: 'Infinity'
 },
 'MetalGarurumon':{
 types: ['Ice', 'Steel'],
-bs: {hp:100, at:130, df:120, sa:130, sd:105, sp:125}, 
+bs: {hp:100, at:134, df:120, sa:126, sd:105, sp:125}, 
 weightkg: 616,
 abilities: {0: 'Technician'},
 origin: 'Infinity'
@@ -15216,13 +15216,15 @@ types: ['Flying', 'Poison'],
 bs: {hp:85, at:125, df:70, sa:90, sd:80, sp:105}, 
 weightkg: 112,
 abilities: {0: 'Long Reach'},
+nfe: true,
 origin: 'Infinity'
 },
 'Bakemon':{
 types: ['Poison', 'Ghost'],
-bs: {hp:55, at:90, df:140, sa:90, sd:140, sp:40}, 
+bs: {hp:75, at:70, df:90, sa:114, sd:120, sp:81}, 
 weightkg: 26,
-abilities: {0: 'Levitate'},
+abilities: {0: 'Cursed Body'},
+nfe: true,
 origin: 'Infinity'
 },
 'Keramon':{
@@ -15253,6 +15255,86 @@ types: ['Psychic', 'Ghost'],
 bs: {hp:80, at:100, df:70, sa:130, sd:75, sp:100}, 
 weightkg: 75,
 abilities: {0: 'Magic Bounce'},
+origin: 'Infinity'
+},
+'Woodmon':{
+types: ['Grass'],
+bs: {hp:105, at:95, df:130, sa:70, sd:65, sp:60}, 
+weightkg: 519,
+abilities: {0: 'Super Luck'},
+nfe: true,
+origin: 'Infinity'
+},
+'Cherrymon':{
+types: ['Grass', 'Poison'],
+bs: {hp:105, at:130, df:130, sa:95, sd:65, sp:64}, 
+weightkg: 1251,
+abilities: {0: 'Sniper'},
+nfe: true,
+origin: 'Infinity'
+},
+'Puppetmon':{
+types: ['Grass', 'Dark'],
+bs: {hp:120, at:141, df:110, sa:120, sd:90, sp:119}, 
+weightkg: 158,
+abilities: {0: 'Sniper'},
+origin: 'Infinity'
+},
+'MetalSeadramon':{
+types: ['Steel', 'Dragon'],
+bs: {hp:104, at:100, df:130, sa:145, sd:105, sp:121}, 
+weightkg: 1485,
+abilities: {0: 'Drizzle'},
+origin: 'Infinity'
+},
+'Myotismon':{
+types: ['Poison', 'Psychic'],
+bs: {hp:100, at:119, df:94, sa:126, sd:80, sp:106}, 
+weightkg: 238,
+abilities: {0: 'Tough Claws'},
+origin: 'Infinity'
+},
+'Phantomon':{
+types: ['Poison', 'Ghost'],
+bs: {hp:94, at:128, df:90, sa:100, sd:95, sp:103}, 
+weightkg: 127.5,
+abilities: {0: 'Cursed Body'},
+nfe: true,
+origin: 'Infinity'
+},
+'Piedmon':{
+types: ['Ghost', 'Dark'],
+bs: {hp:104, at:160, df:105, sa:108, sd:110, sp:118}, 
+weightkg: 163.5,
+abilities: {0: 'Cursed Body'},
+origin: 'Infinity'
+},
+'Venus':{
+types: ['Grass', 'Ground'],
+bs: {hp:115, at:120, df:130, sa:75, sd:110, sp:80}, 
+weightkg: 90,
+abilities: {0: 'Magic Guard'},
+origin: 'Infinity'
+},
+'Mars':{
+types: ['Fire', 'Dragon'],
+bs: {hp:80, at:130, df:110, sa:120, sd:75, sp:115}, 
+weightkg: 60,
+abilities: {0: 'No Guard'},
+origin: 'Infinity'
+},
+'Mercury':{
+types: ['Water', 'Ice'],
+bs: {hp:130, at:75, df:80, sa:120, sd:115, sp:110}, 
+weightkg: 90,
+abilities: {0: 'Filter'},
+origin: 'Infinity'
+},
+'Jupiter':{
+types: ['Flying', 'Electric'],
+bs: {hp:75, at:115, df:110, sa:80, sd:120, sp:130}, 
+weightkg: 70,
+abilities: {0: 'Friend Guard'},
 origin: 'Infinity'
 },
 
@@ -16545,7 +16627,7 @@ origin: 'Pokeathlon'
 },
 'Caramitti-Crazed':{
 types: ['Fairy', 'Flying'],
-bs: {hp:89, at:113, df:25, sa:126, sd:72, sp:140}, 
+bs: {hp:89, at:118, df:25, sa:131, sd:62, sp:140}, 
 weightkg: 0.9,
 abilities: {0: 'Sweet Tooth'},
 origin: 'Pokeathlon'
@@ -16834,7 +16916,7 @@ origin: 'Pokeathlon'
 },
 'Incandele':{
 types: ['Fire', 'Fairy'],
-bs: {hp:100, at:76, df:115, sa:85, sd:66, sp:80}, 
+bs: {hp:100, at:76, df:115, sa:91, sd:66, sp:74}, 
 weightkg: 10.1,
 abilities: {0: 'Magic Bounce'},
 origin: 'Pokeathlon'
@@ -17585,7 +17667,7 @@ origin: 'Pokeathlon'
 },
 'Cloudinyte':{
 types: ['Dark', 'Flying'],
-bs: {hp:80, at:100, df:80, sa:50, sd:80, sp:110}, 
+bs: {hp:79, at:105, df:78, sa:50, sd:78, sp:110}, 
 weightkg: 28,
 abilities: {0: 'Retribution'},
 origin: 'Pokeathlon'
@@ -17621,9 +17703,9 @@ origin: 'Pokeathlon'
 },
 'Escarphone':{
 types: ['Ghost', 'Poison'],
-bs: {hp:76, at:66, df:140, sa:90, sd:82, sp:44}, 
+bs: {hp:76, at:64, df:140, sa:90, sd:82, sp:46}, 
 weightkg: 48.3,
-abilities: {0: 'Soul Choir'},
+abilities: {0: 'Soul Symphony'},
 origin: 'Pokeathlon'
 },
 'Potermit':{
@@ -17636,7 +17718,7 @@ origin: 'Pokeathlon'
 },
 'Ceraguard':{
 types: ['Water', 'Fighting'],
-bs: {hp:101, at:94, df:121, sa:67, sd:76, sp:66}, 
+bs: {hp:101, at:109, df:121, sa:67, sd:76, sp:66}, 
 weightkg: 93,
 abilities: {0: 'Shell Armor'},
 origin: 'Pokeathlon'
@@ -17661,6 +17743,49 @@ types: ['Steel'],
 bs: {hp:79, at:84, df:90, sa:51, sd:131, sp:55}, 
 weightkg: 63,
 abilities: {0: 'Heatproof'},
+origin: 'Pokeathlon'
+},
+'Arcaspark':{
+types: ['Water', 'Electric'],
+bs: {hp:100, at:95, df:72, sa:87, sd:86, sp:55}, 
+weightkg: 38.6,
+abilities: {0: 'Volt Absorb'},
+origin: 'Pokeathlon'
+},
+'Catastropede':{
+types: ['Fire', 'Dark'],
+bs: {hp:132, at:71, df:58, sa:132, sd:77, sp:25}, 
+weightkg: 213,
+abilities: {0: 'Flash Fire'},
+origin: 'Pokeathlon'
+},
+'Nweet':{
+types: ['Fairy', 'Normal'],
+bs: {hp:57, at:75, df:64, sa:53, sd:63, sp:43}, 
+weightkg: 36,
+abilities: {0: 'Guts'},
+origin: 'Pokeathlon',
+nfe: true,
+},
+'Jawladin':{
+types: ['Fairy', 'Normal'],
+bs: {hp:115, at:97, df:88, sa:68, sd:83, sp:34}, 
+weightkg: 36,
+abilities: {0: 'Guts'},
+origin: 'Pokeathlon'
+},
+'Rakura':{
+types: ['Rock', 'Grass'],
+bs: {hp:99, at:54, df:80, sa:111, sd:118, sp:73}, 
+weightkg: 58.6,
+abilities: {0: 'Solar Power'},
+origin: 'Pokeathlon'
+},
+'Sauphozoa':{
+types: ['Psychic', 'Poison'],
+bs: {hp:103, at:87, df:63, sa:117, sd:110, sp:37}, 
+weightkg: 113,
+abilities: {0: 'Cute Charm'},
 origin: 'Pokeathlon'
 },
 };
