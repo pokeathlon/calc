@@ -17653,7 +17653,7 @@ origin: 'Pokeathlon'
 },
 'Iron Chamber':{
 types: ['Steel', 'Water'],
-bs: {hp:84, at:104, df:134, sa:60, sd:134, sp:54}, 
+bs: {hp:84, at:110, df:134, sa:54, sd:134, sp:54}, 
 weightkg: 172,
 abilities: {0: 'Quark Drive'},
 origin: 'Pokeathlon'

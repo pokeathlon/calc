@@ -48,6 +48,7 @@ import {
   getStabMod,
   getStellarStabMod,
   checkAdaptiveArmor,
+  checkAsAbove,
 } from './util';
 import { Types } from '../data/types';
 import { types } from 'util';
@@ -91,11 +92,13 @@ export function calculateSMSSSV(
   checkIntrepidSword(defender, gen);
   checkAdaptiveArmor(attacker, defender);
   checkAdaptiveArmor(defender, attacker);
+  checkAsAbove(attacker, defender);
+  checkAsAbove(defender, attacker);
 
   if (move.named('Meteor Beam', 'Electro Shot')) {
     attacker.boosts.spa +=
       attacker.hasAbility('Simple') ? 2
-      : attacker.hasAbility('Contrary') ? -1
+      : (attacker.hasAbility('Contrary') || checkAsAbove(defender, attacker)) ? -1
       : 1;
     // restrict to +- 6
     attacker.boosts.spa = Math.min(6, Math.max(-6, attacker.boosts.spa));
@@ -537,7 +540,7 @@ export function calculateSMSSSV(
     for (stat in defender.boosts) {
       if (defender.boosts[stat] > 0) {
         attacker.boosts[stat] +=
-          attacker.hasAbility('Contrary') ? -defender.boosts[stat]! : defender.boosts[stat]!;
+          (attacker.hasAbility('Contrary') || checkAsAbove(defender, attacker)) ? -defender.boosts[stat]! : defender.boosts[stat]!;
         if (attacker.boosts[stat] > 6) attacker.boosts[stat] = 6;
         if (attacker.boosts[stat] < -6) attacker.boosts[stat] = -6;
         attacker.stats[stat] = getModifiedStat(attacker.rawStats[stat]!, attacker.boosts[stat]!);
@@ -1402,6 +1405,11 @@ export function calculateAttackSMSSSV(
   } else if (defender.hasAbility('Unaware')) {
     attack = attackSource.rawStats[attackStat];
     desc.defenderAbility = defender.ability;
+  }  else if (checkAsAbove(defender, attacker)) {
+    attackSource.boosts[attackStat]! = -attackSource.boosts[attackStat]!;
+    attack = getModifiedStat(attackSource.rawStats[attackStat]!, attackSource.boosts[attackStat]!);
+    desc.attackBoost = -attackSource.boosts[attackStat];
+    desc.defenderAbility = 'As Above';
   } else {
     attack = getModifiedStat(attackSource.rawStats[attackStat]!, attackSource.boosts[attackStat]!);
     desc.attackBoost = attackSource.boosts[attackStat];
@@ -1594,6 +1602,11 @@ export function calculateDefenseSMSSSV(
   } else if (attacker.hasAbility('Unaware', 'Vacuum Bubble')) {
     defense = defender.rawStats[defenseStat];
     desc.attackerAbility = attacker.ability;
+  } else if (checkAsAbove(defender, attacker)) {
+    defender.boosts[defenseStat]! = -defender.boosts[defenseStat]!;
+    defense = getModifiedStat(defender.rawStats[defenseStat]!, defender.boosts[defenseStat]!);
+    desc.defenseBoost = defender.boosts[defenseStat];
+    desc.attackerAbility = 'As Above';
   } else {
     defense = getModifiedStat(defender.rawStats[defenseStat]!, defender.boosts[defenseStat]!);
     desc.defenseBoost = defender.boosts[defenseStat];

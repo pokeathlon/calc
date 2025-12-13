@@ -449,7 +449,8 @@ const SV = SS.concat([
   'Hidden Ambush',
   'Hive Mind',
   'Vacuum Bubble',
-  'Coat of Arms'
+  'Coat of Arms',
+  'As Above'
 ]);
 
 export const ABILITIES = [[], RBY, GSC, ADV, DPP, BW, XY, SM, SS, SV];
