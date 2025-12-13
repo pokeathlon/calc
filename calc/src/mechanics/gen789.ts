@@ -288,6 +288,8 @@ export function calculateSMSSSV(
     }
   }
 
+  if (attacker.hasAbility('Soul Symphony') && move.flags.sound) type = 'Ghost';
+
   if (move.named('Tera Blast') && attacker.teraType) {
     type = attacker.teraType;
   }
