@@ -1069,7 +1069,8 @@ export function calculateBPModsSMSSSV(
     (move.named('Brine') && defender.curHP() <= defender.maxHP() / 2) ||
     (move.named('Venoshock') && defender.hasStatus('psn', 'tox')) ||
     (move.named('Lash Out') && (countBoosts(gen, attacker.boosts) < 0)) ||
-    (move.named('Pixie Trick') && !resistedKnockOffDamage)
+    (move.named('Pixie Trick') && !resistedKnockOffDamage) ||
+    (move.named('Brutal Calamity') && (field.isWonderRoom || field.isMagicRoom || field.isTrickRoom))
   ) {
     bpMods.push(8192);
     desc.moveBP = basePower * 2;
