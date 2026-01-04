@@ -6145,7 +6145,7 @@ Mudslide: {
   secondaries: true,
 },
 'Twin Gust': {
-  bp: 40,
+  bp: 30,
   type: 'Flying',
   category: 'Special',
   zp: 100,
