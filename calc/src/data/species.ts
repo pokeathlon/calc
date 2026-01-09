@@ -13148,14 +13148,14 @@ const SV_PATCH: {[name: string]: DeepPartial<SpeciesData>} = {
 },
 'Crustle-Delta-Berry': {
     types: ['Grass', 'Poison'],
-    bs: { hp: 70, at: 105, df: 125, sa: 65, sd: 75, sp: 45 },
+    bs: { hp: 70, at: 95, df: 125, sa: 65, sd: 75, sp: 45 },
     weightkg: 150,
     abilities: { 0: 'Harvest' },
     origin: "Insurgence"
     },
 'Crustle-Delta-Cake': {
     types: ['Fairy', 'Normal'],
-    bs: { hp: 70, at: 105, df: 125, sa: 65, sd: 75, sp: 45 },
+    bs: { hp: 70, at: 95, df: 125, sa: 65, sd: 75, sp: 45 },
     weightkg: 100,
     abilities: { 0: 'Own Tempo' },
     origin: "Insurgence"
