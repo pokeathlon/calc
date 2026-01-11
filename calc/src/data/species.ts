@@ -17578,14 +17578,14 @@ origin: 'Pokeathlon'
 },
 'Zorblob':{
 types: ['Psychic'],
-bs: {hp:90, at:72, df:78, sa:105, sd:110, sp:85}, 
+bs: {hp:90, at:65, df:78, sa:112, sd:110, sp:85}, 
 weightkg: 49.2,
 abilities: {0: 'Hive Mind'},
 origin: 'Pokeathlon'
 },
 'Zorblob-Split':{
 types: ['Psychic'],
-bs: {hp:90, at:91, df:66, sa:115, sd:66, sp:112}, 
+bs: {hp:90, at:84, df:66, sa:122, sd:66, sp:112}, 
 weightkg: 49.2,
 abilities: {0: 'Hive Mind'},
 origin: 'Pokeathlon'
@@ -17740,7 +17740,7 @@ origin: 'Pokeathlon'
 },
 'Utensitile':{
 types: ['Steel'],
-bs: {hp:79, at:84, df:90, sa:51, sd:131, sp:55}, 
+bs: {hp:79, at:89, df:90, sa:51, sd:131, sp:55}, 
 weightkg: 63,
 abilities: {0: 'Heatproof'},
 origin: 'Pokeathlon'
@@ -17754,7 +17754,7 @@ origin: 'Pokeathlon'
 },
 'Catastropede':{
 types: ['Fire', 'Dark'],
-bs: {hp:132, at:71, df:58, sa:132, sd:77, sp:25}, 
+bs: {hp:132, at:71, df:63, sa:140, sd:84, sp:25}, 
 weightkg: 213,
 abilities: {0: 'Flash Fire'},
 origin: 'Pokeathlon'
